@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="900b74c1-0867-4d06-ba5f-385a0b2f49fd" Name="Task_Primary_Setup">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="900b74c1-0867-4d06-ba5f-385a0b2f49fd"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// General Settings
+$CurrentRunDateCommApp=FormatDate((ConvertTimeZone(Now(),"CST","GMT")),"yyyy-mm-ddTHH:MM:SSZ");
+$jitterbit.sfdc.dbsource.sfheader=true;
+$jitterbit.source.text.character_encoding="UTF-8";
+$jitterbit.target.text.character_encoding="UTF-8";
+
+// Single step variable setup 
+//$EmailToAdmission="its.ea-auto+Adm@snc.edu,diane.cramer@snc.edu,admit@snc.edu,darlene.blaney@snc.edu";
+$EmailToAdmission="darlene.blaney@snc.edu";
+$EmailFromAdmission="its.ea-dba+Adm@snc.edu";
+
+$EmailAppSubject="Task Process Messages";
+
+&lt;/trans&gt;</konga.string>
+</Entity>

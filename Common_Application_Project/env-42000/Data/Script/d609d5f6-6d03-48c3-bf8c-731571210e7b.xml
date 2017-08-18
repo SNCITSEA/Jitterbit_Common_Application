@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="d609d5f6-6d03-48c3-bf8c-731571210e7b" Name="Check_for_Task">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="d609d5f6-6d03-48c3-bf8c-731571210e7b"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$TaskSubject = "";
+$TaskSelect = "First Source";
+//$SFContactId = "0031600002KnshLAAR";
+task_soql = "select id from task where Subject = " + Quote($TaskSelect) + " and WhoId = " + Quote($SFContactId) +
+            " and (IsArchived = TRUE or IsArchived = FALSE)";
+$debugMsgs = $debugMsgs + task_soql + "\n";
+
+eval($SFTaskExist = SfLookup("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",task_soql),$SFTaskErrorMsg=GetLastError()) ;
+If(Length($SFTaskErrorMsg) &gt; 0,
+   ($TaskErrMessage = "Place error message here " + $SFTaskErrorMsg);
+    $debugMsgs = $debugMsgs + $TaskErrMessage + " WhoId: " + $SFContactId + "\n",
+    //$TaskSubject = "First Source",
+   If(Length($SFTaskExist) &gt; 0,
+      $TaskSubject = "Additional Source",
+      $TaskSubject = "First Source"));
+&lt;/trans&gt;</konga.string>
+</Entity>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="c1c3aa8f-6b0c-48cf-91d8-dc1eafc67e02" Name="CommonApp_Transfer_Text">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="character_encoding" value="ISO-8859-1"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="TR*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="1"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00Xr3V1Rj/kUjsmXIKkCQLxnwb8mUlHPKyI6BrghZhK/8BK4kLvsyYptaAPLf2aH/Xep9gDI0cGxnr69DUNCZjm5CmZglVO/Y/IGPUrveWkEB6q/BF7UpSE70e9mz7qrAf"/>
+        <Item enc="true" key="login" value="$00yv3AK35P2Z7htHPLQ16RtlM8wLqZL3y0q1gHS4lOux8="/>
+        <Item enc="true" key="password" value="$00IDoQ5hC8P3e3Xdc+3tXIiLzSWQwbFf5vOEf9lrKc3HM="/>
+        <Item key="renamefileto" value="Original_CommonTrans_[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

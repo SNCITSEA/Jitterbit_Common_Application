@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="SalesforceConnector">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="6079dcdd-c71b-4f49-a2bf-38aba01638e2" Name="its.ea-dba@snc.edu">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="api_version" value="37.0"/>
+    <Item enc="true" key="password" value="$00i6VyEi1gGIQ/ivf4vvLKdewbAb1xxaBN4iund4r3nx4="/>
+    <Item key="salesforceconnector_id" value="6079dcdd-c71b-4f49-a2bf-38aba01638e2"/>
+    <Item key="sandbox" value="0"/>
+    <Item enc="true" key="security_token" value="$004Y62xi7JxBmxPvAopBZND9e3nbILmGdOWU0gavKYyDO3Pj1Ul7FVaIQPf4ufOMNL"/>
+    <Item key="server_host" value="https://login.salesforce.com/"/>
+    <Item key="status" value="1"/>
+    <Item enc="true" key="user_name" value="$00JzZH/BC/iUKwqBZi7xJVE9kWRnxp9Ya+cXpncUskXgnSQo1vTBqa/93r2h9kQeto"/>
+  </Properties>
+</Entity>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="ff20db9a-fb11-4ecf-94cf-729bdc812243" Name="Write_Contact_Exists_File">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_condition_condition_id" value="0"/>
+    <Item key="script_condition_operation_else" value="&quot;&quot;"/>
+    <Item key="script_condition_operation_else_tag" value=""/>
+    <Item key="script_condition_operation_if_true" value="&quot;&quot;"/>
+    <Item key="script_condition_operation_if_true_tag" value=""/>
+    <Item key="script_condition_value" value=""/>
+    <Item key="script_condition_variable" value=""/>
+    <Item key="script_id" value="ff20db9a-fb11-4ecf-94cf-729bdc812243"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+If($WriteFileHeader=="Y",
+   $WriteFileHeader = "n";
+   RunScript("sc.f187f2e1-60d2-4b61-a846-1885585d598e"));
+
+WriteFile("t.b49e5e7d-7831-4a5f-add8-f5e45f8b7ea0", $SFContactId + "\t" + $CACommonAppId + "\t" +
+                $AppDate + "\t" + $CAStudentType + "\t" + $CAFirstName + "\t" + $CAMiddleName + "\t" + $CALastName + "\t" + 
+                $CAFormerLastName + "\t" + $CAPreferredName + "\t" + $CASex + "\t" + $BirthDate + "\t" + $CAPermAddress1 + "\t" +
+                $CAPermAddress2 + "\t" + $CAPermAddress3 + "\t" + $CAPermAddressCity + "\t" + $CAPermAddressCounty + "\t" +
+                $CAPermAddressState + "\t" + $CAPermAddressZip + "\t" + $CAPermAddressCountry + "\t" + $CACurrAddress1 + "\t" +
+                $CACurrAddress2 + "\t" + $CACurrAddress3 + "\t" + $CACurrAddressCity + "\t" + $CACurrAddressCounty + "\t" +
+                $CACurrAddressState + "\t" + $CACurrAddressZip + "\t" + $CACurrAddressCountry + "\t" + $CAEmailAddress + "\t" + 
+                $CAPreferredPhone + "\t" + $CAPreferred_phone_number_raw + "\t" + $CAAlternate_phone_number_raw + "\t" +
+                $CAReligion_raw + "\t" + $CAUSArmedForces + "\t" + $CAHispanicLatino + "\t" + $CABirthCountry + "\t" + 
+                $CABirthCity + "\t" + $CABirthState + "\t" + $CALiveInUS + "\t" + $CALiveOutsideUS + "\t" + $CALanguage1 + "\t" + 
+                $CALanguage1Proficiency + "\t" + $CALanguage2 + "\t" + $CALanguage2Proficiency + "\t" + $Citizenship + "\t" + 
+                $CASSN + "\t" + $CACitizenships + "\t" + $CAVisaType + "\t" + $VisaDate + "\t" + $CAParentMaritalStatus + "\t" + 
+                $CAParent1Type + "\t" + $CAParent1Living + "\t" + $CAParent1Title + "\t" + $CAParent1FirstName + "\t" + 
+                $CAParent1Middle + "\t" + $CAParent1LastName + "\t" + $CAParent1Suffix + "\t" + $CAParent1Email + "\t" + 
+                $CAParent1_phone_number_raw + "\t" + $CAParent1Address_Same + "\t" + $CAParent1Address1 + "\t" + 
+                $CAParent1Address2 + "\t" + $CAParent1City + "\t" + $CAParent1State + "\t" + $CAParent1Zip + "\t" + 
+                $CAParent1Country + "\t" + $CAParent1Position + "\t" + $CAParent1Employer + "\t" + $CAParent1EdLevel + "\t" + 
+                $CAParent1College1CeebCode + "\t" + $CAParent1College1CeebName + "\t" + $CAParent1College1Degree1 + "\t" + 
+                $CAParent1College1Year + "\t" + $CAParent2Type + "\t" + $CAParent2Living + "\t" + $CAParent2Title + "\t" + 
+                $CAParent2FirstName + "\t" + $CAParent2Middle + "\t" + $CAParent2LastName + "\t" + $CAParent2Suffix + "\t" + 
+                $CAParent2Email + "\t" + $CAParent2_phone_number_raw + "\t" + $CAParent2Address_Same + "\t" + 
+                $CAParent2Address1 + "\t" + $CAParent2Address2 + "\t" + $CAParent2City + "\t" + $CAParent2State + "\t" + 
+                $CAParent2Zip + "\t" + $CAParent2Country + "\t" + $CAParent2Position + "\t" + $CAParent2Employer + "\t" + 
+                $CAParent2EdLevel + "\t" + $CAParent2College1CeebCode + "\t" + $CAParent2College1CeebName + "\t" + 
+                $CAParent2College1Degree1 + "\t" + $CAParent2College1Year + "\t" + $CASibling1FullName + "\t" + $CASibling1Age + "\t" + 
+                $CASibling1CollegeCeebName + "\t" + $CASibling2FullName + "\t" + $CASibling2Age + "\t" + $CASibling2CollegeCeebName + "\t" + 
+                $CASibling3FullName + "\t" + $CASibling3Age + "\t" + $CASibling3CollegeCeebName + "\t" + $CASibling4FullName + "\t" + 
+                $CASibling4Age + "\t" + $CASibling4CollegeCeebName + "\t" + $CAStepParent1Type + "\t" + $CAStepParent1Title + "\t" + 
+                $CAStepParent1FirstName + "\t" + $CAStepParent1Middle + "\t" + $CAStepParent1LastName + "\t" + $CAStepParent1Suffix + "\t" + 
+                $CAStepParent1Email + "\t" + $CAStepParent1_phone_number_raw + "\t" + $CAStepParent1Address_Same + "\t" + 
+                $CAStepParent1Address1 + "\t" + $CAStepParent1Address2 + "\t" + $CAStepParent1City + "\t" + $CAStepParent1State + "\t" + 
+                $CAStepParent1Zip + "\t" + $CAStepParent1Country + "\t" + $CAStepParent1Position + "\t" + $CAStepParent1Employer + "\t" + 
+                $CAStepParent1EdLevel + "\t" + $CAStepParent1College1CeebCode + "\t" + $CAStepParent1College1CeebName + "\t" + 
+                $CAStepParent1College1Degree1 + "\t" + $CAStepParent1College1Year + "\t" + $CAStepParent2Type + "\t" + 
+                $CAStepParent2Title + "\t" + $CAStepParent2FirstName + "\t" + $CAStepParent2Middle + "\t" + $CAStepParent2LastName + "\t" + 
+                $CAStepParent2Suffix + "\t" + $CAStepParent2Email + "\t" + $CAStepParent2_phone_number_raw + "\t" + 
+                $CAStepParent2Address_Same + "\t" + $CAStepParent2Address1 + "\t" + $CAStepParent2Address2 + "\t" + 
+                $CAStepParent2City + "\t" + $CAStepParent2State + "\t" + $CAStepParent2Zip + "\t" + $CAStepParent2Country + "\t" + 
+                $CAStepParent2Position + "\t" + $CAStepParent2Employer + "\t" + $CAStepParent2College1CeebCode + "\t" + 
+                $CAStepParent2College1CeebName + "\t" + $CAStepParent2College1Degree1 + "\t" + $CAStepParent2College1Year + "\t" + 
+                $CAACTNumber + "\t" + $CAACTCompositeScore + "\t" + $ACTDate + "\t" + $CAACTEnglishScore + "\t" + 
+                $CAACTMathScore + "\t" + $CAACTReadingScore + "\t" + $CAACTScienceScore + "\t" + $CAACTWritingScore + "\t" + 
+                $CASATNumber + "\t" + $CASATCRScore + "\t" + $SatCRDate + "\t" + $CASATMathScore + "\t" + $CASATWritingScore + "\t" + 
+                $CATOEFLNumber + "\t" + $CATOEFLReadingScore + "\t" + $ToeflReaddate + "\t" + $CATOEFLSpeaking + "\t" + 
+                $CATOEFLListening + "\t" + $CATOEFLWriting + "\t" + $CATOEFLPaperNumber + "\t" + $CATOEFLPaperReading + "\t" + 
+                $ToeflPaperReaddate + "\t" + $CATOEFLPaperListening + "\t" + $CATOEFLPaperTWEScore + "\t" + $CAIELTSNumber + "\t" + 
+                $CAIELTSReadingScore + "\t" + $IeltsReaddate + "\t" + $CAIELTSListening + "\t" + $CAIELTSWriting + "\t" + 
+                $CAIELTSSpeaking + "\t" + $SFHighSchoolId + "\t" + $CAHighSchoolCEEB + "\t" + $CAHighSchoolName + "\t" + 
+                $CAHighSchoolCity + "\t" + $CAHighSchoolState + "\t" + $CAHighSchoolCountry + "\t" + $CABoardingSchool + "\t" + $CAOnCampus + "\t" + 
+                $GradDate + "\t" + $CAOthSchoolNumber + "\t" + $CASchool2City + "\t" + $CASchool2State + "\t" + 
+                $CASchool2Country + "\t" + $CASchool2CeebCode + "\t" + $CASchool2CeebName + "\t" + $CASchool2TypeCode + "\t" + 
+                $School2FromDate + "\t" + $School2ToDate + "\t" + $CASchool3City + "\t" + $CASchool3State + "\t" + 
+                $CASchool3Country + "\t" + $CASchool3CeebCode + "\t" + $CASchool3CeebName + "\t" + $CASchool3TypeCode + "\t" + 
+                $School3FromDate + "\t" + $School3ToDate + "\t" + $CAGEDDate + "\t" + $CACollegesAttended + "\t" + 
+                $CACollege1City + "\t" + $CACollege1State + "\t" + $CACollege1Country + "\t" + $CACollege1CeebCode + "\t" + 
+                $CACollege1CeebName + "\t" + $CACollege1Course + "\t" + $College1FromDate + "\t" + $College1ToDate + "\t" + 
+                $CACollege2City + "\t" + $CACollege2State + "\t" + $CACollege2Country + "\t" + $CACollege2CeebCode + "\t" + 
+                $CACollege2CeebName + "\t" + $CACollege2Course + "\t" + $College2FromDate + "\t" + $College2ToDate + "\t" + 
+                $CACollege3City + "\t" + $CACollege3State + "\t" + $CACollege3Country + "\t" + $CACollege3CeebCode + "\t" + 
+                $CACollege3CeebName + "\t" + $CACollege3Course + "\t" + $College3FromDate + "\t" + $College3ToDate + "\t" + 
+                $CAClassRank + "\t" + $CAClassSize + "\t" + $CACumGPA + "\t" + $CAHonorsNumber + "\t" + $CAHonors1Title + "\t" + 
+                $CAHonors1Grade + "\t" + $CAHonors1Recognition + "\t" + $CAHonors2Title + "\t" + $CAHonors2Grade + "\t" + 
+                $CAHonors2Recognition + "\t" + $CAHonors3Title + "\t" + $CAHonors3Grade + "\t" + $CAHonors3Recognition + "\t" + 
+                $CAHonors4Title + "\t" + $CAHonors4Grade + "\t" + $CAHonors4Recognition + "\t" + $CAHonors5Title + "\t" + 
+                $CAHonors5Grade + "\t" + $CAHonors5Recognition + "\t" + $CACareerInterests + "\t" + $CAHighestDegree + "\t" + 
+                $CAActivity1Type + "\t" + $CAActivity1Name + "\t" + $CAActivity1Honors + "\t" + $CAActivity1Grade + "\t" + 
+                $CAActivity1ContInCollege + "\t" + $CAActivity1Term + "\t" + $CAActivity1Hours + "\t" + $CAActivity1Week + "\t" + 
+                $CAActivity1Details + "\t" + $CAActivity2Type + "\t" + $CAActivity2Name + "\t" + $CAActivity2Honors + "\t" + 
+                $CAActivity2Grade + "\t" + $CAActivity2ContInCollege + "\t" + $CAActivity2Term + "\t" + $CAActivity2Hours + "\t" + 
+                $CAActivity2Week + "\t" + $CAActivity2Details + "\t" + $CAActivity3Type + "\t" + $CAActivity3Name + "\t" + 
+                $CAActivity3Honors + "\t" + $CAActivity3Grade + "\t" + $CAActivity3ContInCollege + "\t" + $CAActivity3Term + "\t" + 
+                $CAActivity3Hours + "\t" + $CAActivity3Week + "\t" + $CAActivity3Details + "\t" + $CAActivity4Type + "\t" + 
+                $CAActivity4Name + "\t" + $CAActivity4Honors + "\t" + $CAActivity4Grade + "\t" + $CAActivity4ContInCollege + "\t" + 
+                $CAActivity4Term + "\t" + $CAActivity4Hours + "\t" + $CAActivity4Week + "\t" + $CAActivity4Details + "\t" + 
+                $CAActivity5Type + "\t" + $CAActivity5Name + "\t" + $CAActivity5Honors + "\t" + $CAActivity5Grade + "\t" + 
+                $CAActivity5ContInCollege + "\t" + $CAActivity5Term + "\t" + $CAActivity5Hours + "\t" + $CAActivity5Week + "\t" + 
+                $CAActivity5Details + "\t" + $CAActivity6Type + "\t" + $CAActivity6Name + "\t" + $CAActivity6Honors + "\t" + 
+                $CAActivity6Grade + "\t" + $CAActivity6ContInCollege + "\t" + $CAActivity6Term + "\t" + $CAActivity6Hours + "\t" + 
+                $CAActivity6Week + "\t" + $CAActivity6Details + "\t" + $CAActivity7Type + "\t" + $CAActivity7Name + "\t" + 
+                $CAActivity7Honors + "\t" + $CAActivity7Grade + "\t" + $CAActivity7ContInCollege + "\t" + $CAActivity7Term + "\t" + 
+                $CAActivity7Hours + "\t" + $CAActivity7Week + "\t" + $CAActivity7Details + "\t" + $CAActivity8Type + "\t" + 
+                $CAActivity8Name + "\t" + $CAActivity8Honors + "\t" + $CAActivity8Grade + "\t" + $CAActivity8ContInCollege + "\t" + 
+                $CAActivity8Term + "\t" + $CAActivity8Hours + "\t" + $CAActivity8Week + "\t" + $CAActivity8Details + "\t" + 
+                $CAActivity9Type + "\t" + $CAActivity9Name + "\t" + $CAActivity9Honors + "\t" + $CAActivity9Grade + "\t" + 
+                $CAActivity9ContInCollege + "\t" + $CAActivity9Term + "\t" + $CAActivity9Hours + "\t" + $CAActivity9Week + "\t" + 
+                $CAActivity9Details + "\t" + $CAActivity10Type + "\t" + $CAActivity10Name + "\t" + $CAActivity10Honors + "\t" + 
+                $CAActivity10Grade + "\t" + $CAActivity10ContInCollege + "\t" + $CAActivity10Term + "\t" + $CAActivity10Hours + "\t" + 
+                $CAActivity10Week + "\t" + $CAActivity10Details + "\t" + $CAEssayOptions + "\t" + $CAEssayClean + "\t" + 
+                $CASchoolDiscipline + "\t" + $CACriminalHistory + "\t" + $CAAdditionalInfoQuestion + "\t" + $CARequiredExplanation + "\t" + 
+                $CAStudentStatus_raw + "\t" + $CAPreferredStartTerm + "\t" + $CAAdmissionPlan + "\t" + $CAPreferredResidence + "\t" + 
+                $CAFinancialAid + "\t" + $CAAcad1Question1 + "\t" + $CAAcad1Question2 + "\t" + $CAStudentType2 + "\t" + 
+                $CAGenderIdentity + "\t" + $CASATRWScore + "\t" + $SatRWdate + "\t" + $CASATNewMathScore + "\t" + $SatNewMathDate + "\t" + 
+                $Race + "\t" + $OldEthnicity + "\t" + $CASuffix + "\t" + $ContactMatch + "\t" + $SFFirstName + "\t" + $SFLastName + "\t" + 
+                $SFNickName + "\t" + $SFEmail + "\t" + $SFBirthdate + "\t" + $SFHomePhone + "\t" + $SFCity + "\t" + $SFPostalcode + "\t" + 
+                $SFSSN + "\t" + $SFAdditionalPrograms + "\t" + $SFEmployer + "\t" + $SFDesiredEntryTerm + "\t" + $SFActiveApplicant
+                 + "\n" 
+             ,$ContactExistFileName );
+
+&lt;/trans&gt;</konga.string>
+</Entity>

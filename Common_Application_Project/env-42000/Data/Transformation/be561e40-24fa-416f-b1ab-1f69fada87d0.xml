@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Transformation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="be561e40-24fa-416f-b1ab-1f69fada87d0" Name="CommonApp_InsertTasks Request">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="natureofsource" value="Flat"/>
+    <Item key="natureoftarget" value="Tree"/>
+    <Item key="NoSourceDataUsedInMapping" value="0"/>
+    <Item key="output_function_id" value="308f3ab5-5204-46bd-987d-bb4d12dfb71b"/>
+    <Item key="saleforce_wizard_role" value="CREATE|REQUEST"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Task"/>
+    <Item key="salesforce_partner_wizard" value="1"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="sfdc_edgemart_structure_guid" value=""/>
+    <Item key="source_text_doc" value="ab51223f-3ffd-4f64-926e-08bd802584da"/>
+    <Item key="source_type_id" value="1"/>
+    <Item key="target_type_id" value="12"/>
+    <Item key="transformation_id" value="be561e40-24fa-416f-b1ab-1f69fada87d0"/>
+  </Properties>
+  <InputStructure docId="ab51223f-3ffd-4f64-926e-08bd802584da"/>
+  <OutputStructure wsCallId="308f3ab5-5204-46bd-987d-bb4d12dfb71b"/>
+  <Mappings>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.header$DebuggingHeader$categories.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$create$Task.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction./PRECONDITION/	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+$jitterbit.web_service_call.number_of_retries = 3;
+$jitterbit.web_service_call.retry_wait_seconds = 30;
+true
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$SessionHeader$sessionId$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+Get("__Salesforce.SessionID.6079dcdd-c71b-4f49-a2bf-38aba01638e2")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$MruHeader$updateMru$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllowFieldTruncationHeader$allowFieldTruncation$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DisableFeedTrackingHeader$disableFeedTracking$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$StreamingEnabledHeader$streamingEnabled$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllOrNoneHeader$allOrNone$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$allowSave$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$includeRecordDetails$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$runAsCurrentUser$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerAutoResponseEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerOtherEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerUserEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task./PRECONDITION/	&lt;trans&gt;
+$SFContactId = SalesforceId;
+
+RunScript("sc.d609d5f6-6d03-48c3-bf8c-731571210e7b");
+
+If(Length($TaskSubject) &gt; 0,true,false)
+
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.ActivityDate$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+GetUTCFormattedDate(Now(), "UTC", false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.OwnerId$	&lt;trans&gt;
+"005G0000004HodXIAS"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.Priority$	&lt;trans&gt;
+"Normal"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.RecordTypeId$	&lt;trans&gt;
+"012G0000000qg8iIAA"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.Status$	&lt;trans&gt;
+"Completed"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.Subject$	&lt;trans&gt;
+$TaskSubject
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.Type$	&lt;trans&gt;
+"Application-Common-Web_I"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Task.WhoId$	&lt;trans&gt;
+SalesforceId
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+  </Mappings>
+  <InvalidMappings/>
+  <RenamedNodes/>
+</Entity>

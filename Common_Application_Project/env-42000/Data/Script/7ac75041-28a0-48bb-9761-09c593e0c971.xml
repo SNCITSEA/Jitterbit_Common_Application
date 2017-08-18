@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="7ac75041-28a0-48bb-9761-09c593e0c971" Name="Workflow_Transfer_Process">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="7ac75041-28a0-48bb-9761-09c593e0c971"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// Process Transfer file from SDS
+RunOperation("op.afc2600e-d45a-4eae-a5c1-2eacfc0a57e6",true);
+
+// Create applications for the new transfer applicants
+RunOperation("op.7ca3a616-5bdf-40c5-901f-9e444945a1d6",true);
+
+// Run the process to upsert interest object for new transfer applicants
+RunOperation("op.f6d8ec61-fa30-4287-9265-e3ce0ff20d34",true);
+
+// Create tasks for the new transfer applicants
+RunOperation("op.fcfced4f-cdcb-4699-8be0-ca9d9af2cad2",true);
+
+&lt;/trans&gt;</konga.string>
+</Entity>

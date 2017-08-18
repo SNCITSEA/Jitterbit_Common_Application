@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="SalesforceCreate">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="9bd77332-704e-4f60-9a89-8608d5f78993" Name="CommonAppTransInsertApplication">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="compress" value="1"/>
+    <Item key="connector_id" value="6079dcdd-c71b-4f49-a2bf-38aba01638e2"/>
+    <Item key="date_fmt" value="MM/dd/yyyy"/>
+    <Item key="datetime_fmt" value="MM/dd/yyyy HH:mm:ss"/>
+    <Item key="debug_mode" value=""/>
+    <Item key="insert_null_values" value="0"/>
+    <Item key="operation_id" value="7ca3a616-5bdf-40c5-901f-9e444945a1d6"/>
+    <Item key="related_objects" value="Student__r++Student__c++Contact++Student__r.Banner_Contact_ID__c&amp;STRING&amp;STRING&amp;1&amp;1&amp;1&amp;1&amp;1|Student__r.Banner_Org_Id__c&amp;STRING&amp;STRING&amp;1&amp;1&amp;1&amp;1&amp;1"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Application__c"/>
+    <Item key="salesforcecreate_id" value="9bd77332-704e-4f60-9a89-8608d5f78993"/>
+    <Item key="sfdc.soapheader.AllOrNone" value="0"/>
+    <Item key="sfdc.soapheader.AllowFieldTruncation" value="0"/>
+    <Item key="sfdc.soapheader.AssignmentRule" value="|"/>
+    <Item key="sfdc.soapheader.CallOptions" value=""/>
+    <Item key="sfdc.soapheader.Debugging37" value=""/>
+    <Item key="sfdc.soapheader.DisableFeedTracking" value="0"/>
+    <Item key="sfdc.soapheader.DuplicateRule" value="000"/>
+    <Item key="sfdc.soapheader.Email" value="000"/>
+    <Item key="sfdc.soapheader.LocaleOptions" value=""/>
+    <Item key="sfdc.soapheader.MruHeader" value="0"/>
+    <Item key="sfdc.soapheader.PackageVersion" value=""/>
+    <Item key="sfdc.soapheader.Session" value=""/>
+    <Item key="sfdc.soapheader.StreamingEnabledHeader" value="0"/>
+    <Item key="source_encoding" value=""/>
+    <Item key="source_file_has_header" value="0"/>
+    <Item key="timezone" value="UTC"/>
+    <Item key="trigger_email" value="0"/>
+    <Item key="truncate_fields" value="0"/>
+  </Properties>
+</Entity>

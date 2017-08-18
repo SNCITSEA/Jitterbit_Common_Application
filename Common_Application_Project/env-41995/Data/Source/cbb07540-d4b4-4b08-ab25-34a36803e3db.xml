@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="cbb07540-d4b4-4b08-ab25-34a36803e3db" Name="ContactPush_Application">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="salesforce_wizard_object" value="1"/>
+  </Properties>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="NewContactPushApplication*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="1"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00yyktMMc6HLcDOCmSIeek6V0Z/AcdVJD02FeXuzB9Dl+9dBOzC1Zw6VFeonIze6gbBpnD6wyuxBRnS7gl8SSg+wnHGk09r7rkx4WZHBqqhaKYD6Cogk7Lh0TkdiRPkBz1"/>
+        <Item enc="true" key="login" value="$00l9E2zGvEf5C2xYwata1TD+AVgmtJNSebgggquzQKzs4="/>
+        <Item enc="true" key="password" value="$004hEeAwEuCTD67M5efF8Z90y/g+AE+S1jOuJt/rs0jgU="/>
+        <Item key="renamefileto" value="Done_NewContactPushApplication[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

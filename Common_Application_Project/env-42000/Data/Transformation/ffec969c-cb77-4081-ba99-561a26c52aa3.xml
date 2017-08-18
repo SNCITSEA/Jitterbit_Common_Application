@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Transformation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="ffec969c-cb77-4081-ba99-561a26c52aa3" Name="Upsert_Interests_Request">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="natureofsource" value="Flat"/>
+    <Item key="natureoftarget" value="Tree"/>
+    <Item key="NoSourceDataUsedInMapping" value="0"/>
+    <Item key="output_function_id" value="81382325-821f-4dbe-89af-047d0edc5720"/>
+    <Item key="saleforce_wizard_role" value="UPSERT|REQUEST"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Interest__c"/>
+    <Item key="salesforce_partner_wizard" value="1"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="sfdc_edgemart_structure_guid" value=""/>
+    <Item key="source_text_doc" value="ab51223f-3ffd-4f64-926e-08bd802584da"/>
+    <Item key="source_type_id" value="1"/>
+    <Item key="target_type_id" value="12"/>
+    <Item key="transformation_id" value="ffec969c-cb77-4081-ba99-561a26c52aa3"/>
+  </Properties>
+  <InputStructure docId="ab51223f-3ffd-4f64-926e-08bd802584da"/>
+  <OutputStructure wsCallId="81382325-821f-4dbe-89af-047d0edc5720"/>
+  <Mappings>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.header$DebuggingHeader$categories.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.header$OwnerChangeOptions$options.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$upsert$Interest__c.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$upsert$Interest__c.Contact__r.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction./PRECONDITION/	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+$jitterbit.web_service_call.number_of_retries = 3;
+$jitterbit.web_service_call.retry_wait_seconds = 30;
+true
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$SessionHeader$sessionId$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+Get("__Salesforce.SessionID.6079dcdd-c71b-4f49-a2bf-38aba01638e2")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$MruHeader$updateMru$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllowFieldTruncationHeader$allowFieldTruncation$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DisableFeedTrackingHeader$disableFeedTracking$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$StreamingEnabledHeader$streamingEnabled$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllOrNoneHeader$allOrNone$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$allowSave$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$includeRecordDetails$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$runAsCurrentUser$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerAutoResponseEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerOtherEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerUserEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$externalIDFieldName$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+"Id"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c./PRECONDITION/	&lt;trans&gt;
+// Fields from input file
+$SFStudentId = SalesforceId;
+$CAFirstName = FirstName;
+$CALastName = LastName;
+
+$CAActivity1Type = Activity1Type;
+$CAActivity1Name = Activity1Name;
+
+$CAActivity2Type = Activity2Type;
+$CAActivity2Name = Activity2Name;
+
+$CAActivity3Type = Activity3Type;
+$CAActivity3Name = Activity3Name;
+
+$CAActivity4Type = Activity4Type;
+$CAActivity4Name = Activity4Name;
+
+$CAActivity5Type = Activity5Type;
+$CAActivity5Name = Activity5Name;
+
+$CAActivity6Type = Activity6Type;
+$CAActivity6Name = Activity6Name;
+
+$CAActivity7Type = Activity7Type;
+$CAActivity7Name = Activity7Name;
+
+$CAActivity8Type = Activity8Type;
+$CAActivity8Name = Activity8Name;
+
+$CAActivity9Type = Activity9Type;
+$CAActivity9Name = Activity9Name;
+
+$CAActivity10Type = Activity10Type;
+$CAActivity10Name = Activity10Name;
+
+RunScript("sc.e677e3a3-585d-4797-a159-f723ea3f584f");
+//RunScript("sc.f5845cd4-aba9-41cf-b89d-eb0c1eb6c187");
+RunScript("sc.5dfdd2b2-7db7-482e-abf2-f4c22593791d");
+
+
+true
+
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c.Id$	&lt;trans&gt;
+SFInterestId
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c.Additional_Interests__c$	&lt;trans&gt;
+$FinalAdditionalString
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c.Athletic_Interests__c$	&lt;trans&gt;
+$FinalAthleticString
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c.Contact__c$	&lt;trans&gt;
+SalesforceId
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c.Other_Interests__c$	&lt;trans&gt;
+$FinalOtherString
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$upsert$Interest__c.RecordTypeId$	&lt;trans&gt;
+"012G0000000qgMkIAI"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+  </Mappings>
+  <InvalidMappings/>
+  <RenamedNodes/>
+</Entity>

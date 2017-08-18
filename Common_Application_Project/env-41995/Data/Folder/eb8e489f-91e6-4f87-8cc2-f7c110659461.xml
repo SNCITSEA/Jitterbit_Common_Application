@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Folder">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="eb8e489f-91e6-4f87-8cc2-f7c110659461" Name="Salesforce Upserts">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="folder_id" value="eb8e489f-91e6-4f87-8cc2-f7c110659461"/>
+    <Item key="protected" value="false"/>
+  </Properties>
+</Entity>

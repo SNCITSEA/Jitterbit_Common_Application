@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="e96cd51e-9d36-4c25-ac8d-013d505a7634" Name="Build_Race_And_Old_Ethnicity">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="e96cd51e-9d36-4c25-ac8d-013d505a7634"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+//$CABackground = "Asian";
+//$CAAsian = "India";
+$Race = "";
+$OldEthnicity = "";
+If($CABackground=="Black or African American",
+   $Race = "BL: Black or African American";
+   $OldEthnicity = "African American/Black";
+   ,If($CABackground=="American Indian or Alaska Native",
+      $Race = "AM: American Indian or Alaskan Native";
+      $OldEthnicity = "American Indian/Alaskan Native";
+      ,If($CABackground=="White",
+         $Race = "WH: White";
+         $OldEthnicity = "White";
+         ,If($CABackground=="Asian",
+            If($CAAsian=="Philippines",
+              $Race = "AS: Filipino";
+              $OldEthnicity = "Asian or Pacific Islander";
+              ,$OldEthnicity = "Asian";
+               If($CAAsian=="China",
+                 $Race = "AS: Chinese",
+                 If($CAAsian=="India",
+                   $Race = "AS: Asian Indian",
+                   If($CAAsian=="Japan",
+                     $Race = "AS: Japanese",
+                     If($CAAsian=="Korea",
+                       $Race = "AS: Korean",
+                       If($CAAsian=="Pakistan",
+                         $Race = "AS: Pakistani",
+                         If($CAAsian=="Vietnam",
+                           $Race = "AS: Vietnamese",
+                           If($CAAsian=="Other East Asia" || $CAAsian=="Other South Asia" || $CAAsian=="Other Southeast Asia",
+                             $Race = "AS: Asian"))))))))
+            ,If($CABackground=="Native Hawaiian or Other Pacific Islander",
+               $OldEthnicity = "Native Hawaiian/Pacific Island";
+               If($CAHawaiian=="Guam",
+                 $Race = "NA: Guamanian";
+                 ,If($CAHawaiian=="Hawaii",
+                    $OldEthnicity = "NA: Native Hawaiian",
+                    If($CAHawaiian=="Samoa",
+                      $OldEthnicity = "NA: Samoan",
+                      If($CAHawaiian=="Other Pacific Islands (excluding Philippines)",
+                        $OldEthnicity = "NA: Other Pac. Isl. (excl. Philippines)")))))))));
+&lt;/trans&gt;</konga.string>
+</Entity>

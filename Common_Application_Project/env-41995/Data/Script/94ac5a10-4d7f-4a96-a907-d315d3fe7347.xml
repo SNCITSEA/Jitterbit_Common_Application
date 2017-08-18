@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="94ac5a10-4d7f-4a96-a907-d315d3fe7347" Name="Convert_Phone_Numbers">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_id" value="94ac5a10-4d7f-4a96-a907-d315d3fe7347"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// This script consists of steps to convert phone numbers appropriately.  It has
+// been separated out to be used in multiple operations.
+
+// Alternate phone number formatting
+$CAAlternate_phone_number_formatted = "";
+$CAAlternate_intl_number_formatted = "";
+If(IsNull($CAAlternate_phone_number_raw),$CAAlternate_phone_number_formatted = "";
+                                       $CAAlternate_intl_number_formatted = "" ,
+     (If(Mid($CAAlternate_phone_number_raw,0,1)=="1",
+            $CAAlternate_phone_number_formatted = "(" + Mid($CAAlternate_phone_number_raw,1,3) + ") " +
+                  Mid($CAAlternate_phone_number_raw,4,3) + "-" + Mid($CAAlternate_phone_number_raw,7,4)
+        ,IF(Length($CAAlternate_phone_number_raw)==13,
+            $CAAlternate_phone_number_formatted = "(" + Mid($CAAlternate_phone_number_raw,3,3) + ") " +
+                  Mid($CAAlternate_phone_number_raw,6,3) + "-" + Mid($CAAlternate_phone_number_raw,9,4);
+            $CAAlternate_intl_number_formatted = Mid($CAAlternate_phone_number_raw,0,3)
+           ,IF(Length($CAAlternate_phone_number_raw)==12,
+               $CAAlternate_phone_number_formatted = "(" + Mid($CAAlternate_phone_number_raw,2,3) + ") " +
+                  Mid($CAAlternate_phone_number_raw,5,3) + "-" + Mid($CAAlternate_phone_number_raw,8,4);
+            $CAAlternate_intl_number_formatted = Mid($CAAlternate_phone_number_raw,0,2))))));
+// Preferred phone number formatting
+$CAPreferred_phone_number_formatted = "";
+$CAPreferred_intl_number_formatted = "";
+If(IsNull($CAPreferred_phone_number_raw),$CAPreferred_phone_number_formatted = "";
+                                       $CAPreferred_intl_number_formatted = "" ,
+     (If(Mid($CAPreferred_phone_number_raw,0,1)=="1",
+            $CAPreferred_phone_number_formatted = "(" + Mid($CAPreferred_phone_number_raw,1,3) + ") " +
+                  Mid($CAPreferred_phone_number_raw,4,3) + "-" + Mid($CAPreferred_phone_number_raw,7,4)
+        ,IF(Length($CAPreferred_phone_number_raw)==13,
+            $CAPreferred_phone_number_formatted = "(" + Mid($CAPreferred_phone_number_raw,3,3) + ") " +
+                  Mid($CAPreferred_phone_number_raw,6,3) + "-" + Mid($CAPreferred_phone_number_raw,9,4);
+            $CAPreferred_intl_number_formatted = Mid($CAPreferred_phone_number_raw,0,3)
+           ,IF(Length($CAPreferred_phone_number_raw)==12,
+               $CAPreferred_phone_number_formatted = "(" + Mid($CAPreferred_phone_number_raw,2,3) + ") " +
+                  Mid($CAPreferred_phone_number_raw,5,3) + "-" + Mid($CAPreferred_phone_number_raw,8,4);
+            $CAPreferred_intl_number_formatted = Mid($CAPreferred_phone_number_raw,0,2))))));
+
+// parent1 phone number formatting
+$CAParent1_phone_number_formatted = "";
+$CAParent1_intl_number_formatted = "";
+If(IsNull($CAParent1_phone_number_raw),$CAParent1_phone_number_formatted = "";
+                                       $CAParent1_intl_number_formatted = "" ,
+     (If(Mid($CAParent1_phone_number_raw,0,1)=="1",
+            $CAParent1_phone_number_formatted = "(" + Mid($CAParent1_phone_number_raw,1,3) + ") " +
+                  Mid($CAParent1_phone_number_raw,4,3) + "-" + Mid($CAParent1_phone_number_raw,7,4)
+        ,IF(Length($CAParent1_phone_number_raw)==13,
+            $CAParent1_phone_number_formatted = "(" + Mid($CAParent1_phone_number_raw,3,3) + ") " +
+                  Mid($CAParent1_phone_number_raw,6,3) + "-" + Mid($CAParent1_phone_number_raw,9,4);
+            $CAParent1_intl_number_formatted = Mid($CAParent1_phone_number_raw,0,3)
+           ,IF(Length($CAParent1_phone_number_raw)==12,
+               $CAParent1_phone_number_formatted = "(" + Mid($CAParent1_phone_number_raw,2,3) + ") " +
+                  Mid($CAParent1_phone_number_raw,5,3) + "-" + Mid($CAParent1_phone_number_raw,8,4);
+            $CAParent1_intl_number_formatted = Mid($CAParent1_phone_number_raw,0,2))))));
+
+// parent2 phone number formatting
+$CAParent2_phone_number_formatted = "";
+$CAParent2_intl_number_formatted = "";
+If(IsNull($CAParent2_phone_number_raw),$CAParent2_phone_number_formatted = "";
+                                       $CAParent2_intl_number_formatted = "" ,
+     (If(Mid($CAParent2_phone_number_raw,0,1)=="1",
+            $CAParent2_phone_number_formatted = "(" + Mid($CAParent2_phone_number_raw,1,3) + ") " +
+                  Mid($CAParent2_phone_number_raw,4,3) + "-" + Mid($CAParent2_phone_number_raw,7,4)
+        ,If(Length($CAParent2_phone_number_raw)==13,
+            $CAParent2_phone_number_formatted = "(" + Mid($CAParent2_phone_number_raw,3,3) + ") " +
+                  Mid($CAParent2_phone_number_raw,6,3) + "-" + Mid($CAParent2_phone_number_raw,9,4);
+            $CAParent2_intl_number_formatted = Mid($CAParent2_phone_number_raw,0,3)
+           ,IF(Length($CAParent2_phone_number_raw)==12,
+               $CAParent2_phone_number_formatted = "(" + Mid($CAParent2_phone_number_raw,2,3) + ") " +
+                  Mid($CAParent2_phone_number_raw,5,3) + "-" + Mid($CAParent2_phone_number_raw,8,4);
+            $CAParent2_intl_number_formatted = Mid($CAParent2_phone_number_raw,0,2))))));
+
+// step parent1 phone number formatting
+$CAStepParent1_phone_number_formatted = "";
+$CAStepParent1_intl_number_formatted = "";
+If(IsNull($CAStepParent1_phone_number_raw),$CAStepParent1_phone_number_formatted = "";
+                                       $CAStepParent1_intl_number_formatted = "" ,
+     (If(Mid($CAStepParent1_phone_number_raw,0,1)=="1",
+            $CAStepParent1_phone_number_formatted = "(" + Mid($CAStepParent1_phone_number_raw,1,3) + ") " +
+                  Mid($CAStepParent1_phone_number_raw,4,3) + "-" + Mid($CAStepParent1_phone_number_raw,7,4)
+        ,IF(Length($CAStepParent1_phone_number_raw)==13,
+            $CAStepParent1_phone_number_formatted = "(" + Mid($CAStepParent1_phone_number_raw,3,3) + ") " +
+                  Mid($CAStepParent1_phone_number_raw,6,3) + "-" + Mid($CAStepParent1_phone_number_raw,9,4);
+            $CAStepParent1_intl_number_formatted = Mid($CAStepParent1_phone_number_raw,0,3)
+           ,IF(Length($CAStepParent1_phone_number_raw)==12,
+               $CAStepParent1_phone_number_formatted = "(" + Mid($CAStepParent1_phone_number_raw,2,3) + ") " +
+                  Mid($CAStepParent1_phone_number_raw,5,3) + "-" + Mid($CAStepParent1_phone_number_raw,8,4);
+            $CAStepParent1_intl_number_formatted = Mid($CAStepParent1_phone_number_raw,0,2))))));
+
+// parent2 phone number formatting
+$CAStepParent2_phone_number_formatted = "";
+$CAStepParent2_intl_number_formatted = "";
+If(IsNull($CAStepParent2_phone_number_raw),$CAStepParent2_phone_number_formatted = "";
+                                       $CAStepParent2_intl_number_formatted = "" ,
+     (If(Mid($CAStepParent2_phone_number_raw,0,1)=="1",
+            $CAStepParent2_phone_number_formatted = "(" + Mid($CAStepParent2_phone_number_raw,1,3) + ") " +
+                  Mid($CAStepParent2_phone_number_raw,4,3) + "-" + Mid($CAStepParent2_phone_number_raw,7,4)
+        ,If(Length($CAStepParent2_phone_number_raw)==13,
+            $CAStepParent2_phone_number_formatted = "(" + Mid($CAStepParent2_phone_number_raw,3,3) + ") " +
+                  Mid($CAStepParent2_phone_number_raw,6,3) + "-" + Mid($CAStepParent2_phone_number_raw,9,4);
+            $CAStepParent2_intl_number_formatted = Mid($CAStepParent2_phone_number_raw,0,3)
+           ,IF(Length($CAStepParent2_phone_number_raw)==12,
+               $CAStepParent2_phone_number_formatted = "(" + Mid($CAStepParent2_phone_number_raw,2,3) + ") " +
+                  Mid($CAStepParent2_phone_number_raw,5,3) + "-" + Mid($CAStepParent2_phone_number_raw,8,4);
+            $CAStepParent2_intl_number_formatted = Mid($CAStepParent2_phone_number_raw,0,2))))));
+
+&lt;/trans&gt;</konga.string>
+</Entity>

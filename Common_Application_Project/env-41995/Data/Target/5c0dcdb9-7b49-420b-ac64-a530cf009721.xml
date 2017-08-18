@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="5c0dcdb9-7b49-420b-ac64-a530cf009721" Name="InterestFile">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="InterestFile_[date][time].txt"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00C56LLTD+Ycek3HORd0v/7/0HCgttcCIxs0XivCqhjclFGo3g6y2QjGT5QjHVdi2emgZfM/KDuy4qjBms8iPHActh/q/50rerCzak1AetJuqwOexU8lnoMO7u+fwroWc8"/>
+        <Item enc="true" key="login" value="$00OPCcVNACWFdblFY/2hnqb1WE9L5aecXC/8NxX9EEpHU="/>
+        <Item enc="true" key="password" value="$00WophL21iPNZDhzHPg7b0IpMkTP9FHHERWKJhqZwvkMo="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="0dbc9255-527b-4fa2-b5d2-3b51aff03f8c" Name="Backup_CommonTrans_Textfile">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="Original_CommonTrans_[date][time].txt"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00llLvimW9Z9almI/DLs848sJ7QvOFMXlZVxKaoU+MO1Lq6LJUs0s0KbWVVtV6SH8lHf9SD0MytyRr1GOeQK3/BiIKkRmdrC90wW8jR3rwwbKfDqGjzBybcGeN4Jn+V54D"/>
+        <Item enc="true" key="login" value="$00vO/VEjNEvYFfSkRNrO0OhJkc8ox1DO8pnDl8YtLF1EA="/>
+        <Item enc="true" key="password" value="$00LHpzC/iXRvjkoHPYq7W1nKbWrDhrAeiqozjPQng8CJ8="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

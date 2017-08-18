@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Transformation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="91f2a447-4862-4650-855a-6d91939501dc" Name="ContactExists_InsertApplicationRequest">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="natureofsource" value="Flat"/>
+    <Item key="natureoftarget" value="Tree"/>
+    <Item key="NoSourceDataUsedInMapping" value="0"/>
+    <Item key="output_function_id" value="308f3ab5-5204-46bd-987d-bb4d12dfb71b"/>
+    <Item key="saleforce_wizard_role" value="CREATE|REQUEST"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Application__c"/>
+    <Item key="salesforce_partner_wizard" value="1"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="sfdc_edgemart_structure_guid" value=""/>
+    <Item key="source_text_doc" value="e6a014d0-8069-4192-b0fc-50a4ca6f9edd"/>
+    <Item key="source_type_id" value="1"/>
+    <Item key="target_type_id" value="12"/>
+    <Item key="transformation_id" value="91f2a447-4862-4650-855a-6d91939501dc"/>
+  </Properties>
+  <InputStructure docId="e6a014d0-8069-4192-b0fc-50a4ca6f9edd"/>
+  <OutputStructure wsCallId="308f3ab5-5204-46bd-987d-bb4d12dfb71b"/>
+  <Mappings>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.header$DebuggingHeader$categories.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$create$Application__c.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$create$Application__c.Student__r.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction./PRECONDITION/	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+$jitterbit.web_service_call.number_of_retries = 3;
+$jitterbit.web_service_call.retry_wait_seconds = 30;
+true
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$SessionHeader$sessionId$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+Get("__Salesforce.SessionID.6079dcdd-c71b-4f49-a2bf-38aba01638e2")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$MruHeader$updateMru$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllowFieldTruncationHeader$allowFieldTruncation$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DisableFeedTrackingHeader$disableFeedTracking$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$StreamingEnabledHeader$streamingEnabled$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllOrNoneHeader$allOrNone$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$allowSave$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$includeRecordDetails$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$runAsCurrentUser$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerAutoResponseEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerOtherEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerUserEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c./PRECONDITION/	&lt;trans&gt;
+// Fields from input file
+$SFStudentId = SalesforceID;
+$CACommonAppId = Common_App_ID;
+$CAStudentTypeRaw = Student_Type;
+$ApplicationDate = Application_Submit_Date;
+// Student Type
+$CAAppStudentType = "";
+If($CAStudentTypeRaw == "Freshman",$CAAppStudentType = "First Time UG");
+
+$CAFirstName = First_name;
+$CAMiddleName = Middle_name;
+$CALastName = Last_name;
+$CASuffix = Suffix;
+$CAFormerLastName = Former_last_name;
+$CAPreferredName = Preferred_name;
+$CAEmailAddress = Email_Address;
+
+// Citizenship values
+$Citizenship = Citizenship;
+
+// Domestic or International
+$CADomOrIntl = "";
+If(Citizenship == "Non-Resident Alien",
+   $CADomOrIntl = "International",$CADomOrIntl = "Domestic");
+// Admission Type
+$CAAdmissionType = "";
+If(Citizenship == "Non-Resident Alien",
+   $CAAdmissionType = "International",$CAAdmissionType = "Standard");
+
+$CAVisaType = VisaType;
+$CAVisaDateIssued = VisaDate;
+
+// Parent Step Parent information
+$CAParentMaritalStatus = ParentMaritalStatus;
+//$CAPermHome = Permanent_home;
+$CAParent1Type = Parent1Type;
+$CAParent1Living = Parent1Living;
+$CAParent1Title = Parent1Title;
+$CAParent1FirstName = Parent1FirstName;
+$CAParent1Middle = Parent1Middle;
+$CAParent1LastName = Parent1LastName;
+$CAParent1Suffix = Parent1Suffix;
+$CAParent1Email = Parent1Email;
+$CAParent1_phone_number_raw = Parent1_phone_number;
+$CAParent1Address_Same = Parent1Address_Same;
+v_p1_workspace = Trim(Parent1Address1);
+IF(Length(Parent1Address2)&gt;0,v_p1_workspace=v_p1_workspace+"\n"+TRIM(Parent1Address2));
+$CAParent1Address = v_p1_workspace;
+$CAParent1City = Parent1City;
+$CAParent1State = Parent1State;
+$CAParent1Zip = Parent1Zip;
+$CAParent1Country = Parent1Country;
+$CAParent1Position = Parent1Position;
+$CAParent1Employer = Parent1Employer;
+$CAParent1EdLevel = Parent1EdLevel;
+$CAParent1College1CeebCode = Parent1College1CeebCode;
+$CAParent1College1CeebName = Parent1College1CeebName;
+$CAParent1College1Degree1 = Parent1College1Degree1;
+$CAParent1College1Year = Parent1College1Year;
+
+$CAParent2Type = Parent2Type;
+$CAParent2Living = Parent2Living;
+$CAParent2Title = Parent2Title;
+$CAParent2FirstName = Parent2FirstName;
+$CAParent2Middle = Parent2Middle;
+$CAParent2LastName = Parent2LastName;
+$CAParent2Suffix = Parent2Suffix;
+$CAParent2Email = Parent2Email;
+$CAParent2_phone_number_raw = Parent2_phone_number;
+$CAParent2Address_Same = Parent2Address_Same;
+v_p2_workspace = Trim(Parent2Address1);
+IF(Length(Parent2Address2)&gt;0,v_p2_workspace=v_p2_workspace+"\n"+TRIM(Parent2Address2));
+$CAParent2Address = v_p2_workspace;
+$CAParent2City = Parent2City;
+$CAParent2State = Parent2State;
+$CAParent2Zip = Parent2Zip;
+$CAParent2Country = Parent2Country;
+$CAParent2Position = Parent2Position;
+$CAParent2Employer = Parent2Employer;
+$CAParent2EdLevel = Parent2EdLevel;
+$CAParent2College1CeebCode = Parent2College1CeebCode;
+$CAParent2College1CeebName = Parent2College1CeebName;
+$CAParent2College1Degree1 = Parent2College1Degree1;
+$CAParent2College1Year = Parent2College1Year;
+
+$CAStepParent1Type = StepParent1Type;
+$CAStepParent1Title = StepParent1Title;
+$CAStepParent1FirstName = StepParent1FirstName;
+$CAStepParent1Middle = StepParent1Middle;
+$CAStepParent1LastName = StepParent1LastName;
+$CAStepParent1Suffix = StepParent1Suffix;
+$CAStepParent1Email = StepParent1Email;
+$CAStepParent1_phone_number_raw = StepParent1_phone_number;
+$CAStepParent1Address_Same = StepParent1Address_Same;
+v_sp1_workspace = Trim(StepParent1Address1);
+IF(Length(StepParent1Address2)&gt;0,v_sp1_workspace=v_sp1_workspace+"\n"+TRIM(StepParent1Address2));
+$CAStepParent1Address = v_sp1_workspace;
+$CAStepParent1City = StepParent1City;
+$CAStepParent1State = StepParent1State;
+$CAStepParent1Zip = StepParent1Zip;
+$CAStepParent1Country = StepParent1Country;
+$CAStepParent1Position = StepParent1Position;
+$CAStepParent1Employer = StepParent1Employer;
+$CAStepParent1EdLevel = StepParent1EdLevel;
+$CAStepParent1College1CeebCode = StepParent1College1CeebCode;
+$CAStepParent1College1CeebName = StepParent1College1CeebName;
+$CAStepParent1College1Degree1 = StepParent1College1Degree1;
+$CAStepParent1College1Year = StepParent1College1Year;
+
+$CAStepParent2Type = StepParent2Type;
+$CAStepParent2Title = StepParent2Title;
+$CAStepParent2FirstName = StepParent2FirstName;
+$CAStepParent2Middle = StepParent2Middle;
+$CAStepParent2LastName = StepParent2LastName;
+$CAStepParent2Suffix = StepParent2Suffix;
+$CAStepParent2Email = StepParent2Email;
+$CAStepParent2_phone_number_raw = StepParent2_phone_number;
+$CAStepParent2Address_Same = StepParent2Address_Same;
+v_sp2_workspace = Trim(StepParent2Address1);
+IF(Length(StepParent2Address2)&gt;0,v_sp2_workspace=v_sp2_workspace+"\n"+TRIM(StepParent2Address2));
+$CAStepParent2Address = v_sp2_workspace;
+$CAStepParent2City = StepParent2City;
+$CAStepParent2State = StepParent2State;
+$CAStepParent2Zip = StepParent2Zip;
+$CAStepParent2Country = StepParent2Country;
+$CAStepParent2Position = StepParent2Position;
+$CAStepParent2Employer = StepParent2Employer;
+//$CAStepParent2EdLevel = ;
+$CAStepParent2College1CeebCode = StepParent2College1CeebCode;
+$CAStepParent2College1CeebName = StepParent2College1CeebName;
+$CAStepParent2College1Degree1 = StepParent2College1Degree1;
+$CAStepParent2College1Year = StepParent2College1Year;
+
+// Sibling information
+$CASibling1FullName = Sibling1FullName;
+$CASibling1Age = Sibling1Age;
+$CASibling1CollegeCeebName = Sibling1CollegeCeebName;
+$CASibling2FullName = Sibling2FullName;
+$CASibling2Age = Sibling2Age;
+$CASibling2CollegeCeebName = Sibling2CollegeCeebName;
+$CASibling3FullName = Sibling3FullName;
+$CASibling3Age = Sibling3Age;
+$CASibling3CollegeCeebName = Sibling3CollegeCeebName;
+$CASibling4FullName = Sibling4FullName;
+$CASibling4Age = Sibling4Age;
+$CASibling4CollegeCeebName = Sibling4CollegeCeebName;
+// ACT information
+$CAACTNumber_raw = ACTNumber;
+If(IsInteger($CAACTNumber_raw),$CAACTNumber = $CAACTNumber_raw,$CAACTNumber = 0);
+$CAACTCompositeScore = ACTCompositeScore;
+$CAACTEnglishScore = ACTEnglishScore;
+$CAACTMathScore = ACTMathScore;
+$CAACTReadingScore = ACTReadingScore;
+$CAACTScienceScore = ACTScienceScore;
+$CAACTWritingScore = ACTWritingScore;
+
+// SAT information
+$CASATNumber_raw = SATNumber;
+If(IsInteger($CASATNumber_raw),$CASATNumber = $CASATNumber_raw,$CASATNumber = 0);
+$CASATCRScore = SATCRScore;
+$CASATMathScore = SATMathScore;
+$CASATWritingScore = SATWritingScore;
+
+// TOEFL information
+$CATOEFLNumber_raw = TOEFLNumber;
+If(IsInteger($CATOEFLNumber_raw) &gt; 0,$CATOEFLNumber = $CATOEFLNumber_raw,$CATOEFLNumber = 0);
+$CATOEFLReadingScore = TOEFLReadingScore;
+$CATOEFLSpeaking = TOEFLSpeaking;
+$CATOEFLListening = TOEFLListening;
+$CATOEFLWriting = TOEFLWriting;
+$CATOEFLPaperNumber = TOEFLPaperNumber;
+$CATOEFLPaperReading = TOEFLPaperReading;
+$CATOEFLPaperListening = TOEFLPaperListening;
+$CATOEFLPaperTWEScore = TOEFLPaperTWEScore;
+
+// IELTS information
+$CAIELTSNumber_raw = IELTSNumber;
+If(IsInteger($CAIELTSNumber_raw) &gt; 0,$CAIELTSNumber = $CAIELTSNumber_raw,$CAIELTSNumber = 0);
+$CAIELTSReadingScore = IELTSReadingScore;
+$CAIELTSListening = IELTSListening;
+$CAIELTSWriting = IELTSWriting;
+$CAIELTSSpeaking = IELTSSpeaking;
+
+// School information
+$SFHighSchoolId = HighSchoolId;
+$CAHighSchoolCEEB = HighSchoolCEEB;
+$CAHighSchoolName = HighSchoolName;
+$CAHighSchoolCity = HighSchoolCity;
+$CAHighSchoolState = HighSchoolState;
+$CAHighSchoolCountry = HighSchoolCountry;
+$CABoardingSchool = BoardingSchool;
+
+$CAOnCampus = OnCampus;
+$CAClassRank = ClassRank;
+$CAClassSize = ClassSize;
+$CACumGPA = CumGPA;
+
+$CAOthSchoolNumber = OthSchoolNumber;
+$CASchool2City = School2City;
+$CASchool2State = School2State;
+$CASchool2Country = School2Country;
+$CASchool2CeebCode = School2CeebCode;
+$CASchool2CeebName = School2CeebName;
+$CASchool2TypeCode = School2TypeCode;
+
+$CASchool3City = School3City;
+$CASchool3State = School3State;
+$CASchool3Country = School3Country;
+$CASchool3CeebCode = School3CeebCode;
+$CASchool3CeebName = School3CeebName;
+$CASchool3TypeCode = School3TypeCode;
+
+$CAGEDDate_raw = GEDDate;
+
+$College1FromDate = "";
+$College1ToDate = "";
+$College2FromDate = "";
+$College2ToDate = "";
+$College3FromDate = "";
+$College3ToDate = "";
+
+$CACollegesAttended = CollegesAttended;
+$CACollege1City = College1City;
+$CACollege1State = College1State;
+$CACollege1Country = College1Country;
+$CACollege1CeebCode = College1CeebCode;
+$CACollege1CeebName = College1CeebName;
+$CACollege1Course = College1Course;
+If(Length(College1FromDate)==7,
+  $College1FromDate = CVTDate(Mid(College1FromDate,0,2)+"15"+Mid(College1FromDate,3,4),"mmddyyyy","mm/dd/yyyy"));
+If(Length(College1ToDate)==7,
+  $College1ToDate = CVTDate(Mid(College1ToDate,0,2)+"15"+Mid(College1ToDate,3,4),"mmddyyyy","mm/dd/yyyy"));
+
+$CACollege2City = College2City;
+$CACollege2State = College2State;
+$CACollege2Country = College2Country;
+$CACollege2CeebCode = College2CeebCode;
+$CACollege2CeebName = College2CeebName;
+$CACollege2Course = College2Course;
+If(Length(College2FromDate)==7,
+  $College2FromDate = CVTDate(Mid(College2FromDate,0,2)+"15"+Mid(College2FromDate,3,4),"mmddyyyy","mm/dd/yyyy"));
+If(Length(College2ToDate)==7,
+  $College2ToDate = CVTDate(Mid(College2ToDate,0,2)+"15"+Mid(College2ToDate,3,4),"mmddyyyy","mm/dd/yyyy"));
+
+$CACollege3City = College3City;
+$CACollege3State = College3State;
+$CACollege3Country = College3Country;
+$CACollege3CeebCode = College3CeebCode;
+$CACollege3CeebName = College3CeebName;
+$CACollege3Course = College3Course;
+If(Length(College3FromDate)==7,
+  $College3FromDate = CVTDate(Mid(College3FromDate,0,2)+"15"+Mid(College3FromDate,3,4),"mmddyyyy","mm/dd/yyyy"));
+If(Length(College3ToDate)==7,
+  $College3ToDate = CVTDate(Mid(College3ToDate,0,2)+"15"+Mid(College3ToDate,3,4),"mmddyyyy","mm/dd/yyyy"));
+
+$CAHonorsNumber = HonorsNumber;
+$CAHonors1Title = Honors1Title;
+$CAHonors1Grade = Honors1Grade;
+$CAHonors1Recognition = Honors1Recognition;
+$CAHonors2Title = Honors2Title;
+$CAHonors2Grade = Honors2Grade;
+$CAHonors2Recognition = Honors2Recognition;
+$CAHonors3Title = Honors3Title;
+$CAHonors3Grade = Honors3Grade;
+$CAHonors3Recognition = Honors3Recognition;
+$CAHonors4Title = Honors4Title;
+$CAHonors4Grade = Honors4Grade;
+$CAHonors4Recognition = Honors4Recognition;
+$CAHonors5Title = Honors5Title;
+$CAHonors5Grade = Honors5Grade;
+$CAHonors5Recognition = Honors5Recognition;
+
+$CACareerInterests = CareerInterests;
+$CAHighestDegree = HighestDegree;
+
+$CAActivity1Type = Activity1Type;
+$CAActivity1Name = Activity1Name;
+$CAActivity1Honors = Activity1Honors;
+$CAActivity1Grade = Activity1Grade;
+$CAActivity1ContInCollege = Activity1ContInCollege;
+$CAActivity1Term = Activity1Term;
+$CAActivity1Hours = Activity1Hours;
+$CAActivity1Week = Activity1Week;
+$CAActivity1Details = Activity1Details;
+
+$CAActivity2Type = Activity2Type;
+$CAActivity2Name = Activity2Name;
+$CAActivity2Honors = Activity2Honors;
+$CAActivity2Grade = Activity2Grade;
+$CAActivity2ContInCollege = Activity2ContInCollege;
+$CAActivity2Term = Activity2Term;
+$CAActivity2Hours = Activity2Hours;
+$CAActivity2Week = Activity2Week;
+$CAActivity2Details = Activity2Details;
+
+$CAActivity3Type = Activity3Type;
+$CAActivity3Name = Activity3Name;
+$CAActivity3Honors = Activity3Honors;
+$CAActivity3Grade = Activity3Grade;
+$CAActivity3ContInCollege = Activity3ContInCollege;
+$CAActivity3Term = Activity3Term;
+$CAActivity3Hours = Activity3Hours;
+$CAActivity3Week = Activity3Week;
+$CAActivity3Details = Activity3Details;
+
+$CAActivity4Type = Activity4Type;
+$CAActivity4Name = Activity4Name;
+$CAActivity4Honors = Activity4Honors;
+$CAActivity4Grade = Activity4Grade;
+$CAActivity4ContInCollege = Activity4ContInCollege;
+$CAActivity4Term = Activity4Term;
+$CAActivity4Hours = Activity4Hours;
+$CAActivity4Week = Activity4Week;
+$CAActivity4Details = Activity4Details;
+
+$CAActivity5Type = Activity5Type;
+$CAActivity5Name = Activity5Name;
+$CAActivity5Honors = Activity5Honors;
+$CAActivity5Grade = Activity5Grade;
+$CAActivity5ContInCollege = Activity5ContInCollege;
+$CAActivity5Term = Activity5Term;
+$CAActivity5Hours = Activity5Hours;
+$CAActivity5Week = Activity5Week;
+$CAActivity5Details = Activity5Details;
+
+$CAActivity6Type = Activity6Type;
+$CAActivity6Name = Activity6Name;
+$CAActivity6Honors = Activity6Honors;
+$CAActivity6Grade = Activity6Grade;
+$CAActivity6ContInCollege = Activity6ContInCollege;
+$CAActivity6Term = Activity6Term;
+$CAActivity6Hours = Activity6Hours;
+$CAActivity6Week = Activity6Week;
+$CAActivity6Details = Activity6Details;
+
+$CAActivity7Type = Activity7Type;
+$CAActivity7Name = Activity7Name;
+$CAActivity7Honors = Activity7Honors;
+$CAActivity7Grade = Activity7Grade;
+$CAActivity7ContInCollege = Activity7ContInCollege;
+$CAActivity7Term = Activity7Term;
+$CAActivity7Hours = Activity7Hours;
+$CAActivity7Week = Activity7Week;
+$CAActivity7Details = Activity7Details;
+
+$CAActivity8Type = Activity8Type;
+$CAActivity8Name = Activity8Name;
+$CAActivity8Honors = Activity8Honors;
+$CAActivity8Grade = Activity8Grade;
+$CAActivity8ContInCollege = Activity8ContInCollege;
+$CAActivity8Term = Activity8Term;
+$CAActivity8Hours = Activity8Hours;
+$CAActivity8Week = Activity8Week;
+$CAActivity8Details = Activity8Details;
+
+$CAActivity9Type = Activity9Type;
+$CAActivity9Name = Activity9Name;
+$CAActivity9Honors = Activity9Honors;
+$CAActivity9Grade = Activity9Grade;
+$CAActivity9ContInCollege = Activity9ContInCollege;
+$CAActivity9Term = Activity9Term;
+$CAActivity9Hours = Activity9Hours;
+$CAActivity9Week = Activity9Week;
+$CAActivity9Details = Activity9Details;
+
+$CAActivity10Type = Activity10Type;
+$CAActivity10Name = Activity10Name;
+$CAActivity10Honors = Activity10Honors;
+$CAActivity10Grade = Activity10Grade;
+$CAActivity10ContInCollege = Activity10ContInCollege;
+$CAActivity10Term = Activity10Term;
+$CAActivity10Hours = Activity10Hours;
+$CAActivity10Week = Activity10Week;
+$CAActivity10Details = Activity10Details;
+
+$CASchoolDiscipline = SchoolDiscipline;
+$CACriminalHistory = CriminalHistory;
+$CAAdditionalInfoQuestion = AdditionalInfoQuestion;
+$CAAdditionalInfoQuestion=replace($CAAdditionalInfoQuestion,HexToString('A0'),'');
+$CARequiredExplanation = RequiredExplanation;
+$CARequiredExplanation=replace($CARequiredExplanation,HexToString('A0'),'');
+$CAStudentStatus_raw = StudentStatus;
+$CAPreferredStartTerm = PreferredStartTerm;
+$CAAdmissionPlan = AdmissionPlan;
+$CAPreferredResidence = PreferredResidence;
+$CAFinancialAid = FinancialAid;
+$CAAcad1Question1 = Acad1Question1;
+$CAAcad1Question2 = Acad1Question2;
+$CAStudentType2 = StudentType2;
+$CAGenderIdentity = GenderIdentity;
+$CASATRWScore = SATWRScore;
+$CASATNewMathScore = SATNewMathScore;
+
+$CAEssayOptions = EssayOptions;
+$CAEssayClean = EssayQuestion;
+
+
+// Entry term
+$Entry_Term = "";
+CASE(PreferredStartTerm == "Fall 2017", $Entry_Term = "201710",
+     PreferredStartTerm == "Spring 2017", $Entry_Term = "201730", 
+     PreferredStartTerm == "Fall 2018", $Entry_Term = "201810", 
+     PreferredStartTerm == "Spring 2018", $Entry_Term = "201830", 
+     PreferredStartTerm == "Fall 2019", $Entry_Term = "201910", 
+     PreferredStartTerm == "Spring 2019", $Entry_Term = "201930", 
+     PreferredStartTerm == "Fall 2020", $Entry_Term = "202010", 
+     PreferredStartTerm == "Spring 2020", $Entry_Term = "202030");
+
+RunScript("sc.6e4281b5-54b4-47ea-bf3f-ec6428b82571");
+RunScript("sc.94ac5a10-4d7f-4a96-a907-d315d3fe7347");
+RunScript("sc.8e352ab5-ac8c-4624-972d-6d1411610137");
+RunScript("sc.83c9f083-62db-4c00-bc62-3a14f944362a");
+RunScript("sc.f5845cd4-aba9-41cf-b89d-eb0c1eb6c187");
+RunScript("sc.fd89d758-61da-4a68-99ae-df8b356a85fa");
+
+If(Length(SalesforceID) &gt; 0,true,false);
+//true;
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_Composite__c$	&lt;trans&gt;
+If(IsInteger(ACTCompositeScore),ACTCompositeScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_English__c$	&lt;trans&gt;
+If(IsInteger(ACTEnglishScore),ACTEnglishScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_Math__c$	&lt;trans&gt;
+If(IsInteger(ACTMathScore),ACTMathScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_Reading__c$	&lt;trans&gt;
+If(IsInteger(ACTReadingScore),ACTEnglishScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_Science__c$	&lt;trans&gt;
+If(IsInteger(ACTScienceScore),ACTScienceScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_Test_Date__c$	&lt;trans&gt;
+ACTDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.ACT_Writing__c$	&lt;trans&gt;
+If(IsInteger(ACTWritingScore),ACTWritingScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Active_Application__c$	&lt;trans&gt;
+true
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Admission_Type__c$	&lt;trans&gt;
+If($CADomOrIntl=="Domestic","Standard","International")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Application_Date__c$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+GetUTCFormattedDate(Application_Submit_Date, "UTC", false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Application_Source__c$	&lt;trans&gt;
+"Common App Web"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Application_Status_Date__c$	&lt;trans&gt;
+$CurrentRunDateCommApp
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Application_Status__c$	&lt;trans&gt;
+"Incomplete - Items Missing"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Athletic_Activities__c$	&lt;trans&gt;
+$AthleticInterest
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Athletic_Additional_Comments__c$	&lt;trans&gt;
+$AthleticAddComments
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Class_Rank__c$	&lt;trans&gt;
+If(IsInteger(ClassRank),ClassRank)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_1_CEEB_Code__c$	&lt;trans&gt;
+If(IsInteger(College1CeebCode),College1CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_1_From_Date__c$	&lt;trans&gt;
+If(Length(College1CeebName) &gt; 0,$College1FromDate)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_1_To_Date__c$	&lt;trans&gt;
+If(Length(College1CeebName) &gt; 0,$College1ToDate)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_2_CEEB_Code__c$	&lt;trans&gt;
+If(IsInteger(College2CeebCode),College2CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_2_From_Date__c$	&lt;trans&gt;
+If(Length(College2CeebName),$College2FromDate)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_2_To_Date__c$	&lt;trans&gt;
+If(Length(College2CeebName) &gt; 0,$College2ToDate)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_3_CEEB_Code__c$	&lt;trans&gt;
+If(IsInteger(College3CeebCode),College3CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_3_From_Date__c$	&lt;trans&gt;
+If(Length(College3CeebName),$College3FromDate)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.College_or_University_3_To_Date__c$	&lt;trans&gt;
+If(Length(College3CeebName),$College3ToDate)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Common_App_ID__c$	&lt;trans&gt;
+Common_App_ID
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Convicted_of_an_offense__c$	&lt;trans&gt;
+If(CriminalHistory=="Yes",true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Date_Visa_Issued__c$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+GetUTCFormattedDate(VisaDate, "UTC", false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Dismissed_suspended_put_on_Probation__c$	&lt;trans&gt;
+SchoolDiscipline
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Entry_Term__c$	&lt;trans&gt;
+CASE(PreferredStartTerm == "Fall 2017", "201710",
+     PreferredStartTerm == "Spring 2017", "201730", 
+     PreferredStartTerm == "Fall 2018", "201810", 
+     PreferredStartTerm == "Spring 2018", "201830", 
+     PreferredStartTerm == "Fall 2019", "201910", 
+     PreferredStartTerm == "Spring 2019", "201930", 
+     PreferredStartTerm == "Fall 2020", "202010", 
+     PreferredStartTerm == "Spring 2020", "202030")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Explanation_of_Conviction_Long__c$	&lt;trans&gt;
+RequiredExplanation
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Full_or_Part_Time__c$	&lt;trans&gt;
+If(StudentStatus=="Full-time","Full-Time","Part-Time")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Graduating_Class_Size__c$	&lt;trans&gt;
+If(IsInteger(ClassSize),ClassSize)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Major_1__c$	&lt;trans&gt;
+Acad1Question1
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Major_2__c$	&lt;trans&gt;
+Acad1Question2
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Need_Financial_Aid__c$	&lt;trans&gt;
+If(FinancialAid=="Yes",true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Non_Athletic_Activities__c$	&lt;trans&gt;
+$NonAthleticInterest
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Non_Athletic_Additional_Comments__c$	&lt;trans&gt;
+$NonAthleticComments
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_1_CEEB__c$	&lt;trans&gt;
+If(IsInteger(School2CeebCode),School2CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_1_Date_Entered__c$	&lt;trans&gt;
+$School2FromDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_1_Date_Leaving__c$	&lt;trans&gt;
+$School2ToDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_1_Location__c$	&lt;trans&gt;
+School2City
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_1_Name__c$	&lt;trans&gt;
+School2CeebName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_2_CEEB__c$	&lt;trans&gt;
+If(IsInteger(School3CeebCode),School3CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_2_Date_Entered__c$	&lt;trans&gt;
+$School3FromDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_2_Date_Leaving__c$	&lt;trans&gt;
+$School3ToDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_2_Location__c$	&lt;trans&gt;
+School3City
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Other_Sec_School_2_Name__c$	&lt;trans&gt;
+School3CeebName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_CEEB__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1College1CeebCode,StepParent1College1CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_City__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1City,StepParent1City)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_College_Grad__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,
+   Parent1EdLevel,
+   StepParent1EdLevel)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_College__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1College1CeebName,StepParent1College1CeebName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Country__c$	&lt;trans&gt;
+If(Length(Parent1LastName),
+  If(Parent1Country=="United States of America","United States",Parent1Country),
+  If(StepParent1Country=="United States of America","United States",StepParent1Country))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Degree_Year__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,
+   If(IsInteger(Parent1College1Year),Parent1College1Year),
+   If(IsInteger(StepParent1College1Year),StepParent1College1Year))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Degree__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1College1Degree1,StepParent1College1Degree1)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Email__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Email,StepParent1Email)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Employer__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Employer,StepParent1Employer)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_First_Name__c$	&lt;trans&gt;
+If(Length(Parent1FirstName) &gt; 0,Parent1FirstName,StepParent1FirstName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Home_Phone__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,$CAParent1_phone_number_formatted,$CAStepParent1_phone_number_formatted)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Last_Name__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1LastName,StepParent1LastName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Living__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Living)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Middle__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Middle,StepParent1Middle)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Position_Title__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Position,StepParent1Position)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Postal_Code__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Zip,StepParent1Zip)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Prefix__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Title,StepParent1Title)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_State__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1State,StepParent1State)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Street_1__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,$CAP1Address,$CAStepP1Address)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Suffix__c$	&lt;trans&gt;
+If(Length(Parent1LastName),Parent1Suffix,StepParent1Suffix)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_1_Type__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,
+  If(Parent1Type == "Mother" || Parent1Type == "Father",
+    Parent1Type),
+  If(StepParent1Type == "Step-mother",
+    "Step Parent",
+    If(StepParent1Type == "Step-father",
+      "Step Parent")))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_CEEB__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2College1CeebCode,StepParent2College1CeebCode)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_City__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2City,StepParent2City)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_College_Grad__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2EdLevel)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_College__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2College1CeebName,StepParent2College1CeebName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Country__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,
+   If(Parent2Country == "United States of America","United States",Parent2Country),
+   If(StepParent2Country == "United States of America","United States",StepParent2Country))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Degree_Year__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,
+   If(IsInteger(Parent2College1Year),Parent2College1Year),
+   If(IsInteger(StepParent2College1Year),StepParent2College1Year))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Degree__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2College1Degree1,StepParent2College1Degree1)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Email__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Email,StepParent2Email)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Employer__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Employer,StepParent2Employer)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_First_Name__c$	&lt;trans&gt;
+If(Length(Parent2FirstName) &gt; 0,Parent2FirstName,StepParent2FirstName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Last_Name__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2LastName,StepParent2LastName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Living__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Living)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Middle__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Middle,StepParent2Middle)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Phone__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,$CAParent2_phone_number_formatted,$CAStepParent2_phone_number_formatted)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Position_Title__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Position,StepParent2Position)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Postal_Code__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Zip,StepParent2Zip)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_State__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2State,StepParent2State)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Street_Address__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,$CAP2Address,$CAStepP2Address)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Title__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Title,StepParent2Title)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parent_Guardian_2_Type__c$	&lt;trans&gt;
+If(Length(Parent2LastName),
+  If(Parent2Type == "Mother" || Parent2Type == "Father",
+    Parent2Type),
+  If(StepParent2Type == "Step-mother",
+    "Step Parent",
+    If(StepParent2Type == "Step-father",
+      "Step Parent")))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Parents_Marital_Status__c$	&lt;trans&gt;
+ParentMaritalStatus
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Personal_Statement_Checklist__c$	&lt;trans&gt;
+If(Length(EssayQuestion) &gt; 0,true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Personal_Statement_Date_Checklist__c$	&lt;trans&gt;
+If(Length(EssayQuestion) &gt; 0,$CurrentRunDateCommApp)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Personal_Statement__c$	&lt;trans&gt;
+$CAEssayClean
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.RecordTypeId$	&lt;trans&gt;
+If($CADomOrIntl == "Domestic","012G0000000qgrEIAQ",
+  If($CADomOrIntl == "International","012G0000000qgr9IAA"))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Residence__c$	&lt;trans&gt;
+"Resident on Campus"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SAT_Reasoning_Critical_Reading__c$	&lt;trans&gt;
+If(IsInteger(SATCRScore),SATCRScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SAT_Reasoning_Math__c$	&lt;trans&gt;
+If(IsInteger(SATMathScore),SATMathScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SAT_Reasoning_Test_Date__c$	&lt;trans&gt;
+SatCRDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SAT_Reasoning_Writing__c$	&lt;trans&gt;
+If(IsInteger(SATWritingScore),SATWritingScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SRT_SAT_ERW_Section__c$	&lt;trans&gt;
+If(IsInteger(SATWRScore),SATWRScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SRT_SAT_Math_Section__c$	&lt;trans&gt;
+If(IsInteger(SATNewMathScore),SATNewMathScore)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.SRT_SAT_Test_Date__c$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+GetUTCFormattedDateTime(SatRWdate, "UTC", false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_1_Age__c$	&lt;trans&gt;
+If(IsInteger(Sibling1Age),Sibling1Age)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_1_College__c$	&lt;trans&gt;
+Sibling1CollegeCeebName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_1_Name__c$	&lt;trans&gt;
+Sibling1FullName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_2_Age__c$	&lt;trans&gt;
+If(IsInteger(Sibling2Age),Sibling2Age)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_2_College__c$	&lt;trans&gt;
+Sibling2CollegeCeebName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_2_Name__c$	&lt;trans&gt;
+Sibling2FullName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_3_Age__c$	&lt;trans&gt;
+If(IsInteger(Sibling3Age),Sibling3Age)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_3_College__c$	&lt;trans&gt;
+Sibling3CollegeCeebName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_3_Name__c$	&lt;trans&gt;
+Sibling3FullName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_4_Age__c$	&lt;trans&gt;
+If(IsInteger(Sibling4Age),Sibling4Age)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_4_College__c$	&lt;trans&gt;
+Sibling4CollegeCeebName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Sibling_4_Name__c$	&lt;trans&gt;
+Sibling4FullName
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Special_Accomplishments__c$	&lt;trans&gt;
+$Special_Interests
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Student_Type__c$	&lt;trans&gt;
+$CAAppStudentType
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Student__c$	&lt;trans&gt;
+SalesforceID
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Submitting_IELTS__c$	&lt;trans&gt;
+If(Length(IELTSNumber) &gt; 0,true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Submitting_TOEFL__c$	&lt;trans&gt;
+If(Length(TOEFLNumber) &gt; 0,true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Submitting_an_ACT__c$	&lt;trans&gt;
+If(Length(ACTNumber),true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Submitting_an_SAT__c$	&lt;trans&gt;
+If(Length(SATNumber) &gt; 0,true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Supporting_Short_Statement__c$	&lt;trans&gt;
+AdditionalInfoQuestion
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Test_Scores_Date_checklist__c$	&lt;trans&gt;
+$ToeflReaddate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.US_Perm_Citizenship_Country_1__c$	&lt;trans&gt;
+Citiezenships
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.US_Veteran__c$	&lt;trans&gt;
+if(USArmedForces==0,false,true)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Visa_Type__c$	&lt;trans&gt;
+VisaType
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Work_Experience__c$	&lt;trans&gt;
+$WorkExperience
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Years_Lived_outside__c$	&lt;trans&gt;
+If(IsInteger(LiveOutsideUS),LiveOutsideUS)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$create$Application__c.Years_in_Country__c$	&lt;trans&gt;
+If(IsInteger(LiveInUS),LiveInUS)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+  </Mappings>
+  <InvalidMappings/>
+  <RenamedNodes/>
+</Entity>

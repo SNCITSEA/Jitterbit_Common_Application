@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project name="Common_Application_Project" projectId="e8ef7388-608d-4edb-9ed7-68261deed6a6">
+  <EntityType name="WebServiceCall">
+    <Folder entityId="4ac393bd-221e-4225-ab37-19ec57ca50fb" name="Jitterbit Connect™">
+      <Folder entityId="c3825da6-99a4-4ef4-824a-10cbe19889c4" name="Salesforce Upserts">
+        <Entity entityId="81382325-821f-4dbe-89af-047d0edc5720" name="SFDC Upsert"/>
+      </Folder>
+      <Folder entityId="191e3e4b-73e0-4b68-b7af-c860d88bf15a" name="Salesforce Updates">
+        <Entity entityId="611b69f8-4caa-443d-af33-e284f3a82670" name="SFDC Update"/>
+      </Folder>
+      <Folder entityId="d5f075ef-5cd9-4456-90a9-9100f5d66fe2" name="Salesforce Inserts">
+        <Entity entityId="308f3ab5-5204-46bd-987d-bb4d12dfb71b" name="SFDC Create"/>
+      </Folder>
+    </Folder>
+  </EntityType>
+  <EntityType name="Operation">
+    <Folder entityId="7ddd4326-6a68-497c-9bc6-44a24cd05253" name="Workflows">
+      <Entity entityId="2cce565e-a220-459a-9ee2-5407464223a9" name="Workflow_Undergrad_Process"/>
+      <Entity entityId="05c74276-6c66-4db0-83f4-fa2463291306" name="Workflow_Transfer_Process"/>
+      <Entity entityId="93ae765e-6658-405d-b72b-66b391f1a378" name="Workflow_Contact_Exist_Process"/>
+    </Folder>
+    <Folder entityId="d6e1eb8a-5755-4cb6-b9f4-aa448279a6c2" name="Jitterbit Connect™">
+      <Folder entityId="949e7a99-b639-49a5-ace5-799dbf672077" name="Salesforce Updates">
+        <Entity entityId="4dd847b2-91a5-445b-a51c-5f3394fd3346" name="Common_App_UpdateContacts"/>
+      </Folder>
+      <Folder entityId="2f944645-bd60-4a89-a105-57429e5a2748" name="Salesforce Upserts">
+        <Entity entityId="f6d8ec61-fa30-4287-9265-e3ce0ff20d34" name="Upsert_Interests"/>
+      </Folder>
+      <Folder entityId="58dd2d12-9c64-4eda-8be3-cce800a99d6c" name="Salesforce Inserts">
+        <Entity entityId="b50421f4-2c1d-4ab0-911c-71a7a37f1395" name="Common_App_InsertUndergradContacts"/>
+        <Entity entityId="01fa8a8a-46c1-42bf-95e9-faf961d06a8a" name="NewContact_Insert_Applications"/>
+        <Entity entityId="887f5d2e-6e65-469d-b2e7-9cd6a886b159" name="ContactExists_InsertApplication"/>
+        <Entity entityId="afc2600e-d45a-4eae-a5c1-2eacfc0a57e6" name="CommonTransInsertContacts"/>
+        <Entity entityId="81fcd719-72c2-4341-98b8-2b7dbe743daf" name="Common_App_InsertContactsUnchecked"/>
+        <Entity entityId="fcfced4f-cdcb-4699-8be0-ca9d9af2cad2" name="CommonApp_InsertTasks"/>
+        <Entity entityId="7ca3a616-5bdf-40c5-901f-9e444945a1d6" name="CommonAppTransInsertApplication"/>
+        <Entity entityId="f2955381-0e49-4a35-bdda-d0bbca455754" name="ContactPushExists_InsertApplication"/>
+      </Folder>
+    </Folder>
+    <Entity entityId="01560716-f2d1-4762-9209-bbed0b6ed034" name="Rename_FY_InputFile"/>
+    <Entity entityId="9e02b0f7-5abd-4f00-971e-4c51897decff" name="Rename_TR_InputFile"/>
+  </EntityType>
+  <EntityType name="SalesforceCreate">
+    <Entity entityId="babd3068-490e-4f82-9ede-19327739e9f4" name="Common_App_InsertUndergradContacts"/>
+    <Entity entityId="2513a24b-cd4a-4b58-b210-1f24ccc6d2e6" name="Insert Applications"/>
+    <Entity entityId="d1d5509f-4d29-49d4-99b0-b78fe565da51" name="ContactExists_InsertApplication"/>
+    <Entity entityId="b69e4f63-de55-423c-938e-3ac318cf5e0c" name="CommonTransInsertContacts"/>
+    <Entity entityId="bc3a7698-3ffa-494e-b81b-523ce8e87ca8" name="Common_App_InsertContactsUnchecked"/>
+    <Entity entityId="a278b9eb-054c-45da-8dd1-53d92d55a2e5" name="CommonApp_InsertTasks"/>
+    <Entity entityId="9bd77332-704e-4f60-9a89-8608d5f78993" name="CommonAppTransInsertApplication"/>
+    <Entity entityId="43bc4c50-1af8-4d44-a941-29ac7791b397" name="ContactPushExists_InsertApplication"/>
+  </EntityType>
+  <EntityType name="Script">
+    <Entity entityId="feed7627-d98e-45b6-95c4-277feed7709c" name="CommonApp_Primary_Setup"/>
+    <Entity entityId="9bac6c08-d825-4bab-9618-26756a81ac09" name="SF_HighSchool_Lookup"/>
+    <Entity entityId="83f5eb75-3d10-48cf-882a-3a9ffccf300b" name="Check_Religion_Valid"/>
+    <Entity entityId="94ac5a10-4d7f-4a96-a907-d315d3fe7347" name="Convert_Phone_Numbers"/>
+    <Entity entityId="d14ad2a7-65d2-4d17-b0c9-7a5e6b068d51" name="Check_for_Contact"/>
+    <Entity entityId="f9f46cbb-cbb1-47b3-b9cc-f4361972c49d" name="Date_Translations"/>
+    <Entity entityId="ff20db9a-fb11-4ecf-94cf-729bdc812243" name="Write_Contact_Exists_File"/>
+    <Entity entityId="a64aab8d-330a-472c-922c-61e6081ddea4" name="Application_Primary_Setup"/>
+    <Entity entityId="f187f2e1-60d2-4b61-a846-1885585d598e" name="Write_Contact_Exists_Header"/>
+    <Entity entityId="6e4281b5-54b4-47ea-bf3f-ec6428b82571" name="Build_Activities_And_WorkExperience"/>
+    <Entity entityId="e96cd51e-9d36-4c25-ac8d-013d505a7634" name="Build_Race_And_Old_Ethnicity"/>
+    <Entity entityId="71840245-e041-4379-909c-ff789b4abcaa" name="CommonApp_Secondary_Setup"/>
+    <Entity entityId="83c9f083-62db-4c00-bc62-3a14f944362a" name="Check_for_Application"/>
+    <Entity entityId="9f3b291c-43c7-44e8-a85c-6a924d82ace0" name="Write_Interests_Header"/>
+    <Entity entityId="fd89d758-61da-4a68-99ae-df8b356a85fa" name="Write_Interests_File"/>
+    <Entity entityId="01c2815a-e5ac-40b4-abc1-35e3e9b4f3a8" name="CommonApp_Transfer_Setup"/>
+    <Entity entityId="e6c4b9d0-cd76-41ab-a927-42cd5e91ecdd" name="Transfer_Date_Translations"/>
+    <Entity entityId="5246ac2e-68aa-4c21-82a8-5f946aca3737" name="CommonAppUnderGradCleanup"/>
+    <Entity entityId="c6d5da09-a5d5-45ff-bade-f2dfc3f37925" name="CommonAppTransferCleanup"/>
+    <Entity entityId="d609d5f6-6d03-48c3-bf8c-731571210e7b" name="Check_for_Task"/>
+    <Entity entityId="900b74c1-0867-4d06-ba5f-385a0b2f49fd" name="Task_Primary_Setup"/>
+    <Entity entityId="8e352ab5-ac8c-4624-972d-6d1411610137" name="Build_Special_Interests"/>
+    <Entity entityId="2b5c09e7-03e1-44ba-8247-0f3e8f6fe732" name="Build_Prior_School_for_Transfers"/>
+    <Entity entityId="fdf12b46-eff5-4336-882e-c26b5996a983" name="Workflow_Undergrad_Process"/>
+    <Entity entityId="7ac75041-28a0-48bb-9761-09c593e0c971" name="Workflow_Transfer_Process"/>
+    <Entity entityId="5bb1a784-89b1-4847-b7a7-13be1ad1cb95" name="Rename_FY_InputFile_script"/>
+    <Entity entityId="b16fb929-1cf0-4582-8661-574c7cfe1027" name="Rename_TR_InputFile_script"/>
+    <Entity entityId="71201001-bbf9-4bda-82a6-33c14fa00fbb" name="Workflow_Contact_Exist_Script"/>
+    <Entity entityId="e677e3a3-585d-4797-a159-f723ea3f584f" name="Build_Interest_Values"/>
+    <Entity entityId="f5845cd4-aba9-41cf-b89d-eb0c1eb6c187" name="Check_for_Interest"/>
+    <Entity entityId="5dfdd2b2-7db7-482e-abf2-f4c22593791d" name="Build_Interest_String"/>
+  </EntityType>
+  <EntityType name="EmailMessage">
+    <Entity entityId="c27874ae-9c4d-4cc2-ad8f-36594f74432c" name="Application_Process_Email"/>
+    <Entity entityId="73350cf5-0d37-4308-9d92-d5264fe6bb10" name="debug_Process_Email"/>
+  </EntityType>
+  <EntityType name="SalesforceConnector">
+    <Entity entityId="6079dcdd-c71b-4f49-a2bf-38aba01638e2" name="darlene.blaney@snc.edu.test1 (Sandbox)"/>
+  </EntityType>
+  <EntityType name="Source">
+    <Entity entityId="5f0374eb-06f1-4d20-b25a-f8dc9072c962" name="Common_App_TxtFile"/>
+    <Entity entityId="4f2013d8-b847-47ad-934a-0ff9158dd5e1" name="Application_CSVfile"/>
+    <Entity entityId="7fe37f2d-43f2-4830-8055-de10f1dbbea6" name="ContactExist_Application"/>
+    <Entity entityId="067e90a7-5331-4b6e-8f74-9d08a6cbf590" name="Contact_Exists"/>
+    <Entity entityId="c1c3aa8f-6b0c-48cf-91d8-dc1eafc67e02" name="CommonApp_Transfer_Text"/>
+    <Entity entityId="84b1ea6a-dc51-43b9-bc5a-44d2034028b9" name="RawDataFileSource"/>
+    <Entity entityId="b2b4bf0f-f3d1-4dc3-a135-84d81186213e" name="TaskBuildSource"/>
+    <Entity entityId="8ac8c2f4-2fdb-4161-a8d0-ec5e4477479a" name="Transfer_Application_csv"/>
+    <Entity entityId="14bc23a2-2762-4eac-8df5-f1e11814ae1e" name="Override_Contact_Exists"/>
+    <Entity entityId="cbb07540-d4b4-4b08-ab25-34a36803e3db" name="ContactPush_Application"/>
+    <Entity entityId="e75ed9bc-f72f-45b2-a745-24f6f18a193a" name="InterestBuildSource"/>
+  </EntityType>
+  <EntityType name="SalesforceUpdate">
+    <Entity entityId="a86d9479-25c7-4503-b32c-1681ebc560b8" name="Common_App_UpdateContacts"/>
+  </EntityType>
+  <EntityType name="Target">
+    <Entity entityId="73827892-4512-410a-9c2c-3e9400d65eed" name="Contact_Success_Inserts"/>
+    <Entity entityId="b49e5e7d-7831-4a5f-add8-f5e45f8b7ea0" name="Contact_Exists"/>
+    <Entity entityId="5c0dcdb9-7b49-420b-ac64-a530cf009721" name="InterestFile"/>
+    <Entity entityId="532a15dc-7e18-4581-8a78-80f5554f9477" name="testTarget"/>
+    <Entity entityId="9dfe3f52-d4c0-4835-90cd-d79b1f88928c" name="Trans_Contact_Success_Inserts"/>
+    <Entity entityId="6ce79601-1615-4157-9b2b-d912124ab434" name="Contact_Push_Success_Inserts"/>
+    <Entity entityId="6def2259-bca3-44b0-851c-d2892a127125" name="Backup_CommonApp_Textfile"/>
+    <Entity entityId="0dbc9255-527b-4fa2-b5d2-3b51aff03f8c" name="Backup_CommonTrans_Textfile"/>
+  </EntityType>
+  <EntityType name="SalesforceUpsert">
+    <Entity entityId="6a90e9ff-e346-4e45-9f5a-db3ab375ddca" name="Upsert_Interests"/>
+  </EntityType>
+  <EntityType name="Transformation">
+    <Folder entityId="6d0ffa08-d3b8-4ab2-a01d-52a09f054400" name="Jitterbit Connect™">
+      <Folder entityId="48b6050e-2e52-4acd-a56c-b544b1bab411" name="Salesforce Inserts">
+        <Entity entityId="d017d4d6-a7e4-44b8-8e4d-da754ca090ab" name="Common_App_InsertUndergradContacts Request"/>
+        <Entity entityId="456b3e3b-2c31-4f8f-a77f-fb9bf7fa2b49" name="Common_App_InsertUndergradContacts Response"/>
+        <Entity entityId="54048d73-25da-4493-9d7f-6042efb6d990" name="InsertApplicationsRequest"/>
+        <Entity entityId="33eb2259-74cc-4fc3-93d2-bcc2c8346287" name="InsertApplicationsResponse"/>
+        <Entity entityId="91f2a447-4862-4650-855a-6d91939501dc" name="ContactExists_InsertApplicationRequest"/>
+        <Entity entityId="f2acb5e7-70be-4e3d-a703-1242fe0cf6f9" name="ContactExists_InsertApplication Response"/>
+        <Entity entityId="46a2d3d3-633d-40ef-823d-edf079780aaf" name="CommonTransInsertContacts Request"/>
+        <Entity entityId="72258c0d-ef24-489d-b2bb-1bcbfd83aea3" name="CommonTransInsertContacts Response"/>
+        <Entity entityId="b2dd102f-be8b-4840-bb5f-87048e6b0e9c" name="Common_App_InsertContactsUnchecked Request"/>
+        <Entity entityId="d09e06f3-1b71-4982-bd45-6ed2e978a983" name="Common_App_InsertContactsUnchecked Response"/>
+        <Entity entityId="be561e40-24fa-416f-b1ab-1f69fada87d0" name="CommonApp_InsertTasks Request"/>
+        <Entity entityId="8ef5be43-a7d5-4fa3-908a-618302d927e7" name="CommonApp_InsertTasks Response"/>
+        <Entity entityId="93a2756e-d2f5-4387-ab7b-297df4b4f4dc" name="CommonAppTransInsertApplication Request"/>
+        <Entity entityId="792210ca-07f8-4903-bc8d-952e0d3214d3" name="CommonAppTransInsertApplication Response"/>
+        <Entity entityId="2eae82c0-7864-4c99-a55a-bb65c9af19ca" name="ContactPushExists_InsertApplicationRequest"/>
+        <Entity entityId="a924ad05-f81d-454d-b903-70b45533cc9b" name="ContactPushExists_InsertApplication Response"/>
+      </Folder>
+      <Folder entityId="eb8e489f-91e6-4f87-8cc2-f7c110659461" name="Salesforce Upserts">
+        <Entity entityId="ffec969c-cb77-4081-ba99-561a26c52aa3" name="Upsert_Interests_Request"/>
+        <Entity entityId="2078d781-fb61-42c2-a3c6-d72f92acc63a" name="Upsert_Interests Response"/>
+      </Folder>
+      <Folder entityId="42b80e1f-7615-4859-8ddd-5cde0739fa47" name="Salesforce Updates">
+        <Entity entityId="1f748164-e8d4-4114-a1de-4c9eb90d900e" name="Common_App_UpdateContacts Request"/>
+        <Entity entityId="88526fd6-daec-46d4-90b6-acb5729e9d17" name="Common_App_UpdateContacts Response"/>
+      </Folder>
+    </Folder>
+  </EntityType>
+  <EntityType name="Document">
+    <Folder entityId="28f376e3-b966-4766-803f-aa48bec17002" name="Jitterbit Connect™">
+      <Folder entityId="25f03bf2-e861-4f88-a279-26abcb46088d" name="Salesforce Upserts">
+        <Entity entityId="8c0b6651-aad0-4dbd-90de-b31eefeedd39" name="SFDC Upsert Response"/>
+      </Folder>
+      <Folder entityId="da04fd34-8813-494e-933b-f2d6fa10b886" name="Salesforce Updates">
+        <Entity entityId="05a20657-ad38-4c1e-88c2-e44747f7e9ff" name="SFDC Update Response"/>
+      </Folder>
+      <Folder entityId="b8ece4ab-cdf1-4856-be29-f0bc38844a57" name="Salesforce Inserts">
+        <Entity entityId="ebbb0e16-8132-4904-a403-56d8d2c248f7" name="SFDC Insert Response"/>
+      </Folder>
+    </Folder>
+    <Entity entityId="d3bf2f2f-df6b-43bd-ad08-799b89012cfc" name="Common_App_Undergrad"/>
+    <Entity entityId="e04af8cb-76b9-4ac5-b282-72834c88b894" name="Common_App_Transfers"/>
+    <Entity entityId="03a03894-1c4d-4b0d-92ad-9a9f2217b022" name="Contact_Create_Application"/>
+    <Entity entityId="e6a014d0-8069-4192-b0fc-50a4ca6f9edd" name="ContactExist_Create_Application"/>
+    <Entity entityId="ab51223f-3ffd-4f64-926e-08bd802584da" name="InterestFile"/>
+    <Entity entityId="0a7d4fb3-8ae9-40f7-a051-5a6090109282" name="Contact_Trans_Create_Application"/>
+    <Entity entityId="8bbf975b-38d0-4de9-aa43-691cd0d899b8" name="ContactPush_Create_Application"/>
+  </EntityType>
+</Project>

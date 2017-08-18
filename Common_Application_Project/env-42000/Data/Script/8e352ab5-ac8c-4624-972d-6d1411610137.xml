@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="8e352ab5-ac8c-4624-972d-6d1411610137" Name="Build_Special_Interests">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="8e352ab5-ac8c-4624-972d-6d1411610137"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$Special_Interests = "";
+
+If(Length($CAHonors1Title) &gt; 0,
+   $Special_Interests = $Special_Interests +
+          $CAHonors1Title + "; " + $CAHonors1Grade + "; " + $CAHonors1Recognition + ";\n");
+
+If(Length($CAHonors2Title) &gt; 0,
+   $Special_Interests = $Special_Interests +
+          $CAHonors2Title + "; " + $CAHonors2Grade + "; " + $CAHonors2Recognition + ";\n");
+
+If(Length($CAHonors3Title) &gt; 0,
+   $Special_Interests = $Special_Interests +
+          $CAHonors3Title + "; " + $CAHonors3Grade + "; " + $CAHonors3Recognition + ";\n");
+
+If(Length($CAHonors4Title) &gt; 0,
+   $Special_Interests = $Special_Interests +
+          $CAHonors4Title + "; " + $CAHonors4Grade + "; " + $CAHonors4Recognition + ";\n");
+
+If(Length($CAHonors5Title) &gt; 0,
+   $Special_Interests = $Special_Interests +
+          $CAHonors5Title + "; " + $CAHonors5Grade + "; " + $CAHonors5Recognition + ";\n");
+&lt;/trans&gt;</konga.string>
+</Entity>

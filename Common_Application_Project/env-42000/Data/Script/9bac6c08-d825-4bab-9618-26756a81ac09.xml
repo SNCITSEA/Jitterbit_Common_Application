@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="9bac6c08-d825-4bab-9618-26756a81ac09" Name="SF_HighSchool_Lookup">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="9bac6c08-d825-4bab-9618-26756a81ac09"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$SFHighSchoolId="";
+//$CAHighSchoolCEEB = "142973";
+$HSErrorMsg = "";
+HSsoql = "select id from account where CEEB_Code__c = " + Quote($CAHighSchoolCEEB);
+
+eval($SFHighSchoolId = SfLookup("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",HSsoql),$HSErrorMsg=GetLastError()) ;
+
+
+If(Length($HSErrorMsg) &gt; 0,
+   $HSErrMessage = "Place error message here " + $HSErrorMsg + ': ' + $CAHighSchoolCEEB + "/" + $CAHighSchoolName);
+&lt;/trans&gt;</konga.string>
+</Entity>

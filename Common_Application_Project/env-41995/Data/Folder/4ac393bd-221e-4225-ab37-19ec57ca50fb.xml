@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Folder">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="4ac393bd-221e-4225-ab37-19ec57ca50fb" Name="Jitterbit Connect™">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="folder_id" value="4ac393bd-221e-4225-ab37-19ec57ca50fb"/>
+    <Item key="protected" value="false"/>
+  </Properties>
+</Entity>

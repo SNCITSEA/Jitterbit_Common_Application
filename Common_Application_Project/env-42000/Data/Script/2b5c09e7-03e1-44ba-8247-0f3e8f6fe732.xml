@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="2b5c09e7-03e1-44ba-8247-0f3e8f6fe732" Name="Build_Prior_School_for_Transfers">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="2b5c09e7-03e1-44ba-8247-0f3e8f6fe732"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$Prior_Schools = "";
+
+If(Length($CACollege1CeebName) &gt; 0,
+   $Prior_Schools = $Prior_Schools + $CACollege1CeebName;
+   If(Length($CACollege1Degree) &gt; 0,
+       $Prior_Schools = $Prior_Schools + " (Degree Type - " + $CACollege1Degree + "); ",
+       $Prior_Schools = $Prior_Schools + "; ";) );
+
+If(Length($CACollege2CeebName) &gt; 0,
+   $Prior_Schools = $Prior_Schools + $CACollege2CeebName;
+   If(Length($CACollege2Degree) &gt; 0,
+       $Prior_Schools = $Prior_Schools + " (Degree Type - " + $CACollege2Degree + "); ",
+       $Prior_Schools = $Prior_Schools + "; ";) );
+
+If(Length($CACollege3CeebName) &gt; 0,
+   $Prior_Schools = $Prior_Schools + $CACollege3CeebName;
+   If(Length($CACollege3Degree) &gt; 0,
+       $Prior_Schools = $Prior_Schools + " (Degree Type - " + $CACollege3Degree + "); ",
+       $Prior_Schools = $Prior_Schools + "; ";) );
+&lt;/trans&gt;</konga.string>
+</Entity>

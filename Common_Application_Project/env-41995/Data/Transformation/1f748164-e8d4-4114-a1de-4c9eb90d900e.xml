@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Transformation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="1f748164-e8d4-4114-a1de-4c9eb90d900e" Name="Common_App_UpdateContacts Request">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="natureofsource" value="Flat"/>
+    <Item key="natureoftarget" value="Tree"/>
+    <Item key="NoSourceDataUsedInMapping" value="0"/>
+    <Item key="output_function_id" value="611b69f8-4caa-443d-af33-e284f3a82670"/>
+    <Item key="saleforce_wizard_role" value="UPDATE|REQUEST"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Contact"/>
+    <Item key="salesforce_partner_wizard" value="1"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="sfdc_edgemart_structure_guid" value=""/>
+    <Item key="source_text_doc" value="e6a014d0-8069-4192-b0fc-50a4ca6f9edd"/>
+    <Item key="source_type_id" value="1"/>
+    <Item key="target_type_id" value="12"/>
+    <Item key="transformation_id" value="1f748164-e8d4-4114-a1de-4c9eb90d900e"/>
+  </Properties>
+  <InputStructure docId="e6a014d0-8069-4192-b0fc-50a4ca6f9edd"/>
+  <OutputStructure wsCallId="611b69f8-4caa-443d-af33-e284f3a82670"/>
+  <Mappings>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.header$DebuggingHeader$categories.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.header$OwnerChangeOptions$options.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$update$Contact.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$update$Contact.Account.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$update$Contact.College__r.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$update$Contact.High_School__r.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$update$Contact.Referred_By__r.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">[root$transaction.body$update$Contact.ReportsTo.]	[]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction./PRECONDITION/	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+$jitterbit.web_service_call.number_of_retries = 3;
+$jitterbit.web_service_call.retry_wait_seconds = 30;
+true
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$SessionHeader$sessionId$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+Get("__Salesforce.SessionID.6079dcdd-c71b-4f49-a2bf-38aba01638e2")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$MruHeader$updateMru$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllowFieldTruncationHeader$allowFieldTruncation$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DisableFeedTrackingHeader$disableFeedTracking$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$StreamingEnabledHeader$streamingEnabled$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$AllOrNoneHeader$allOrNone$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$allowSave$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$includeRecordDetails$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$DuplicateRuleHeader$runAsCurrentUser$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerAutoResponseEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerOtherEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.header$EmailHeader$triggerUserEmail$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+false
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact./PRECONDITION/	&lt;trans&gt;
+IF((Permanent_Country != "United States") &amp;&amp; (Citizenship != "Citizen"),
+   $CADomOrIntl = "International", $CADomOrIntl = "Domestic");
+
+$GradYear = CVTDate(Graduation_Date,"?m/dd/yyyy","yyyy");
+$CAReligion_raw = Religion;
+
+// Phone numbers
+$CAPreferred_phone_number_raw = Preferred_phone_number;
+$CAAlternate_phone_number_raw = Alternate_phone_number;
+$CAParent1_phone_number_raw = Parent1_phone_number;
+$CAParent2_phone_number_raw = Parent2_phone_number;
+$CAStepParent1_phone_number_raw = StepParent1_phone_number;
+$CAStepParent2_phone_number_raw = StepParent2_phone_number;
+
+RunScript("sc.83f5eb75-3d10-48cf-882a-3a9ffccf300b");
+RunScript("sc.94ac5a10-4d7f-4a96-a907-d315d3fe7347");
+
+// Address formatting
+v_oth_workspace = Permanent_Address1;
+IF(Length(Permanent_Address2)&gt;0,v_oth_workspace=v_oth_workspace+"\n"+TRIM(Permanent_Address2));
+IF(Length(Permanent_Address3)&gt;0,v_oth_workspace=v_oth_workspace+"\n"+TRIM(Permanent_Address3));
+$CAPermAddress = v_oth_workspace;
+
+$CASSN_raw = SSN;
+// SSN
+$CASSN = "";
+IF((Length($CASSN_Raw) &gt; 0) &amp;&amp; (Length($CASSN_Raw) &gt; 9),
+   $CASSN = Replace($CASSN_Raw,"-",""));
+
+If(Length(SalesforceID) &gt; 0,true,false);
+//true;
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Id$	&lt;trans&gt;
+SalesforceID
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Birth_City__c$	&lt;trans&gt;
+Birth_City
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Birth_Country__c$	&lt;trans&gt;
+Birth_Country
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Birth_State__c$	&lt;trans&gt;
+Birth_State
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Birthdate$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+GetUTCFormattedDate(Birthdate, "UTC", false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Citizenship__c$	&lt;trans&gt;
+Citizenship
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Copy_to_Primary_Address_From__c$	&lt;trans&gt;
+"Permanent (Other) Address"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Current_County_Code__c$	&lt;trans&gt;
+Permanent_County
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Desired_Entry_Term__c$	&lt;trans&gt;
+CASE(PreferredStartTerm == "Fall 2017", "201710",
+     PreferredStartTerm == "Spring 2017", "201730", 
+     PreferredStartTerm == "Fall 2018", "201810", 
+     PreferredStartTerm == "Spring 2018", "201830", 
+     PreferredStartTerm == "Fall 2019", "201910", 
+     PreferredStartTerm == "Spring 2019", "201930", 
+     PreferredStartTerm == "Fall 2020", "202010", 
+     PreferredStartTerm == "Spring 2020", "202030")
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Desired_Major_2__c$	&lt;trans&gt;
+Acad1Question2
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Desired_Major__c$	&lt;trans&gt;
+Acad1Question1
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Dismissed_suspended_put_on_Probation__c$	&lt;trans&gt;
+If(SchoolDiscipline=="Yes",true,false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Domestic_Or_International__c$	&lt;trans&gt;
+$CADomOrIntl
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.First_Language__c$	&lt;trans&gt;
+Language1
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Gender_Identity_Details__c$	&lt;trans&gt;
+GenderIdentity
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Gender__c$	&lt;trans&gt;
+Gender
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.High_School_GED_Year__c$	&lt;trans&gt;
+GEDDate
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.High_School_Grad_Date__c$	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+GetUTCFormattedDate(Graduation_Date, "UTC", false)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.High_School_Grad_Year__c$	&lt;trans&gt;
+$GradYear
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.High_School_Other__c$	&lt;trans&gt;
+If(IsNull(HighSchoolId),HighSchoolName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.High_School__c$	&lt;trans&gt;
+HighSchoolId
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.HomePhone$	&lt;trans&gt;
+$CAPreferred_phone_number_formatted
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Intnl_Access_Home_Phone__c$	&lt;trans&gt;
+$CAPreferred_intl_number_formatted
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Intnl_Access_Mobile_Phone__c$	&lt;trans&gt;
+$CAAlternate_intl_number_formatted
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.LastName$	&lt;trans&gt;
+Last_name
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Live_with_Parent_Guardian_1__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,
+  If(Parent1Address_Same==1,true,false),
+  If(StepParent1Address_Same==1,true,false))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Live_with_Parent_Guardian_2__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,
+  If(Parent2Address_Same==1,true,false),
+  If(StepParent2Address_Same==1,true,false))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Middle_Name__c$	&lt;trans&gt;
+Middle_name
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.MobilePhone$	&lt;trans&gt;
+$CAAlternate_phone_number_formatted
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.New_Ethnicity__c$	&lt;trans&gt;
+HispanicLatino
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Nickname__c$	&lt;trans&gt;
+Preferred_name
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Old_Ethnicity__c$	&lt;trans&gt;
+OldEthnicity
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.OtherCity$	&lt;trans&gt;
+Permanent_City
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.OtherCountry$	&lt;trans&gt;
+Permanent_Country
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.OtherPostalCode$	&lt;trans&gt;
+Permanent_Zip
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.OtherState$	&lt;trans&gt;
+Permanent_County2
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.OtherStreet$	&lt;trans&gt;
+$CAPermAddress
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_1_Email__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1Email,StepParent1Email)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_1_FirstName__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1FirstName,StepParent1FirstName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_1_Home_Phone__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,
+    $CAParent1_phone_number_formatted,
+    $CAStepParent1_phone_number_formatted)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_1_Last_Name__c$	&lt;trans&gt;
+If(Length(Parent1LastName) &gt; 0,Parent1LastName,StepParent1LastName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_2_Email__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2Email,StepParent2Email)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_2_FirstName__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2FirstName,StepParent2FirstName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_2_Home_Phone__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,
+  $CAParent2_phone_number_formatted,$CAStepParent2_phone_number_formatted)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Parent_Guardian_2_Last_Name__c$	&lt;trans&gt;
+If(Length(Parent2LastName) &gt; 0,Parent2LastName,StepParent2LastName)
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Primary_Language_Spoken_Proficiency_Leve__c$	&lt;trans&gt;
+Language2Proficiency
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Primary_Language_Spoken__c$	&lt;trans&gt;
+Language2
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Race__c$	&lt;trans&gt;
+Race
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Recruit_Type__c$	&lt;trans&gt;
+"Applicant"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Religion__c$	&lt;trans&gt;
+$CAReligion_raw = Religion;
+If(Length($CAReligion_raw)&gt;0,
+  Case($CAReligion_raw == "Agnostic" || $CAReligion_raw == "Athiest" || $CAReligion_raw == "Wiccan (Pagan)","None",
+    $CAReligion_raw == "Anglican (Episcopal)","Anglican",
+    $CAReligion_raw == "Bahá'í", "Baha'i Faith",
+    $CAReligion_raw == "Caodaiist" || $CAReligion_raw == "Cheondoist" || $CAReligion_raw == "Church of World Messianity" 
+                         || $CAReligion_raw == "Jain" || $CAReligion_raw == "Moravian" || $CAReligion_raw == "Other"
+                         || $CAReligion_raw == "Rastafari" || $CAReligion_raw == "Reformed" || $CAReligion_raw == "Scientology"
+                         || $CAReligion_raw == "Seicho-no-le-ist" || $CAReligion_raw == "Sikh" || $CAReligion_raw == "Taoist"
+                         || $CAReligion_raw == "Tenrikyoist" || $CAReligion_raw == "Yazidi"
+                  ,"Other Religion",
+     $CAReligion_raw == "Christian Scientist", "Christian Science",
+     $CAReligion_raw == "Church of Christ", "Churches of Christ",
+     $CAReligion_raw == "Congregationalist (UCC)", "Congregational",
+     $CAReligion_raw == "Friend (Quaker)", "Society of Friends (Quaker)",
+     $CAReligion_raw == "Jehovah's Witness", "Jehovah's Witnesses",
+     $CAReligion_raw == "Latter-day Saint (Mormon)", "Latter-day Saints (Mormon)",
+     $CAReligion_raw == "Orthodox", "Eastern Christian Orthodox",
+     $CAReligion_raw == "Other - Christian", "Christian",
+     $CAReligion_raw == "Seventh Day Adventist", "Seventh-Day Adventist",
+     $CAReligion_raw == "Unitarian Universalist (UU)", "Unitarian Universalists",
+     $CAReligion_raw == "Baptist", $CAReligion_raw,
+     $CAReligion_raw == "Buddhist", $CAReligion_raw,
+     $CAReligion_raw == "Disciples of Christ", $CAReligion_raw,
+     $CAReligion_raw == "Hindu", $CAReligion_raw,
+     $CAReligion_raw == "Jewish", $CAReligion_raw,
+     $CAReligion_raw == "Lutheran", $CAReligion_raw,
+     $CAReligion_raw == "Methodist", $CAReligion_raw,
+     $CAReligion_raw == "Muslim", $CAReligion_raw,
+     $CAReligion_raw == "Pentecostal", $CAReligion_raw,
+     $CAReligion_raw == "Presbyterian", $CAReligion_raw,
+     $CAReligion_raw == "Roman Catholic", $CAReligion_raw,
+     $CAReligion_raw == "None", $CAReligion_raw));
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.SSN__c$	&lt;trans&gt;
+$CASSN
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.Student_Type__c$	&lt;trans&gt;
+Student_Type
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.npe01__HomeEmail__c$	&lt;trans&gt;
+Email_Address
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.npe01__PreferredPhone__c$	&lt;trans&gt;
+Preferred_Phone
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">root$transaction.body$update$Contact.npe01__Preferred_Email__c$	&lt;trans&gt;
+"Personal"
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+  </Mappings>
+  <InvalidMappings/>
+  <RenamedNodes/>
+</Entity>

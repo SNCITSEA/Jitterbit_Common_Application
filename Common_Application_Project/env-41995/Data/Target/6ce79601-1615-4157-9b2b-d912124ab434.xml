@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="6ce79601-1615-4157-9b2b-d912124ab434" Name="Contact_Push_Success_Inserts">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="NewContactPushApplication_[date][time].txt"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00x+8XLJxc0sD9cfBg5D3mEPUvaZ41nAy1Y/tJPVagrq9Gkr1jHLbfo5rG8NrfiQhXO5VldRFvaWiOij7jlMh3MP1wuyjO6C2G6f+NFraE99PnQaSRPdH/41DKg1/t64Bq"/>
+        <Item enc="true" key="login" value="$00+5WUH5vbXsN7SS13orqo3dVCnUVPcyr+Ar3+IUT1YaI="/>
+        <Item enc="true" key="password" value="$00ihdmPLVLcPtt53OoolL+ayM0LqViH9LdmrEOCImEh2I="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

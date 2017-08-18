@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Document">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="05a20657-ad38-4c1e-88c2-e44747f7e9ff" Name="SFDC Update Response">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="document_id" value="05a20657-ad38-4c1e-88c2-e44747f7e9ff"/>
+    <Item key="format_type_id" value="2"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="text_qualifier" value="&quot;"/>
+  </Properties>
+  <Delimiter value=","/>
+  <Structure>
+    <Properties>
+      <Item key="fixedField" value="0"/>
+    </Properties>
+    <Segment name="" occurenceType="Only Once" parent="_Root" segmentId="0">
+      <Fields>
+        <Field default="" fieldId="1" fixWidth="false" format="" name="response" required="1" type="String"/>
+      </Fields>
+    </Segment>
+  </Structure>
+</Entity>

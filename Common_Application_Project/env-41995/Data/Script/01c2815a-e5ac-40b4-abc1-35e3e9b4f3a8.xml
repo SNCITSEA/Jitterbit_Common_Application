@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="01c2815a-e5ac-40b4-abc1-35e3e9b4f3a8" Name="CommonApp_Transfer_Setup">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_condition_condition_id" value="0"/>
+    <Item key="script_condition_operation_else" value="&quot;&quot;"/>
+    <Item key="script_condition_operation_else_tag" value=""/>
+    <Item key="script_condition_operation_if_true" value="&quot;&quot;"/>
+    <Item key="script_condition_operation_if_true_tag" value=""/>
+    <Item key="script_condition_value" value=""/>
+    <Item key="script_condition_variable" value=""/>
+    <Item key="script_id" value="01c2815a-e5ac-40b4-abc1-35e3e9b4f3a8"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// General Settings
+$CurrentRunDateCommApp=FormatDate((ConvertTimeZone(Now(),"CST","GMT")),"yyyy-mm-ddTHH:MM:SSZ");
+$jitterbit.sfdc.dbsource.sfheader=true;
+$jitterbit.source.text.character_encoding="UTF-8";
+$jitterbit.target.text.character_encoding="UTF-8";
+$DateStamp = CVTDate(Now(),"GeneralDate","yyyymmmddHHMM");
+
+// Single step variable setup 
+$EmailToAdmission="its.ea-auto+Adm@snc.edu,diane.cramer@snc.edu,admit@snc.edu,darlene.blaney@snc.edu";
+$EmailFromAdmission="its.ea-dba+Adm@snc.edu";
+$debugMsgs="";
+
+//Existing Contact output file set up
+$ContactExistFileName = "Contact_Exists_Trans" + $DateStamp + ".txt";
+$WriteFileHeader = "Y";
+
+&lt;/trans&gt;</konga.string>
+</Entity>

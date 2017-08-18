@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="9dfe3f52-d4c0-4835-90cd-d79b1f88928c" Name="Trans_Contact_Success_Inserts">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="NewTransContactApp_[date][time].csv"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00d7A06RPZKY28ir9jaKKFVHc58e1Nw8W7pFAnEV2qQi4nxPn1Z6OC+QsF2iWAR2trvzBnmfwc+BA0r+CN7NjMGVrya+K4reQftglmbNbaJ+JV5iqC84XBPAP1x0IZA+8V"/>
+        <Item enc="true" key="login" value="$001N5KkH1i3qJkMzeApCQ8uf5o9oFM4U73kR1CK8HVxHM="/>
+        <Item enc="true" key="password" value="$00RKFQ7QLc8nco0D/Iw/DApGf6JDJKAwTmT7uvCT7hKVY="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

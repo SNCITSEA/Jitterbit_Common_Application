@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="f187f2e1-60d2-4b61-a846-1885585d598e" Name="Write_Contact_Exists_Header">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="f187f2e1-60d2-4b61-a846-1885585d598e"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+WriteFile("t.b49e5e7d-7831-4a5f-add8-f5e45f8b7ea0", "SalesforceID \t Common_App_ID \t" +
+                "Application_Submit_Date \t Student_Type \t First_name \t Middle_name \t Last_name \t" + 
+                "Former_last_name \t Preferred_name \t Gender \t Birthdate \t Permanent_Address1 \t" +
+                "Permanent_Address2 \t Permanent_Address3 \t Permanent_City \t Permanent_County \t" +
+                "Permanent_State \t Permanent_Zip \t Permanent_Country \t Current_Address1 \t" +
+                "Current_Address2 \t Current_Address3 \t Current_City \t Current_County \t" +
+                "Current_State \t Current_Zip \t Current_Country \t Email_Address \t" + 
+                "Preferred_Phone \t Preferred_phone_number \t Alternate_phone_number \t" +
+                "Religion \t USArmedForces \t HispanicLatino \t Birth_Country \t" + 
+                "Birth_City \t Birth_State \t LiveInUS \t LiveOutsideUS \t Language1 \t" + 
+                "Language1Proficiency \t Language2 \t Language2Proficiency \t Citizenship \t" + 
+                "SSN \t Citizenships \t VisaType \t VisaDate \t ParentMaritalStatus \t" + 
+                "Parent1Type \t Parent1Living \t Parent1Title \t Parent1FirstName \t" + 
+                "Parent1Middle \t Parent1LastName \t Parent1Suffix \t Parent1Email \t" + 
+                "Parent1_phone_number \t Parent1Address_Same \t Parent1Address1 \t" + 
+                "Parent1Address2 \t Parent1City \t Parent1State \t Parent1Zip \t" + 
+                "Parent1Country \t Parent1Position \t Parent1Employer \t Parent1EdLevel \t" + 
+                "Parent1College1CeebCode \t Parent1College1CeebName \t Parent1College1Degree1 \t" + 
+                "Parent1College1Year \t Parent2Type \t Parent2Living \t Parent2Title \t" + 
+                "Parent2FirstName \t Parent2Middle \t Parent2LastName \t Parent2Suffix \t" + 
+                "Parent2Email \t Parent2_phone_number \t Parent2Address_Same \t" + 
+                "Parent2Address1 \t Parent2Address2 \t Parent2City \t Parent2State \t" + 
+                "Parent2Zip \t Parent2Country \t Parent2Position \t Parent2Employer \t" + 
+                "Parent2EdLevel \t Parent2College1CeebCode \t Parent2College1CeebName \t" + 
+                "Parent2College1Degree1 \t Parent2College1Year \t Sibling1FullName \t Sibling1Age \t" + 
+                "Sibling1CollegeCeebName \t Sibling2FullName \t Sibling2Age \t Sibling2CollegeCeebName \t" + 
+                "Sibling3FullName \t Sibling3Age \t Sibling3CollegeCeebName \t Sibling4FullName \t" + 
+                "Sibling4Age \t Sibling4CollegeCeebName \t StepParent1Type \t StepParent1Title \t" + 
+                "StepParent1FirstName \t StepParent1Middle \t StepParent1LastName \t StepParent1Suffix \t" + 
+                "StepParent1Email \t StepParent1_phone_number \t StepParent1Address_Same \t" + 
+                "StepParent1Address1 \t StepParent1Address2 \t StepParent1City \t StepParent1State \t" + 
+                "StepParent1Zip \t StepParent1Country \t StepParent1Position \t StepParent1Employer \t" + 
+                "StepParent1EdLevel \t StepParent1College1CeebCode \t StepParent1College1CeebName \t" + 
+                "StepParent1College1Degree1 \t StepParent1College1Year \t StepParent2Type \t" + 
+                "StepParent2Title \t StepParent2FirstName \t StepParent2Middle \t StepParent2LastName \t" + 
+                "StepParent2Suffix \t StepParent2Email \t StepParent2_phone_number \t" + 
+                "StepParent2Address_Same \t StepParent2Address1 \t StepParent2Address2 \t" + 
+                "StepParent2City \t StepParent2State \t StepParent2Zip \t StepParent2Country \t" + 
+                "StepParent2Position \t StepParent2Employer \t StepParent2College1CeebCode \t" + 
+                "StepParent2College1CeebName \t StepParent2College1Degree1 \t StepParent2College1Year \t" + 
+                "ACTNumber \t ACTCompositeScore \t ACTDate \t ACTEnglishScore \t" + 
+                "ACTMathScore \t ACTReadingScore \t ACTScienceScore \t ACTWritingScore \t" + 
+                "SATNumber \t SATCRScore \t SatCRDate \t SATMathScore \t SATWritingScore \t" + 
+                "TOEFLNumber \t TOEFLReadingScore \t ToeflReaddate \t TOEFLSpeaking \t" + 
+                "TOEFLListening \t TOEFLWriting \t TOEFLPaperNumber \t TOEFLPaperReading \t" + 
+                "ToeflPaperReaddate \t TOEFLPaperListening \t TOEFLPaperTWEScore \t IELTSNumber \t" + 
+                "IELTSReadingScore \t IeltsReaddate \t IELTSListening \t IELTSWriting \t" + 
+                "IELTSSpeaking \t HighSchoolId \t HighSchoolCEEB \t HighSchoolName \t" + 
+                "HighSchoolCity \t HighSchoolState \t HighSchoolCountry \t BoardingSchool \t OnCampus \t" + 
+                "Graduation_Date \t OthSchoolNumber \t School2City \t School2State \t" + 
+                "School2Country \t School2CeebCode \t School2CeebName \t School2TypeCode \t" + 
+                "School2FromDate \t School2ToDate \t School3City \t School3State \t" + 
+                "School3Country \t School3CeebCode \t School3CeebName \t School3TypeCode \t" + 
+                "School3FromDate \t School3ToDate \t GEDDate \t CollegesAttended \t" + 
+                "College1City \t College1State \t College1Country \t College1CeebCode \t" + 
+                "College1CeebName \t College1Course \t College1FromDate \t College1ToDate \t" + 
+                "College2City \t College2State \t College2Country \t College2CeebCode \t" + 
+                "College2CeebName \t College2Course \t College2FromDate \t College2ToDate \t" + 
+                "College3City \t College3State \t College3Country \t College3CeebCode \t" + 
+                "College3CeebName \t College3Course \t College3FromDate \t College3ToDate \t" + 
+                "ClassRank \t ClassSize \t CumGPA \t HonorsNumber \t Honors1Title \t" + 
+                "Honors1Grade \t Honors1Recognition \t Honors2Title \t Honors2Grade \t" + 
+                "Honors2Recognition \t Honors3Title \t Honors3Grade \t Honors3Recognition \t" + 
+                "Honors4Title \t Honors4Grade \t Honors4Recognition \t Honors5Title \t" + 
+                "Honors5Grade \t Honors5Recognition \t CareerInterests \t HighestDegree \t" + 
+                "Activity1Type \t Activity1Name \t Activity1Honors \t Activity1Grade \t" + 
+                "Activity1ContInCollege \t Activity1Term \t Activity1Hours \t Activity1Week \t" + 
+                "Activity1Details \t Activity2Type \t Activity2Name \t Activity2Honors \t" + 
+                "Activity2Grade \t Activity2ContInCollege \t Activity2Term \t Activity2Hours \t" + 
+                "Activity2Week \t Activity2Details \t Activity3Type \t Activity3Name \t" + 
+                "Activity3Honors \t Activity3Grade \t Activity3ContInCollege \t Activity3Term \t" + 
+                "Activity3Hours \t Activity3Week \t Activity3Details \t Activity4Type \t" + 
+                "Activity4Name \t Activity4Honors \t Activity4Grade \t Activity4ContInCollege \t" + 
+                "Activity4Term \t Activity4Hours \t Activity4Week \t Activity4Details \t" + 
+                "Activity5Type \t Activity5Name \t Activity5Honors \t Activity5Grade \t" + 
+                "Activity5ContInCollege \t Activity5Term \t Activity5Hours \t Activity5Week \t" + 
+                "Activity5Details \t Activity6Type \t Activity6Name \t Activity6Honors \t" + 
+                "Activity6Grade \t Activity6ContInCollege \t Activity6Term \t Activity6Hours \t" + 
+                "Activity6Week \t Activity6Details \t Activity7Type \t Activity7Name \t" + 
+                "Activity7Honors \t Activity7Grade \t Activity7ContInCollege \t Activity7Term \t" + 
+                "Activity7Hours \t Activity7Week \t Activity7Details \t Activity8Type \t" + 
+                "Activity8Name \t Activity8Honors \t Activity8Grade \t Activity8ContInCollege \t" + 
+                "Activity8Term \t Activity8Hours \t Activity8Week \t Activity8Details \t" + 
+                "Activity9Type \t Activity9Name \t Activity9Honors \t Activity9Grade \t" + 
+                "Activity9ContInCollege \t Activity9Term \t Activity9Hours \t Activity9Week \t" + 
+                "Activity9Details \t Activity10Type \t Activity10Name \t Activity10Honors \t" + 
+                "Activity10Grade \t Activity10ContInCollege \t Activity10Term \t Activity10Hours \t" + 
+                "Activity10Week \t Activity10Details \t EssayOptions \t EssayQuestion \t" + 
+                "SchoolDiscipline \t CriminalHistory \t AdditionalInfoQuestion \t RequiredExplanation \t" + 
+                "StudentStatus \t PreferredStartTerm \t AdmissionPlan \t PreferredResidence \t" + 
+                "FinancialAid \t Acad1Question1 \t Acad1Question2 \t StudentType2 \t" + 
+                "GenderIdentity \t SATRWScore \t SatRWdate \t SATNewMathScore \t SatNewMathDate \t" +
+                "Race\tOldEthnicity\tSuffix\tContactMatch\tSFFirstName\tSFLastName\tSFNickName\tSFEmail\t" +
+                "SFBirthdate\tSFHomePhone\tSFCity\tSFPostalCode\tSFSSN\tSFAdditionalPrograms\tSFEmployer\t" +
+                "SFDesiredEntryTerm\tSFActiveApplicant"
+                 + "\n" 
+             ,$ContactExistFileName );
+&lt;/trans&gt;</konga.string>
+</Entity>

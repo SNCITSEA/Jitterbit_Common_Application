@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="5dfdd2b2-7db7-482e-abf2-f4c22593791d" Name="Build_Interest_String">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="5dfdd2b2-7db7-482e-abf2-f4c22593791d"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// Athletic interests
+$Filearr = "";
+$SFarr = "";
+$FinalAthleticString = "";
+//$InterestAthletic = "Golf;Golf;Baseball;Football;";
+//$SFIntAthletic = "Baseball;Tennis;";
+$Filearr = Split($InterestAthletic,";");
+aLoop = 0;
+While(Length($Filearr) &gt; aLoop,
+  test1String = $Filearr[aLoop];
+  If(CountSubString($FinalAthleticString,test1String) &gt; 0,
+     $FinalAthleticString = $FinalAthleticString,
+     $FinalAthleticString = $FinalAthleticString + test1String + ";");
+  aLoop = aLoop + 1);
+$SFarr = Split($SFIntAthletic,";");
+bloop = 0;
+While(Length($SFarr) &gt; bloop,
+  test2string = $SFarr[bloop];
+  If(CountSubString($FinalAthleticString,test2string) &gt; 0,
+     $FinalAthleticString = $FinalAthleticString,
+     $FinalAthleticString = $FinalAthleticString + test2String + ";");
+  bloop = bloop + 1);
+// Other Interest
+$File1arr = "";
+$SF1arr = "";
+$FinalOtherString = "";
+$SFIntOther = "";
+//$InterestOther = "Art;";
+//$SFIntOther = "Archery;Bowling";
+$SF1arr = Split($SFIntOther,";");
+cLoop = 0;
+While(Length($SF1arr) &gt; cLoop,
+  test3string = $SF1arr[cLoop];
+  If(CountSubString($FinalOtherString,test3string),
+    $FinalOtherString = $FinalOtherString,
+    $FinalOtherString = $FinalOtherString + test3string + ";");
+  cLoop = cLoop + 1);
+$File1arr = Split($InterestOther,";");
+dLoop = 0;
+While(Length($File1arr) &gt; dLoop,
+  test4string = $File1arr[dLoop];
+  If(CountSubString($FinalOtherString,test4string) &gt; 0,
+    $FinalOtherString = $FinalOtherString,
+    $FinalOtherString = $FinalOtherString + test4string + ";");
+  dLoop = dLoop + 1);
+// Additional interests
+$File2arr = "";
+$SF2arr = "";
+$FinalAdditionalString = "";
+//$InterestAdditional = "Boxing;Diving;";
+//$SFIntAdditional = "Boxing;";
+$File2arr = Split($InterestAdditional,";");
+eLoop = 0;
+While(Length($File2arr) &gt; eLoop,
+  test5string = $File2arr[eLoop];
+  If(CountSubString($FinalAdditionalString,test5string),
+    $FinalAdditionalString = $FinalAdditionalString,
+    $FinalAdditionalString = $FinalAdditionalString + test5string + ";");
+  eLoop = eLoop + 1);
+$SF2arr = Split($SFIntAdditional,";");
+fLoop = 0;
+While(Length($SF2arr) &gt; fLoop,
+  test6string = $SF2arr[fLoop];
+  If(CountSubString($FinalAdditionalString,test6string),
+    $FinalAdditionalString = $FinalAdditionalString,
+    $FinalAdditionalString = $FinalAdditionalString + test6string + ";");
+  fLoop = fLoop + 1);
+
+&lt;/trans&gt;</konga.string>
+</Entity>

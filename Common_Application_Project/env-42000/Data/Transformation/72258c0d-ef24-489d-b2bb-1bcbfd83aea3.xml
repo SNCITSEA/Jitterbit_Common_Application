@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Transformation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="72258c0d-ef24-489d-b2bb-1bcbfd83aea3" Name="CommonTransInsertContacts Response">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="input_function_id" value="308f3ab5-5204-46bd-987d-bb4d12dfb71b"/>
+    <Item key="natureofsource" value="Tree"/>
+    <Item key="natureoftarget" value="Flat"/>
+    <Item key="NoSourceDataUsedInMapping" value="0"/>
+    <Item key="saleforce_wizard_role" value="CREATE|RESPONSE"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Contact"/>
+    <Item key="salesforce_partner_wizard" value="1"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="sfdc_edgemart_structure_guid" value=""/>
+    <Item key="source_type_id" value="14"/>
+    <Item key="target_text_doc" value="ebbb0e16-8132-4904-a403-56d8d2c248f7"/>
+    <Item key="target_type_id" value="1"/>
+    <Item key="transformation_id" value="72258c0d-ef24-489d-b2bb-1bcbfd83aea3"/>
+  </Properties>
+  <InputStructure wsCallId="308f3ab5-5204-46bd-987d-bb4d12dfb71b"/>
+  <OutputStructure docId="ebbb0e16-8132-4904-a403-56d8d2c248f7"/>
+  <Mappings>
+    <Mapping>
+      <konga.string name="expr">[]	[root$transaction.response$body$createResponse$result.]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">response	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+If(root$transaction.response$body$createResponse$result.success$ == false,
+	WriteToOperationLog(SumString(root$transaction.response$body$createResponse$result.errors#.message$, ". ", false)))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+  </Mappings>
+  <InvalidMappings/>
+  <RenamedNodes/>
+</Entity>

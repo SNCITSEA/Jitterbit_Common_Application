@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="a64aab8d-330a-472c-922c-61e6081ddea4" Name="Application_Primary_Setup">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="a64aab8d-330a-472c-922c-61e6081ddea4"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// General Settings
+$CurrentRunDateCommApp=FormatDate((ConvertTimeZone(Now(),"CST","GMT")),"yyyy-mm-ddTHH:MM:SSZ");
+$jitterbit.sfdc.dbsource.sfheader=true;
+$jitterbit.source.text.character_encoding="UTF-8";
+$jitterbit.target.text.character_encoding="UTF-8";
+
+// Single step variable setup 
+//$EmailToAdmission="its.ea-auto+Adm@snc.edu,diane.cramer@snc.edu,admit@snc.edu,darlene.blaney@snc.edu";
+$EmailToAdmission="darlene.blaney@snc.edu,jackie.schubring@snc.edu,admit@snc.edu,anna.hoefner@snc.edu,its.ea-auto+Adm@snc.edu,pat.wolfe-thornton@snc.edu";
+$EmailFromAdmission="its.ea-dba+Adm@snc.edu";
+
+$EmailAppSubject="Application Process Messages";
+
+$DateStamp = CVTDate(Now(),"GeneralDate","yyyymmmddHHMM");
+$InterestFileName = "InterestFile_" + $DateStamp + ".txt";
+$WriteIFileHeader = "Y";
+
+
+&lt;/trans&gt;</konga.string>
+</Entity>

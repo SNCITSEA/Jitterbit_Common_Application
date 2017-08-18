@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="b16fb929-1cf0-4582-8661-574c7cfe1027" Name="Rename_TR_InputFile_script">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="b16fb929-1cf0-4582-8661-574c7cfe1027"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$File2 = ReadFile("s.c1c3aa8f-6b0c-48cf-91d8-dc1eafc67e02");
+$DateStamp = CVTDate(Now(),"GeneralDate","yyyymmmddHHMM");
+$FilenameTrans = "Original_CommonTrans_" + $DateStamp + ".txt";
+WriteFile("t.0dbc9255-527b-4fa2-b5d2-3b51aff03f8c", $File2,$FilenameTrans);
+DeleteFile("s.c1c3aa8f-6b0c-48cf-91d8-dc1eafc67e02");
+&lt;/trans&gt;</konga.string>
+</Entity>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="b49e5e7d-7831-4a5f-add8-f5e45f8b7ea0" Name="Contact_Exists">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="Contact_Exists[date][time].txt"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00AJVMHFeo+RyRv1fUJ3n9jT4d0X/QTOqN1ULjZzYZGItDCYrSATN4rXiRJ5c1b/DZfMCZx9OU/L6iuUdFRxNmxS23aXPCV22oCBZU4NVF0S0W7JT3TXdBh2j8uZsHeTic"/>
+        <Item enc="true" key="login" value="$00i6oYxDlbcCzYyF0uToKXrQbe3HMaERwppZ2zhP+PrWU="/>
+        <Item enc="true" key="password" value="$00U5x1FuIlfKWJZ/iE8ArolqszsWEW3R0OLQH75OneM5c="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

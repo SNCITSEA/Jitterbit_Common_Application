@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Folder">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="7ddd4326-6a68-497c-9bc6-44a24cd05253" Name="Workflows">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="folder_id" value="7ddd4326-6a68-497c-9bc6-44a24cd05253"/>
+    <Item key="protected" value="false"/>
+  </Properties>
+</Entity>

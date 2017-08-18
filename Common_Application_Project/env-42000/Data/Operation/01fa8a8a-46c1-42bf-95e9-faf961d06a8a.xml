@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Operation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="01fa8a8a-46c1-42bf-95e9-faf961d06a8a" Name="NewContact_Insert_Applications">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="chunk_size" value="200"/>
+    <Item key="connect_type" value="27"/>
+    <Item key="debug_mode_until" value=""/>
+    <Item key="description" value=""/>
+    <Item key="ignore_history" value="1"/>
+    <Item key="LogLevel" value="Everything"/>
+    <Item key="max_number_of_threads" value="2"/>
+    <Item key="operation_id" value="01fa8a8a-46c1-42bf-95e9-faf961d06a8a"/>
+    <Item key="operation_type_id" value="6"/>
+    <Item key="run_success_op_if_no_source_files" value="0"/>
+    <Item key="salesforce_wizard_guid" value="2513a24b-cd4a-4b58-b210-1f24ccc6d2e6"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="salesforce_wizard_operation_name" value="create"/>
+    <Item key="schedule_policy" value="skip_if_running"/>
+    <Item key="source_chunk_node" value="-flat-"/>
+    <Item key="source_id" value="4f2013d8-b847-47ad-934a-0ff9158dd5e1"/>
+    <Item key="target_chunk_node" value="-flat-"/>
+    <Item key="target_chunk_size" value="0"/>
+    <Item key="timeoutseconds" value="7200"/>
+    <Item key="timeoutuiunit" value="HOURS"/>
+    <Item key="trace" value="1"/>
+    <Item key="validate_source_text_file" value="0"/>
+  </Properties>
+  <Pipeline opType="WebServiceCall">
+    <Activities>
+      <SCRIPT activityId="7900d3d2-9ad9-46b4-9149-ae8463b9f432" contentId="a64aab8d-330a-472c-922c-61e6081ddea4" role="Script" type="23"/>
+      <SOURCE activityId="afee8183-1b33-4f46-92c4-e209dde01661" contentId="4f2013d8-b847-47ad-934a-0ff9158dd5e1" role="Source" type="2"/>
+      <TRANSFORMATION activityId="728f16cb-e835-4fa1-b016-8b20e5d458f6" contentId="54048d73-25da-4493-9d7f-6042efb6d990" role="Request" type="4"/>
+      <WEBSERVICECALL activityId="292633f4-0367-4692-808e-62953fe1ee7f" contentId="308f3ab5-5204-46bd-987d-bb4d12dfb71b" role="Web Service Call" type="10"/>
+      <TRANSFORMATION activityId="e1e74b1d-b081-4d6d-bdf7-8c4e757a0079" contentId="33eb2259-74cc-4fc3-93d2-bcc2c8346287" role="Response" type="4"/>
+    </Activities>
+  </Pipeline>
+  <Siblings/>
+</Entity>

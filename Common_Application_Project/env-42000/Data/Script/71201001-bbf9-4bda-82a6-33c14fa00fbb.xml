@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="71201001-bbf9-4bda-82a6-33c14fa00fbb" Name="Workflow_Contact_Exist_Script">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="71201001-bbf9-4bda-82a6-33c14fa00fbb"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// Run the process to update the Contact information
+RunOperation("op.4dd847b2-91a5-445b-a51c-5f3394fd3346",true);
+
+// Run the process to force the creation of the contact
+RunOperation("op.81fcd719-72c2-4341-98b8-2b7dbe743daf",true);
+
+// Run the process to create the applications for the existing contacts
+RunOperation("op.887f5d2e-6e65-469d-b2e7-9cd6a886b159",true);
+
+// Run the process to create the applications for the contacts that were forced
+RunOperation("op.f2955381-0e49-4a35-bdda-d0bbca455754",true);
+
+// Run the process to upsert the interest for the contacts processed
+RunOperation("op.f6d8ec61-fa30-4287-9265-e3ce0ff20d34",true);
+
+// Run the process to create the tasks for the existing contacts
+RunOperation("op.fcfced4f-cdcb-4699-8be0-ca9d9af2cad2",true);
+
+&lt;/trans&gt;</konga.string>
+</Entity>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="4f2013d8-b847-47ad-934a-0ff9158dd5e1" Name="Application_CSVfile">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="NewContactApplication*.csv"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="1"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00nEiqiYR+YbQcTfQ3l8aSfP24hiYr1iMxvMPoZiYLPlx425cmJt9/bSEvZ5URj4m0Sl5Y7EuOHnu6hbrbdWF8dXUQDlj2LGkPJW0nrqUDz2Vvt75Kub4fN7gM5rCTPqdu"/>
+        <Item enc="true" key="login" value="$00+mvSQ6sDMMPiqYPBiCwP2Ie8Sx2v//zs7ayAQjiusgM="/>
+        <Item enc="true" key="password" value="$00xWXN21qNWRo/eiWLypNSECLHYwgfJ1+26bM1OURzy3Q="/>
+        <Item key="renamefileto" value="Done_NewContactApplication[date][time].csv"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

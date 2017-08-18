@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="EmailMessage">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="73350cf5-0d37-4308-9d92-d5264fe6bb10" Name="debug_Process_Email">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="account"/>
+    <Item key="account_password"/>
+    <Item key="bcc" value=""/>
+    <Item key="cc" value=""/>
+    <Item key="message_id" value="73350cf5-0d37-4308-9d92-d5264fe6bb10"/>
+    <Item key="message_text" value="Find messages:&#10;&#10;[debugMsgs]"/>
+    <Item key="reply_to" value=""/>
+    <Item key="send_to" value="darlene.blaney@snc.edu"/>
+    <Item key="sent_from" value="[EmailFromAdmission]"/>
+    <Item key="smtp_servers" value="smtp.snc.edu"/>
+    <Item key="subject" value="Debug messages"/>
+    <Item key="use_ssl" value="0"/>
+  </Properties>
+</Entity>

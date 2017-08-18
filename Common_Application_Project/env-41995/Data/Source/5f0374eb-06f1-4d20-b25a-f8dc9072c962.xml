@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="5f0374eb-06f1-4d20-b25a-f8dc9072c962" Name="Common_App_TxtFile">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="character_encoding" value="ISO-8859-1"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="FY*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="0"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00L4bhfTObPKkmewU44S/UH33gv2tGGgMoQXZg6HQZTpBi1D9/sYjhRH7jGpF3CcHXlzHONs8OPLKF4EGZEsxQ+Ghw+StboS8lIjxZzj57/Odk0mAN/NyMbrr/2Q8OQfxb"/>
+        <Item enc="true" key="login" value="$00nYMaJaD8omsOm//hNmV5e25uTerbg1Uko7iQNt9frhA="/>
+        <Item enc="true" key="password" value="$00OFYgyE1dRMv5oXZ1lRl1MY6LlopO4YbNqH1OKHns+jQ="/>
+        <Item key="renamefileto" value="Original_CommonApp_[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

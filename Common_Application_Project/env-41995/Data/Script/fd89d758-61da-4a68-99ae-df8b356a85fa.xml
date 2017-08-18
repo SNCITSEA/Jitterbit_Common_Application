@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="fd89d758-61da-4a68-99ae-df8b356a85fa" Name="Write_Interests_File">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="fd89d758-61da-4a68-99ae-df8b356a85fa"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+If($WriteIFileHeader=="Y",
+   $WriteIFileHeader = "n";
+   RunScript("sc.9f3b291c-43c7-44e8-a85c-6a924d82ace0"));
+
+WriteFile("t.5c0dcdb9-7b49-420b-ac64-a530cf009721", $SFStudentId + "\t" + $CACommonAppId + "\t" +
+                $ApplicationDate + "\t" + $CAFirstName + "\t" + $CAMiddleName + "\t" + $CALastName + "\t" + 
+                $CAEmailAddress + "\t" + $CAHonorsNumber + "\t" + $CAHonors1Title + "\t" + 
+                $CAHonors1Grade + "\t" + $CAHonors1Recognition + "\t" + $CAHonors2Title + "\t" + $CAHonors2Grade + "\t" + 
+                $CAHonors2Recognition + "\t" + $CAHonors3Title + "\t" + $CAHonors3Grade + "\t" + $CAHonors3Recognition + "\t" + 
+                $CAHonors4Title + "\t" + $CAHonors4Grade + "\t" + $CAHonors4Recognition + "\t" + $CAHonors5Title + "\t" + 
+                $CAHonors5Grade + "\t" + $CAHonors5Recognition + "\t" + $CACareerInterests + "\t" + $CAHighestDegree + "\t" + 
+                $CAActivity1Type + "\t" + $CAActivity1Name + "\t" + $CAActivity1Honors + "\t" + $CAActivity1Grade + "\t" + 
+                $CAActivity1ContInCollege + "\t" + $CAActivity1Term + "\t" + $CAActivity1Hours + "\t" + $CAActivity1Week + "\t" + 
+                $CAActivity1Details + "\t" + $CAActivity2Type + "\t" + $CAActivity2Name + "\t" + $CAActivity2Honors + "\t" + 
+                $CAActivity2Grade + "\t" + $CAActivity2ContInCollege + "\t" + $CAActivity2Term + "\t" + $CAActivity2Hours + "\t" + 
+                $CAActivity2Week + "\t" + $CAActivity2Details + "\t" + $CAActivity3Type + "\t" + $CAActivity3Name + "\t" + 
+                $CAActivity3Honors + "\t" + $CAActivity3Grade + "\t" + $CAActivity3ContInCollege + "\t" + $CAActivity3Term + "\t" + 
+                $CAActivity3Hours + "\t" + $CAActivity3Week + "\t" + $CAActivity3Details + "\t" + $CAActivity4Type + "\t" + 
+                $CAActivity4Name + "\t" + $CAActivity4Honors + "\t" + $CAActivity4Grade + "\t" + $CAActivity4ContInCollege + "\t" + 
+                $CAActivity4Term + "\t" + $CAActivity4Hours + "\t" + $CAActivity4Week + "\t" + $CAActivity4Details + "\t" + 
+                $CAActivity5Type + "\t" + $CAActivity5Name + "\t" + $CAActivity5Honors + "\t" + $CAActivity5Grade + "\t" + 
+                $CAActivity5ContInCollege + "\t" + $CAActivity5Term + "\t" + $CAActivity5Hours + "\t" + $CAActivity5Week + "\t" + 
+                $CAActivity5Details + "\t" + $CAActivity6Type + "\t" + $CAActivity6Name + "\t" + $CAActivity6Honors + "\t" + 
+                $CAActivity6Grade + "\t" + $CAActivity6ContInCollege + "\t" + $CAActivity6Term + "\t" + $CAActivity6Hours + "\t" + 
+                $CAActivity6Week + "\t" + $CAActivity6Details + "\t" + $CAActivity7Type + "\t" + $CAActivity7Name + "\t" + 
+                $CAActivity7Honors + "\t" + $CAActivity7Grade + "\t" + $CAActivity7ContInCollege + "\t" + $CAActivity7Term + "\t" + 
+                $CAActivity7Hours + "\t" + $CAActivity7Week + "\t" + $CAActivity7Details + "\t" + $CAActivity8Type + "\t" + 
+                $CAActivity8Name + "\t" + $CAActivity8Honors + "\t" + $CAActivity8Grade + "\t" + $CAActivity8ContInCollege + "\t" + 
+                $CAActivity8Term + "\t" + $CAActivity8Hours + "\t" + $CAActivity8Week + "\t" + $CAActivity8Details + "\t" + 
+                $CAActivity9Type + "\t" + $CAActivity9Name + "\t" + $CAActivity9Honors + "\t" + $CAActivity9Grade + "\t" + 
+                $CAActivity9ContInCollege + "\t" + $CAActivity9Term + "\t" + $CAActivity9Hours + "\t" + $CAActivity9Week + "\t" + 
+                $CAActivity9Details + "\t" + $CAActivity10Type + "\t" + $CAActivity10Name + "\t" + $CAActivity10Honors + "\t" + 
+                $CAActivity10Grade + "\t" + $CAActivity10ContInCollege + "\t" + $CAActivity10Term + "\t" + $CAActivity10Hours + "\t" + 
+                $CAActivity10Week + "\t" + $CAActivity10Details + "\t" + $SFInterestId + "\t" + $SFIntAthletic + "\t" + 
+                $SFIntOther + "\t" + $SFIntAdditional
+                 + "\n" 
+             ,$InterestFileName );
+
+&lt;/trans&gt;</konga.string>
+</Entity>

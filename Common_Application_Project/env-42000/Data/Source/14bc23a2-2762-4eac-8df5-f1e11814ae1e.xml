@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="14bc23a2-2762-4eac-8df5-f1e11814ae1e" Name="Override_Contact_Exists">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="Step1_Contact_Exist*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="0"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00ZYnoPSjZuAsSvJG5gFNqDsiqNr7jOQIac1EkKolj6kzTMhAsSgJmDd/YboojcItIuQXJIqa0fEX+l5SHkE8JFPtSl9f8sNkvK5SmmyXOj8fiLS9kjwaeJ/4jFPG0WMuz"/>
+        <Item enc="true" key="login" value="$00xqJTolcG1MyXV4goq00fdJcGrkOXaTy4y8OX6lGbcEg="/>
+        <Item enc="true" key="password" value="$00G9VYpWNtj8W+4+vqVufeFDf2hYPdmiZKmOt4YbgO4mo="/>
+        <Item key="renamefileto" value="Step2_Contact_Exist_[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

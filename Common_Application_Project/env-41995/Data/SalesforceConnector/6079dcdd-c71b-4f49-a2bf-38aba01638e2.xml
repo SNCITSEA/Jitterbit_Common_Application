@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="SalesforceConnector">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="6079dcdd-c71b-4f49-a2bf-38aba01638e2" Name="darlene.blaney@snc.edu.test1 (Sandbox)">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="api_version" value="37.0"/>
+    <Item enc="true" key="password" value="$00b6AoiQ43yBFkokdSujI8+Lx0INOxFoSJ72lSPzTniGc80oIGd7wjPA/98DEcf8Ts"/>
+    <Item key="salesforceconnector_id" value="6079dcdd-c71b-4f49-a2bf-38aba01638e2"/>
+    <Item key="sandbox" value="1"/>
+    <Item enc="true" key="security_token" value="$00jkLKUunuV/Ua2Qc3Hl+9Unkb7oy9jJ9Rl4G6eJsW5ECBoneTFJ2ZTHbfovj/9ICF"/>
+    <Item key="server_host" value="https://test.salesforce.com/"/>
+    <Item key="status" value="1"/>
+    <Item enc="true" key="user_name" value="$00VK3SV4fos6YCP/2UAajc3zRlKivXGQU4DVC7kuymZniMsCgn1an0sC3fPKylN6sO"/>
+  </Properties>
+</Entity>

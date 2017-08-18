@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="532a15dc-7e18-4581-8a78-80f5554f9477" Name="testTarget">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="test_process[date]_[time].xml"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00qgBcZL/Cf1ZuAdAoZ5v8ovZYXiHiARt2ie2upjUN3YJ3huAl+/kLcblJE0eS0jw7I0flmKTSQ4w1GC488ypWqifFSUQcr/lrJH9urCMEk9KvZz4lnE32r3tXNxHHCxXW"/>
+        <Item enc="true" key="login" value="$00P8Yax6sT4yAZ923BPW5tg7khpgkHG0ioNx0gLScqx+w="/>
+        <Item enc="true" key="password" value="$00qO2MP7X95GpoXjOvPfNztN7tyWAds6ObeUdmBbqrfkU="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

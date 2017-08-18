@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="5246ac2e-68aa-4c21-82a8-5f946aca3737" Name="CommonAppUnderGradCleanup">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="5246ac2e-68aa-4c21-82a8-5f946aca3737"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$File = ReadFile("s.5f0374eb-06f1-4d20-b25a-f8dc9072c962");
+$File = Replace($File,"Ã?Â","");
+$File = Replace($File,HexToString('A0'),'');
+$File = Replace($File,HexToString('C2'),'');
+$File = Replace($File,"Ã","");
+&lt;/trans&gt;</konga.string>
+</Entity>

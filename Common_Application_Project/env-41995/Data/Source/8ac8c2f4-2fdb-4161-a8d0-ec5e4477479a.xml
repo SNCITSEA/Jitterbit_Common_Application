@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="8ac8c2f4-2fdb-4161-a8d0-ec5e4477479a" Name="Transfer_Application_csv">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="salesforce_wizard_object" value="1"/>
+  </Properties>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="NewTransContactApp*.csv"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="0"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00RwJbOkECOogEJU47FcSn8amSXl2AWToOylSgsaMfVJa99sjo4Rfmqne7yfPOBuRHp7VeXJ8/lTA0fB4UMMCsaHfUS9b5VTr90wNDxhEPX0evJzubub4QGlRUpRt6dhNJ"/>
+        <Item enc="true" key="login" value="$00s6V2o/DDErWx+NL2gwRA2L9xsdC+QOaHY0wFkfEqFZM="/>
+        <Item enc="true" key="password" value="$00jg2uU/oLEGlBpYSth0xczw88QbRU6KSit8KXHsQyFvQ="/>
+        <Item key="renamefileto" value="Done_NewTransContactApp[date][time].csv"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

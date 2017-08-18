@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="7fe37f2d-43f2-4830-8055-de10f1dbbea6" Name="ContactExist_Application">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="salesforce_wizard_object" value="1"/>
+  </Properties>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="Step2_Contact_Exist*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="1"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00cnIzcD6d4ML8qzTKGClFfTd3xbLQjRJYCrSFqRq4lWYh8M2qJtF5XjCvomoU2VKJFcUyfqozX1KC9r3yTEly2+FnnGFNcR5fvUoisJ4fhGZAZVE4ZYpC9SRK7dhBh6MP"/>
+        <Item enc="true" key="login" value="$00VZUEIN2wZyzM32+DPCFA0Fz1X8tDclDivSEtwDAel9c="/>
+        <Item enc="true" key="password" value="$0033LQrgCcFdrMHu5CrSuLfe1WVY0Vduxz9tMgE9MQzTA="/>
+        <Item key="renamefileto" value="Done_Contact_Exist_[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

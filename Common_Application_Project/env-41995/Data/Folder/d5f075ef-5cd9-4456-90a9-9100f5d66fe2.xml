@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Folder">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="d5f075ef-5cd9-4456-90a9-9100f5d66fe2" Name="Salesforce Inserts">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="folder_id" value="d5f075ef-5cd9-4456-90a9-9100f5d66fe2"/>
+    <Item key="protected" value="false"/>
+  </Properties>
+</Entity>

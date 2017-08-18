@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Transformation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="2078d781-fb61-42c2-a3c6-d72f92acc63a" Name="Upsert_Interests Response">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="input_function_id" value="81382325-821f-4dbe-89af-047d0edc5720"/>
+    <Item key="natureofsource" value="Tree"/>
+    <Item key="natureoftarget" value="Flat"/>
+    <Item key="NoSourceDataUsedInMapping" value="0"/>
+    <Item key="saleforce_wizard_role" value="UPSERT|RESPONSE"/>
+    <Item key="salesforce_object" value="{urn:sobject.partner.soap.sforce.com}Interest__c"/>
+    <Item key="salesforce_partner_wizard" value="1"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="sfdc_edgemart_structure_guid" value=""/>
+    <Item key="source_type_id" value="14"/>
+    <Item key="target_text_doc" value="8c0b6651-aad0-4dbd-90de-b31eefeedd39"/>
+    <Item key="target_type_id" value="1"/>
+    <Item key="transformation_id" value="2078d781-fb61-42c2-a3c6-d72f92acc63a"/>
+  </Properties>
+  <InputStructure wsCallId="81382325-821f-4dbe-89af-047d0edc5720"/>
+  <OutputStructure docId="8c0b6651-aad0-4dbd-90de-b31eefeedd39"/>
+  <Mappings>
+    <Mapping>
+      <konga.string name="expr">[]	[root$transaction.response$body$upsertResponse$result.]</konga.string>
+    </Mapping>
+    <Mapping>
+      <konga.string name="expr">response	&lt;trans&gt;
+// This mapping is part of a Salesforce wizard.
+// Modifying it may cause the wizard to malfunction.
+If(root$transaction.response$body$upsertResponse$result.success$ == false,
+	WriteToOperationLog("The following record failed to process. Interest__c " +
+	FindByPos(SourceInstanceCount(), root$transaction.request$body$upsert$Interest__c#.Id$) +
+	" The issue was: " +
+	SumString(root$transaction.response$body$upsertResponse$result.errors#.message$, ". ", false)))
+&lt;/trans&gt;</konga.string>
+    </Mapping>
+  </Mappings>
+  <InvalidMappings/>
+  <RenamedNodes/>
+</Entity>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="f9f46cbb-cbb1-47b3-b9cc-f4361972c49d" Name="Date_Translations">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="f9f46cbb-cbb1-47b3-b9cc-f4361972c49d"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$GradDate = "";
+$GradYear = "";
+If(Length($CAGraduationDate) &gt; 0,
+  If(Length($CAGraduationDate)==5,
+     ($GradDate = CVTDate(Mid($CAGraduationDate,0,1)+"15"+Mid($CAGraduationDate,1,4),"mddyyyy","mm/dd/yyyy")),
+     ($GradDate = CVTDate(MID($CAGraduationDate,0,2)+"15"+MID($CAGraduationDate,2,4),"mmddyyyy","mm/dd/yyyy")));
+  $GradYear = CVTDate($GradDate,"mm/dd/yyyy","yyyy"););
+
+If(Length($CASchool2FromDate_raw)==6,
+  $School2FromDate = CVTDate(Mid($CASchool2FromDate_raw,0,3)+"15"+Mid($CASchool2FromDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+If(Length($CASchool2ToDate_raw)==6,
+  $School2ToDate = CVTDate(Mid($CASchool2ToDate_raw,0,3)+"15"+Mid($CASchool2ToDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+
+If(Length($CASchool3FromDate_raw)==6,
+  $School3FromDate = CVTDate(Mid($CASchool3FromDate_raw,0,3)+"15"+Mid($CASchool3FromDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+If(Length($CASchool2ToDate_raw)==6,
+  $School3ToDate = CVTDate(Mid($CASchool3ToDate_raw,0,3)+"15"+Mid($CASchool3ToDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+
+If(Length($CACollege1FromDate_raw)==6,
+  $College1FromDate = CVTDate(Mid($CACollege1FromDate_raw,0,3)+"15"+Mid($CACollege1FromDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+If(Length($CACollege1ToDate_raw)==6,
+  $College1ToDate = CVTDate(Mid($CACollege1ToDate_raw,0,3)+"15"+Mid($CACollege1ToDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+
+If(Length($CACollege2FromDate_raw)==6,
+  $College2FromDate = CVTDate(Mid($CACollege2FromDate_raw,0,3)+"15"+Mid($CACollege2FromDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+If(Length($CACollege2ToDate_raw)==6,
+  $College2ToDate = CVTDate(Mid($CACollege2ToDate_raw,0,3)+"15"+Mid($CACollege2ToDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+
+If(Length($CACollege3FromDate_raw)==6,
+  $College3FromDate = CVTDate(Mid($CACollege3FromDate_raw,0,3)+"15"+Mid($CACollege3FromDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+If(Length($CACollege3ToDate_raw)==6,
+  $College3ToDate = CVTDate(Mid($CACollege3ToDate_raw,0,3)+"15"+Mid($CACollege3ToDate_raw,4,2),"mmmddyy","mm/dd/yyyy"));
+
+$BirthDate = CVTDate($CABirthdate,"?m/?d/yyyy","mm/dd/yyyy");
+
+$AppDate = CVTDate($CAAppSubmitDate,"?m/?d/yyyy","mm/dd/yyyy");
+
+$ACTDate = CVTDate($CAACTCompositeDate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$VisaDate = CVTDate($CAVisaDateIssued_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$SatCRDate = CVTDate($CASATCRDate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$SatRWDate = CVTDate($CASATRWDate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$SatNewMathDate = CVTDate($CASatNewMathdate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$ToeflReaddate = CVTDate($CATOEFLReadDate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$ToeflPaperReaddate = CVTDate($CATOEFLPaperReadDate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+$IeltsReaddate = CVTDate($CAIELTSReadingDate_raw,"?m/?d/yyyy","mm/dd/yyyy");
+
+&lt;/trans&gt;</konga.string>
+</Entity>

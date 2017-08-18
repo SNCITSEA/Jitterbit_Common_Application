@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="b2b4bf0f-f3d1-4dc3-a135-84d81186213e" Name="TaskBuildSource">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="salesforce_wizard_object" value="1"/>
+  </Properties>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="TaskBuild*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="1"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00UEDb5BrtuHuSPjgCa+T6MkEWaZqLuVCaAikZe3lR/j8kewIRdcQlaqgj0FBMvOCgKmO5nyYBzSlNATFjhhumA2S2j+FvkCthMfUO+edYJfsd4R7UKWy7go7d10iXI5Yv"/>
+        <Item enc="true" key="login" value="$00SqPySEklLJYi/qQLbZcVrZpp/vGIfGBhEHOAecRJW2U="/>
+        <Item enc="true" key="password" value="$00VLS9xQ7Hh9VPouBNAhDsrmnxIe0A34IWxX2qAqnMEXk="/>
+        <Item key="renamefileto" value="Done_TaskBuild_[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

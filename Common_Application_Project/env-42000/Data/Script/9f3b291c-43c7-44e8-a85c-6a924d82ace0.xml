@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="9f3b291c-43c7-44e8-a85c-6a924d82ace0" Name="Write_Interests_Header">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="9f3b291c-43c7-44e8-a85c-6a924d82ace0"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+WriteFile("t.5c0dcdb9-7b49-420b-ac64-a530cf009721", "SalesforceID \t Common_App_ID \t" +
+                "Application_Submit_Date \t First_name \t Middle_name \t Last_name \t" + 
+                "Email\tHonorsNumber \t Honors1Title \t" + 
+                "Honors1Grade \t Honors1Recognition \t Honors2Title \t Honors2Grade \t" + 
+                "Honors2Recognition \t Honors3Title \t Honors3Grade \t Honors3Recognition \t" + 
+                "Honors4Title \t Honors4Grade \t Honors4Recognition \t Honors5Title \t" + 
+                "Honors5Grade \t Honors5Recognition \t CareerInterests \t HighestDegree \t" + 
+                "Activity1Type \t Activity1Name \t Activity1Honors \t Activity1Grade \t" + 
+                "Activity1ContInCollege \t Activity1Term \t Activity1Hours \t Activity1Week \t" + 
+                "Activity1Details \t Activity2Type \t Activity2Name \t Activity2Honors \t" + 
+                "Activity2Grade \t Activity2ContInCollege \t Activity2Term \t Activity2Hours \t" + 
+                "Activity2Week \t Activity2Details \t Activity3Type \t Activity3Name \t" + 
+                "Activity3Honors \t Activity3Grade \t Activity3ContInCollege \t Activity3Term \t" + 
+                "Activity3Hours \t Activity3Week \t Activity3Details \t Activity4Type \t" + 
+                "Activity4Name \t Activity4Honors \t Activity4Grade \t Activity4ContInCollege \t" + 
+                "Activity4Term \t Activity4Hours \t Activity4Week \t Activity4Details \t" + 
+                "Activity5Type \t Activity5Name \t Activity5Honors \t Activity5Grade \t" + 
+                "Activity5ContInCollege \t Activity5Term \t Activity5Hours \t Activity5Week \t" + 
+                "Activity5Details \t Activity6Type \t Activity6Name \t Activity6Honors \t" + 
+                "Activity6Grade \t Activity6ContInCollege \t Activity6Term \t Activity6Hours \t" + 
+                "Activity6Week \t Activity6Details \t Activity7Type \t Activity7Name \t" + 
+                "Activity7Honors \t Activity7Grade \t Activity7ContInCollege \t Activity7Term \t" + 
+                "Activity7Hours \t Activity7Week \t Activity7Details \t Activity8Type \t" + 
+                "Activity8Name \t Activity8Honors \t Activity8Grade \t Activity8ContInCollege \t" + 
+                "Activity8Term \t Activity8Hours \t Activity8Week \t Activity8Details \t" + 
+                "Activity9Type \t Activity9Name \t Activity9Honors \t Activity9Grade \t" + 
+                "Activity9ContInCollege \t Activity9Term \t Activity9Hours \t Activity9Week \t" + 
+                "Activity9Details \t Activity10Type \t Activity10Name \t Activity10Honors \t" + 
+                "Activity10Grade \t Activity10ContInCollege \t Activity10Term \t Activity10Hours \t" + 
+                "Activity10Week \t Activity10Details\tSFInterestId\tSFIntAthletic\tSFIntOther\tSFIntAdditional"
+                 + "\n" 
+             ,$InterestFileName );
+&lt;/trans&gt;</konga.string>
+</Entity>

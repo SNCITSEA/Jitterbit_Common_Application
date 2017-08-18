@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Operation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="9e02b0f7-5abd-4f00-971e-4c51897decff" Name="Rename_TR_InputFile">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="chunk_size" value="0"/>
+    <Item key="debug_mode_until" value=""/>
+    <Item key="description" value=""/>
+    <Item key="ignore_history" value="1"/>
+    <Item key="LogLevel" value="Everything"/>
+    <Item key="max_number_of_threads" value="1"/>
+    <Item key="operation_id" value="9e02b0f7-5abd-4f00-971e-4c51897decff"/>
+    <Item key="operation_type_id" value="8"/>
+    <Item key="run_success_op_if_no_source_files" value="0"/>
+    <Item key="schedule_policy" value="skip_if_running"/>
+    <Item key="source_chunk_node" value=""/>
+    <Item key="target_chunk_node" value=""/>
+    <Item key="target_chunk_size" value="0"/>
+    <Item key="timeoutseconds" value="7200"/>
+    <Item key="timeoutuiunit" value="HOURS"/>
+    <Item key="trace" value="1"/>
+    <Item key="validate_source_text_file" value="0"/>
+  </Properties>
+  <Pipeline opType="Script">
+    <Activities>
+      <SCRIPT activityId="b39f58db-d25e-4df9-a23d-38af6afe9732" contentId="b16fb929-1cf0-4582-8661-574c7cfe1027" role="Script" type="23"/>
+    </Activities>
+  </Pipeline>
+  <Siblings/>
+</Entity>

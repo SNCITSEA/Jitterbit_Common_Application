@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="83c9f083-62db-4c00-bc62-3a14f944362a" Name="Check_for_Application">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="83c9f083-62db-4c00-bc62-3a14f944362a"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+//$SFStudentId = "0030q0000067rAsAAI";
+//$Entry_Term = "201710";
+$AppFound = "N";
+
+$SFAppExist = "";
+test_soql = "select ID, Parent_Guardian_1_College__c, Parent_Guardian_2_College__c from Application__c where Student__c = " + Quote($SFStudentId) +
+                   " and entry_term__c = " + Quote($Entry_Term);
+
+$SFErrorMsg = "";
+
+eval($SFAppExist = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test_soql),$SFErrorMsg=GetLastError()) ;
+
+If(Length($SFErrorMsg) &gt; 0,
+   ($CAErrMessage = "Place error message here " + $SFErrorMsg);
+    $AppFound = "N",
+   If(Length($SFAppExist) &gt; 0,
+     iLoop = 0;
+     While(iLoop &lt; Length($SFAppExist),
+       $CAAppFoundMsg = $CAAppFoundMsg + "Duplicate Found " + $SFStudentId + " " + $CAFirstName + " " +
+               $CALastName + " Term:" + $Entry_Term + " AppId:" + $SFAppExist[iLoop][0] + " Parent/Step College:" +
+               $SFAppExist[iLoop][1] + " Parent2/Step2 College:" + $SFAppExist[iLoop][2] +
+               "\n";
+        iLoop = iLoop + 1)));
+&lt;/trans&gt;</konga.string>
+</Entity>

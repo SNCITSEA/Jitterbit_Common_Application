@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="EmailMessage">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="c27874ae-9c4d-4cc2-ad8f-36594f74432c" Name="Application_Process_Email">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="bcc" value=""/>
+    <Item key="cc" value=""/>
+    <Item key="message_id" value="c27874ae-9c4d-4cc2-ad8f-36594f74432c"/>
+    <Item key="message_text" value="Application Messages:&#10;&#10;Selection Criteria: StudentId = ContactId, EntryTerm = Application_term&#10;&#10;[CAAppFoundMsg]&#10;&#10;&#10;Project: Common_Application_Project&#10;Script: Check_for_Application&#10;Email Message: Application_Process_Email"/>
+    <Item key="reply_to" value=""/>
+    <Item key="send_to" value="[EmailToAdmission]"/>
+    <Item key="sent_from" value="[EmailFromAdmission]"/>
+    <Item key="smtp_servers" value="smtp.snc.edu"/>
+    <Item key="subject" value="[EmailAppSubject]"/>
+    <Item key="use_ssl" value="0"/>
+  </Properties>
+</Entity>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Target">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="6def2259-bca3-44b0-851c-d2892a127125" Name="Backup_CommonApp_Textfile">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties/>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="append_file" value="0"/>
+        <Item key="archive_encryption_mode" value=""/>
+        <Item key="archive_mode" value=""/>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="compress_format" value=""/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="endoflinetype" value="0"/>
+        <Item key="file_name" value="Original_CommonApp_[date][time].txt"/>
+        <Item key="file_share_create_directories" value="1"/>
+        <Item key="filenames_in_archive" value=""/>
+        <Item enc="true" key="locator" value="$00HmVA5dh3ZbhZPyE7IRBRbqZ4hoSL8kKk2zmI/Fs4aEs+wBiO98Ra27fsJQsm3gNwABDvAkruO1I55LbE0tRxZNqNGkPZJtmjag1/kE353wtY29b90qse3PqlkGxbLZpA"/>
+        <Item enc="true" key="login" value="$00HQ1tShNi9nAsukPksfKA2xFnracWwhFx4x3ZNvuif2I="/>
+        <Item enc="true" key="password" value="$00lRYqgkLbhcxW3VtozVntvt/D5c4OrcoEaZvrDg2g9l4="/>
+        <Item key="skip_empty_files" value="0"/>
+        <Item key="writeHeaders" value="0"/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

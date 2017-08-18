@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="6e4281b5-54b4-47ea-bf3f-ec6428b82571" Name="Build_Activities_And_WorkExperience">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="6e4281b5-54b4-47ea-bf3f-ec6428b82571"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$AthleticInterest = "";
+$AthleticAddComments = "";
+$NonAthleticInterest = "";
+$NonAthleticComments = "";
+$WorkExperience = "";
+If(Length($CAActivity1Type)&gt;0,
+  If(Mid($CAActivity1Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity1Name + " - " +
+             $CAActivity1Grade + " - " +
+             $CAActivity1ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity1Name + " - " +
+             $CAActivity1Details + " - " +
+             $CAActivity1Honors + "; \n",
+    If($CAActivity1Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity1Honors + ": " +
+             $CAActivity1Grade + ": " +
+             $CAActivity1ContInCollege + "-St. Norbert : " +
+             $CAActivity1Details + " : " +
+             $CAActivity1Term + " : " +
+             $CAActivity1Hours + " : " +
+             $CAActivity1Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity1Type + ": " +
+          $CAActivity1Honors + " - " +
+          $CAActivity1Grade + " - " +
+          $CAActivity1ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity1Honors + " - " +
+          $CAActivity1Details + "; \n")));
+If(Length($CAActivity2Type)&gt;0,
+  If(Mid($CAActivity2Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity2Name + " - " +
+             $CAActivity2Grade + " - " +
+             $CAActivity2ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity2Name + " - " +
+             $CAActivity2Details + " - " +
+             $CAActivity2Honors + "; \n",
+    If($CAActivity2Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity2Honors + ": " +
+             $CAActivity2Grade + ": " +
+             $CAActivity2ContInCollege + "-St. Norbert : " +
+             $CAActivity2Details + " : " +
+             $CAActivity2Term + " : " +
+             $CAActivity2Hours + " : " +
+             $CAActivity2Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity2Type + ": " +
+          $CAActivity2Honors + " - " +
+          $CAActivity2Grade + " - " +
+          $CAActivity2ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity2Honors + " - " +
+          $CAActivity2Details + "; \n")));
+If(Length($CAActivity3Type)&gt;0,
+  If(Mid($CAActivity3Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity3Name + " - " +
+             $CAActivity3Grade + " - " +
+             $CAActivity3ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity3Name + " - " +
+             $CAActivity3Details + " - " +
+             $CAActivity3Honors + "; \n",
+    If($CAActivity3Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity3Honors + ": " +
+             $CAActivity3Grade + ": " +
+             $CAActivity3ContInCollege + "-St. Norbert : " +
+             $CAActivity3Details + " : " +
+             $CAActivity3Term + " : " +
+             $CAActivity3Hours + " : " +
+             $CAActivity3Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity3Type + ": " +
+          $CAActivity3Honors + " - " +
+          $CAActivity3Grade + " - " +
+          $CAActivity3ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity3Honors + " - " +
+          $CAActivity3Details + "; \n")));
+If(Length($CAActivity4Type)&gt;0,
+  If(Mid($CAActivity4Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity4Name + " - " +
+             $CAActivity4Grade + " - " +
+             $CAActivity4ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity4Name + " - " +
+             $CAActivity4Details + " - " +
+             $CAActivity4Honors + "; \n",
+    If($CAActivity4Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity4Honors + ": " +
+             $CAActivity4Grade + ": " +
+             $CAActivity4ContInCollege + "-St. Norbert : " +
+             $CAActivity4Details + " : " +
+             $CAActivity4Term + " : " +
+             $CAActivity4Hours + " : " +
+             $CAActivity4Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity4Type + ": " +
+          $CAActivity4Honors + " - " +
+          $CAActivity4Grade + " - " +
+          $CAActivity4ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity4Honors + " - " +
+          $CAActivity4Details + "; \n")));
+If(Length($CAActivity5Type)&gt;0,
+  If(Mid($CAActivity5Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity5Name + " - " +
+             $CAActivity5Grade + " - " +
+             $CAActivity5ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity5Name + " - " +
+             $CAActivity5Details + " - " +
+             $CAActivity5Honors + "; \n",
+    If($CAActivity5Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity5Honors + ": " +
+             $CAActivity5Grade + ": " +
+             $CAActivity5ContInCollege + "-St. Norbert : " +
+             $CAActivity5Details + " : " +
+             $CAActivity5Term + " : " +
+             $CAActivity5Hours + " : " +
+             $CAActivity5Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity5Type + ": " +
+          $CAActivity5Honors + " - " +
+          $CAActivity5Grade + " - " +
+          $CAActivity5ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity5Honors + " - " +
+          $CAActivity5Details + "; \n")));
+If(Length($CAActivity6Type)&gt;0,
+  If(Mid($CAActivity6Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity6Name + " - " +
+             $CAActivity6Grade + " - " +
+             $CAActivity6ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity6Name + " - " +
+             $CAActivity6Details + " - " +
+             $CAActivity6Honors + "; \n",
+    If($CAActivity6Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity6Honors + ": " +
+             $CAActivity6Grade + ": " +
+             $CAActivity6ContInCollege + "-St. Norbert : " +
+             $CAActivity6Details + " : " +
+             $CAActivity6Term + " : " +
+             $CAActivity6Hours + " : " +
+             $CAActivity6Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity6Type + ": " +
+          $CAActivity6Honors + " - " +
+          $CAActivity6Grade + " - " +
+          $CAActivity6ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity6Honors + " - " +
+          $CAActivity6Details + "; \n")));
+If(Length($CAActivity7Type)&gt;0,
+  If(Mid($CAActivity7Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity7Name + " - " +
+             $CAActivity7Grade + " - " +
+             $CAActivity7ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity7Name + " - " +
+             $CAActivity7Details + " - " +
+             $CAActivity7Honors + "; \n",
+    If($CAActivity7Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity7Honors + ": " +
+             $CAActivity7Grade + ": " +
+             $CAActivity7ContInCollege + "-St. Norbert : " +
+             $CAActivity7Details + " : " +
+             $CAActivity7Term + " : " +
+             $CAActivity7Hours + " : " +
+             $CAActivity7Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity7Type + ": " +
+          $CAActivity7Honors + " - " +
+          $CAActivity7Grade + " - " +
+          $CAActivity7ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity7Honors + " - " +
+          $CAActivity7Details + "; \n")));
+If(Length($CAActivity8Type)&gt;0,
+  If(Mid($CAActivity8Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity8Name + " - " +
+             $CAActivity8Grade + " - " +
+             $CAActivity8ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity8Name + " - " +
+             $CAActivity8Details + " - " +
+             $CAActivity8Honors + "; \n",
+    If($CAActivity8Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity8Honors + ": " +
+             $CAActivity8Grade + ": " +
+             $CAActivity8ContInCollege + "-St. Norbert : " +
+             $CAActivity8Details + " : " +
+             $CAActivity8Term + " : " +
+             $CAActivity8Hours + " : " +
+             $CAActivity8Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity8Type + ": " +
+          $CAActivity8Honors + " - " +
+          $CAActivity8Grade + " - " +
+          $CAActivity8ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity8Honors + " - " +
+          $CAActivity8Details + "; \n")));
+If(Length($CAActivity9Type)&gt;0,
+  If(Mid($CAActivity9Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity9Name + " - " +
+             $CAActivity9Grade + " - " +
+             $CAActivity9ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity9Name + " - " +
+             $CAActivity9Details + " - " +
+             $CAActivity9Honors + "; \n",
+    If($CAActivity9Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity9Honors + ": " +
+             $CAActivity9Grade + ": " +
+             $CAActivity9ContInCollege + "-St. Norbert : " +
+             $CAActivity9Details + " : " +
+             $CAActivity9Term + " : " +
+             $CAActivity9Hours + " : " +
+             $CAActivity9Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity9Type + ": " +
+          $CAActivity9Honors + " - " +
+          $CAActivity9Grade + " - " +
+          $CAActivity9ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity9Honors + " - " +
+          $CAActivity9Details + "; \n")));
+If(Length($CAActivity10Type)&gt;0,
+  If(Mid($CAActivity10Type,0,8)=="Athletic",
+    $AthleticInterest = $AthleticInterest +
+             $CAActivity10Name + " - " +
+             $CAActivity10Grade + " - " +
+             $CAActivity10ContInCollege + "-St. Norbert; \n";
+    $AthleticAddComments = $AthleticAddComments +
+             $CAActivity10Name + " - " +
+             $CAActivity10Details + " - " +
+             $CAActivity10Honors + "; \n",
+    If($CAActivity10Type == "Work (Paid)",
+      $WorkExperience = $WorkExperience +
+             $CAActivity10Honors + ": " +
+             $CAActivity10Grade + ": " +
+             $CAActivity10ContInCollege + "-St. Norbert : " +
+             $CAActivity10Details + " : " +
+             $CAActivity10Term + " : " +
+             $CAActivity10Hours + " : " +
+             $CAActivity10Week + "; \n" ,
+    $NonAthleticInterest = $NonAthleticInterest + 
+          $CAActivity10Type + ": " +
+          $CAActivity10Honors + " - " +
+          $CAActivity10Grade + " - " +
+          $CAActivity10ContInCollege + "-St. Norbert; \n";
+    $NonAthleticComments = $NonAthleticComments +
+          $CAActivity10Honors + " - " +
+          $CAActivity10Details + "; \n")));
+&lt;/trans&gt;</konga.string>
+</Entity>

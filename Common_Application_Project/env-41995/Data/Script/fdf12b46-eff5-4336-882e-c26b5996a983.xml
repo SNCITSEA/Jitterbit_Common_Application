@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="fdf12b46-eff5-4336-882e-c26b5996a983" Name="Workflow_Undergrad_Process">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="fdf12b46-eff5-4336-882e-c26b5996a983"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+// Run the process for new Contacts - this will be first entry point for SDS file
+RunOperation("op.b50421f4-2c1d-4ab0-911c-71a7a37f1395",true);
+
+// Run the process to create applications for the new contacts
+RunOperation("op.01fa8a8a-46c1-42bf-95e9-faf961d06a8a",true);
+
+// Run the process to upsert the interest object for the new contacts
+RunOperation("op.f6d8ec61-fa30-4287-9265-e3ce0ff20d34",true);
+
+// Run the process to create the tasks for the new contacts
+RunOperation("op.fcfced4f-cdcb-4699-8be0-ca9d9af2cad2",true);
+&lt;/trans&gt;</konga.string>
+</Entity>

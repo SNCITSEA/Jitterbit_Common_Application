@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="WebServiceCall">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="81382325-821f-4dbe-89af-047d0edc5720" Name="SFDC Upsert">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="binding" value="SoapBinding"/>
+    <Item key="operation" value="upsert"/>
+    <Item key="operation_input" value="upsertRequest"/>
+    <Item key="operation_output" value="upsertResponse"/>
+    <Item key="othernamespaces" value="xmlns=http://schemas.xmlsoap.org/wsdl/^xmlns:fns=urn:fault.partner.soap.sforce.com^xmlns:tns=urn:partner.soap.sforce.com^xmlns:xsd=http://www.w3.org/2001/XMLSchema^xmlns:soap=http://schemas.xmlsoap.org/wsdl/soap/^xmlns:ens=urn:sobject.partner.soap.sforce.com"/>
+    <Item key="port" value="Soap"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="service" value="SforceService"/>
+    <Item key="sfdc_partner_wsdl" value="1"/>
+    <Item key="soapaction" value=""/>
+    <Item key="soapbodyuse" value="literal"/>
+    <Item key="soapstyle" value="document"/>
+    <Item key="soapversion" value="1"/>
+    <Item key="targetnamespace" value="urn:partner.soap.sforce.com"/>
+    <Item key="webservice_id" value="81382325-821f-4dbe-89af-047d0edc5720"/>
+    <Item key="webservice_url" value="[__Salesforce.ServiceURL]"/>
+    <Item key="wsdl_display" value="jitterbit.salesforce.partner.29.wsdl"/>
+    <Item key="wsdl_id" value="jitterbit.salesforce.partner.29.wsdl"/>
+  </Properties>
+  <CallRestrictions>
+    <Item key="maxsize_uiunit" value="Kb"/>
+  </CallRestrictions>
+</Entity>

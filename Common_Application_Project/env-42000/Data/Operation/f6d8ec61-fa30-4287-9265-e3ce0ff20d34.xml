@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Operation">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="f6d8ec61-fa30-4287-9265-e3ce0ff20d34" Name="Upsert_Interests">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="chunk_size" value="200"/>
+    <Item key="connect_type" value="26"/>
+    <Item key="debug_mode_until" value=""/>
+    <Item key="description" value=""/>
+    <Item key="ignore_history" value="1"/>
+    <Item key="LogLevel" value="Everything"/>
+    <Item key="max_number_of_threads" value="2"/>
+    <Item key="operation_id" value="f6d8ec61-fa30-4287-9265-e3ce0ff20d34"/>
+    <Item key="operation_type_id" value="6"/>
+    <Item key="run_success_op_if_no_source_files" value="0"/>
+    <Item key="salesforce_wizard_guid" value="6a90e9ff-e346-4e45-9f5a-db3ab375ddca"/>
+    <Item key="salesforce_wizard_object" value="1"/>
+    <Item key="salesforce_wizard_operation_name" value="upsert"/>
+    <Item key="schedule_policy" value="skip_if_running"/>
+    <Item key="source_chunk_node" value=""/>
+    <Item key="source_id" value="e75ed9bc-f72f-45b2-a745-24f6f18a193a"/>
+    <Item key="target_chunk_node" value=""/>
+    <Item key="target_chunk_size" value="0"/>
+    <Item key="timeoutseconds" value="7200"/>
+    <Item key="timeoutuiunit" value="HOURS"/>
+    <Item key="trace" value="1"/>
+    <Item key="validate_source_text_file" value="0"/>
+  </Properties>
+  <Pipeline opType="WebServiceCall">
+    <Activities>
+      <SCRIPT activityId="4a9171d8-52bd-404f-9d3c-03d9b5234922" contentId="900b74c1-0867-4d06-ba5f-385a0b2f49fd" role="Script" type="23"/>
+      <SOURCE activityId="516dcead-2fd2-4510-a4ab-193580d3fc1a" contentId="e75ed9bc-f72f-45b2-a745-24f6f18a193a" role="Source" type="2"/>
+      <TRANSFORMATION activityId="4420a389-9b99-405e-b4b5-57f0fa8b6adf" contentId="ffec969c-cb77-4081-ba99-561a26c52aa3" role="Request" type="4"/>
+      <WEBSERVICECALL activityId="ee4899de-05f8-431c-9d06-ffae55c4bd3b" contentId="81382325-821f-4dbe-89af-047d0edc5720" role="Web Service Call" type="10"/>
+      <TRANSFORMATION activityId="8236d2e8-b2ce-4812-a544-92df6452c1f9" contentId="2078d781-fb61-42c2-a3c6-d72f92acc63a" role="Response" type="4"/>
+    </Activities>
+  </Pipeline>
+  <Siblings/>
+</Entity>

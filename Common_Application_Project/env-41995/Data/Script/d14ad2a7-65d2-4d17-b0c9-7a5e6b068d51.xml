@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="d14ad2a7-65d2-4d17-b0c9-7a5e6b068d51" Name="Check_for_Contact">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="d14ad2a7-65d2-4d17-b0c9-7a5e6b068d51"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$ContactFound = "N";
+//$CALastName = "anfield";
+//$CAFirstName = "savannah";
+//$CASSN_raw = "325961585";
+WorkCALastName = Replace($CALastName,"'","");
+$CompLastName = ToProper(Trim(WorkCALastName));
+WorkCAFirstName = Replace($CAFirstName,"'","");
+$CompFirstName = ToProper(Trim(WorkCAFirstName));
+WorkCANickName = Replace($CAPreferredName,"'","");
+$CompNickName = ToProper(Trim(WorkCANickName));
+$CompAltLastName = Mid($CompLastName,0,5) + "%";
+$CompAltFirstName = Mid($CompFirstName,0,3) + "%";
+$CompZip10="";
+$CompZip9="";
+$CompZip5="";
+If(Length($CAPermAddressZip)==10,
+   $CompZip10 = $CAPermAddressZip;
+   $CompZip9 = Replace($CAPermAddressZip,"-","");
+   $CompZip5 = Mid($CAPermAddressZip,0,5);,
+   $CompZip10 = Trim($CAPermAddressZip);
+   $CompZip9 = Replace(Trim($CAPermAddressZip),"-","");
+   $CompZip5 = Mid($CAPermAddressZip,0,5););
+$CompAltZip = $CompZip5 + "%";
+$CompBirtdate = CVTDate($BirthDate,"mm/dd/yyyy","yyyy-mm-dd");
+$SFContactExist = "";
+test1_soql = "select ID, LastName, SSN__c, FirstName, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName = " + 
+            Quote($CompLastName);
+
+test2_soql = "select ID, LastName, FirstName, Birthdate, OtherPostalCode, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName = " + 
+            Quote($CompLastName) + " and FirstName = " + Quote($CompFirstName) + " and (OtherPostalCode = " +
+            Quote($CompZip10) + " or OtherPostalCode = " + Quote($CompZip9) + " or OtherPostalCode = " +
+            Quote($CompZip5) + ") and Birthdate = " + $CompBirtdate;
+
+test3_soql = "select ID, LastName, FirstName, HomePhone, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName = " + 
+            Quote($CompLastName) + " and FirstName = " + Quote($CompFirstName) + " and HomePhone = " +
+            Quote($CAPreferred_phone_number_formatted);
+
+test4_soql = "select ID, LastName, FirstName, Email, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName = " + 
+            Quote($CompLastName) + " and FirstName = " + Quote($CompFirstName) + " and Email = " +
+            Quote($CAEmailAddress);
+
+test5_soql = "select ID, LastName, NickName__c, Birthdate, OtherPostalCode, FirstName, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName = " + 
+            Quote($CompLastName) + " and NickName__c = " + Quote($CAPreferredName) + " and (OtherPostalCode = " +
+            Quote($CompZip10) + " or OtherPostalCode = " + Quote($CompZip9) + " or OtherPostalCode = " +
+            Quote($CompZip5) + ") and Birthdate = " + $CompBirtdate;
+
+test6_soql = "select ID, LastName, NickName__c, OtherCity, FirstName, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName = " + 
+            Quote($CompLastName) + " and NickName__c = " + Quote($CAPreferredName) + " and OtherCity = " +
+            Quote($CAPermAddressCity);
+
+test7_soql = "select ID, LastName, FirstName, OtherPostalCode, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName like " + 
+            Quote($CompAltLastName) + " and FirstName like " + Quote($CompAltFirstName) + 
+            " and OtherPostalCode like " + Quote($CompAltZip);
+
+test8_soql = "select ID, LastName, FirstName, OtherCity, Additional_Programs__c, Employer__c, Desired_Entry_Term__c, Active_Applicant__c from Contact where LastName like " + 
+            Quote($CompAltLastName) + " and FirstName = " + Quote($CompFirstName) + " and OtherCity = " +
+            Quote($CAPermAddressCity);
+
+$SFErrorMsg = "";
+$SFErrorMsg2 = "";
+$SFErrorMsg3 = "";
+$SFErrorMsg4 = "";
+$SFErrorMsg5 = "";
+$SFErrorMsg6 = "";
+$SFErrorMsg7 = "";
+$SFErrorMsg8 = "";
+$ContactFound = "N";
+$ContactMatch = "";
+$SFLastName = "";
+$SFFirstName = "";
+$SFNickName = "";
+$SFEmail = "";
+$SFHomePhone = "";
+$SFBirthdate = "";
+$SFCity = "";
+$SFPostalcode = "";
+$SFSSN = "";
+$SFAdditionalPrograms = "";
+$SFEmployer = "";
+$SFDesiredEntryTerm = "";
+$SFActiveApplicant = "";
+
+// Check for last name, ssn
+eval($SFContactExist = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test1_soql),$SFErrorMsg=GetLastError()) ;
+If(Length($SFErrorMsg) &gt; 0,
+   ($CAErrMessage = "Place error message here " + $SFErrorMsg);,
+   If(Length($SFContactExist) &gt; 0,
+     iLoopC=0;
+    // $debugMsgs = $debugMsgs + "Found:" + Length($SFContactExist) + " File ssn:" + $CASSN + "\n";
+     While(iLoopC &lt; Length($SFContactExist),  
+      // $debugMsgs = $debugMsgs + " Contactid:" + $SFContactExist[iLoopC][0] + " ssn:" + $SFContactExist[iLoopC][2] +
+      //         " Length SF:" + Length($SFContactExist[iLoopC][2]) + " Length File:" + Length($CASSN) +  "\n";
+       If(Length($SFContactExist[iLoopC][2]) &gt; 0 &amp;&amp; Length($CASSN_raw) &gt; 0,
+         // $debugMsgs = $debugMsgs + " ssn does not exist";, 
+          If($SFContactExist[iLoopC][2] == $CASSN,
+            $SFContactId = $SFContactExist[iLoopC][0];
+            //$debugMsgs = $debugMsgs + " ssn matches " + $SFContactId;
+            $ContactMatch = "LastName,SSN";
+            $SFFirstName = $SFContactExist[iLoopC][3];
+            $SFLastName = $SFContactExist[iLoopC][1];
+            $SFSSN = $SFContactExist[iLoopC][2];
+            $SFAdditionalPrograms = $SFContactExist[iLoopC][4];
+            $SFEmployer = $SFContactExist[iLoopC][5];
+            $SFDesiredEntryTerm = $SFContactExist[iLoopC][6];
+            $SFActiveApplicant = $SFContactExist[iLoopC][7];
+            RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+            $ContactFound = "Y";));
+       iLoopC = iLoopC + 1);));
+//$debugMsgs = $debugMsgs + "After the first check, this is the value: " + $ContactFound + "\n";
+
+// Check for last name, first name, zip, birthdate
+If($ContactFound == "N",
+  //$debugMsgs = $debugMsgs + "Stepping into second soql statement..." + "\n";
+  eval($SFContactExist2 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test2_soql),$SFErrorMsg2=GetLastError()) ;
+  If(Length($SFErrorMsg2) &gt; 0,
+     $CAErrMessage2 = "Place Error Message here" + $SFErrorMsg2;
+     $debugMsgs = $debugMsgs + $CAErrMessage2 + "\n";
+    ,If(Length($SFContactExist2) &gt; 0,
+      // $debugMsgs = $debugMsgs + "Found number 2: " + Length($SFContactExist2);
+       $ContactFound = "Y";
+       iLoopC2 = 0;
+       While(iLoopC2&lt;Length($SFContactExist2),
+         $SFContactId = $SFContactExist2[iLoopC2][0];
+         $ContactMatch = "LastName,FirstName,Zip,Birthdate";
+         $SFFirstName = $SFContactExist2[iLoopC2][2];
+         $SFLastName = $SFContactExist2[iLoopC2][1];
+         $SFBirthdate = $SFContactExist2[iLoopC2][3];
+         $SFPostalcode = $SFContactExist2[iLoopC2][4];
+         $SFAdditionalPrograms = $SFContactExist2[iLoopC2][5];
+         $SFEmployer = $SFContactExist2[iLoopC2][6];
+         $SFDesiredEntryTerm = $SFContactExist2[iLoopC2][7];
+         $SFActiveApplicant = $SFContactExist2[iLoopC2][8];
+        // $debugMsgs = $debugMsgs + " full name, zip and birthday matches " + $SFContactExist2[iLoopC2][3] +
+        //       " / " + $SFContactExist2[iLoopC2][4];
+         RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+         iLoopC2 = iLoopC2 + 1;))));
+
+// Check for first name, last name, home phone
+If($ContactFound=="N",
+  //$debugMsgs = $debugMsgs + "Stepping into third soql statement..." + "\n";
+  eval($SFContactExist3 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test3_soql),$SFErrorMsg3=GetLastError()) ;
+  If(Length($SFErrorMsg3)&gt;0,
+    $CAErrMessage3 = "Place Error message here" + $SFErrorMsg3;
+    $debugMsgs = $debugMsgs + $CAErrMessage3 + "\n";,
+    If(Length($SFContactExist3)&gt;0,
+     // $debugMsgs = $debugMsgs + "Found number 3" + Length($SFContactExist3);
+      $ContactFound = "Y";
+      iLoopC3 = 0;
+      While(iLoopC3&lt;Length($SFContactExist3),
+        $SFContactId = $SFContactExist3[iLoopC3][0];
+        $ContactMatch = "FirstName,LastName,PreferredPhone";
+        $SFLastName = $SFContactExist3[iLoopC3][1];
+        $SFFirstName = $SFContactExist3[iLoopC3][2];
+        $SFHomePhone = $SFContactExist3[iLoopC3][3];
+        $SFAdditionalPrograms = $SFContactExist3[iLoopC3][4];
+        $SFEmployer = $SFContactExist3[iLoopC3][5];
+        $SFDesiredEntryTerm = $SFContactExist3[iLoopC3][6];
+        $SFActiveApplicant = $SFContactExist3[iLoopC3][7];
+       // $debugMsgs = $debugMsgs + "" + $SFContactExist3[iLoopC3][3];
+        RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+        iLoopC3 = iLoopC3 + 1;))));
+
+// Check for First name, last name and email
+If($ContactFound=="N",
+  //$debugMsgs = $debugMsgs + "Stepping into fourth soql statement..." + "\n";
+  eval($SFContactExist4 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test4_soql),$SFErrorMsg4=GetLastError()) ;
+  If(Length($SFErrorMsg4)&gt;0,
+    $CAErrMessage4 = "Place Error message here... " + $SFErrorMsg4;
+    $debugMsgs = $debugMsgs + $CAErrMessage4;,
+    If(Length($SFContactExist4)&gt;0,
+     // $debugMsgs = $debugMsgs + "Found number 4" + Length($SFContactExist4);
+      $ContactFound = "Y";
+      $ContactMatch = "FirstName,LastName,email";
+      iLoopC4 = 0;
+      While(iLoopC4&lt;Length($SFContactExist4),
+        $SFContactId = $SFContactExist4[iLoopC4][0];
+        $SFLastName = $SFContactExist4[iLoopC4][1];
+        $SFFirstName = $SFContactExist4[iLoopC4][2];
+        $SFEmail = $SFContactExist4[iLoopC4][3];
+        $SFAdditionalPrograms = $SFContactExist4[iLoopC4][4];
+        $SFEmployer = $SFContactExist4[iLoopC4][5];
+        $SFDesiredEntryTerm = $SFContactExist4[iLoopC4][6];
+        $SFActiveApplicant = $SFContactExist4[iLoopC4][7];
+       // $debugMsgs = $debugMsgs + "" + $SFContactExist4[iLoopC4][3];
+        RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+        iLoopC4 = iLoopC4 + 1;))));
+
+// Check for nick name, last name, zipcode, birthdate
+If($ContactFound=="N" &amp;&amp; Length($CAPreferredName),
+  //$debugMsgs = $debugMsgs + "Stepping into fifth soql statement..." + "\n";
+  eval($SFContactExist5 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test5_soql),$SFErrorMsg5=GetLastError()) ;
+  If(Length($SFErrorMsg5)&gt;0,
+    $CAErrMessage5 = "Place Error message here... " + $SFErrorMsg5;
+    $debugMsgs = $debugMsgs + $CAErrMessage5;,
+    If(Length($SFContactExist5) &gt; 0,
+      iLoopC5 = 0;
+      //$debugMsgs = $debugMsgs + "Found LastName, Nickname, zip and birthdate:" + Length($SFContactExist5) + "\n";  
+      $ContactFound = "Y";
+      $ContactMatch = "NickName,LastName,Zip,Birthdate";
+      While(iLoopC5 &lt; Length($SFContactExist5),
+        $SFContactId = $SFContactExist5[iLoopC5][0];
+        $SFLastName = $SFContactExist5[iLoopC5][1];
+        $SFFirstName = $SFContactExist5[iLoopC5][5];
+        $SFNickName = $SFContactExist5[iLoopC5][2];
+        $SFBirthdate = $SFContactExist5[iLoopC5][3];
+        $SFPostalcode = $SFContactExist5[iLoopC5][4];
+        $SFAdditionalPrograms = $SFContactExist5[iLoopC5][6];
+        $SFEmployer = $SFContactExist5[iLoopC5][7];
+        $SFDesiredEntryTerm = $SFContactExist5[iLoopC5][8];
+        $SFActiveApplicant = $SFContactExist5[iLoopC5][9];
+       // $debugMsgs = $debugMsgs + "NickName,LastName,zip,Birthdate" + $SFContactExist5[iLoopC5][3] + "/" +
+       //       $SFContactExist5[iLoopC5][4];
+        RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+        iLoopC5 = iLoopC5 + 1;))));
+
+// Check for first name, last name, mailingcity
+If($ContactFound=="N" &amp;&amp; Length($CAPreferredName) &gt; 0,
+  //$debugMsgs = $debugMsgs + "Stepping into sixth soql statement..." + "\n";
+  eval($SFContactExist6 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test6_soql),$SFErrorMsg6=GetLastError()) ;
+  If(Length($SFErrorMsg6) &gt; 0,
+    $CAErrMessage6 = "Place Error message here... " + $SFErrorMsg6;
+    $debugMsgs = $debugMsgs + $CAErrMessage6;,
+    If(Length($SFContactExist6) &gt; 0,
+      iLoopC6 = 0;
+      //$debugMsgs = $debugMsgs + "Found LastName, Nickname and City:" + Length($SFContactExist6) + "\n";
+      While(iLoopC6 &lt; Length($SFContactExist6),
+         $ContactFound = "Y";
+         $SFContactId = $SFContactExist6[iLoopC6][0];
+         $SFLastName = $SFContactExist6[iLoopC6][1];
+         $SFFirstName = $SFContactExist6[iLoopC6][4];
+         $SFNickName = $SFContactExist6[iLoopC6][2];
+         $SFCity = $SFContactExist6[iLoopC6][3];
+         $SFAdditionalPrograms = $SFContactExist6[iLoopC6][5];
+         $SFEmployer = $SFContactExist6[iLoopC6][6];
+         $SFDesiredEntryTerm = $SFContactExist6[iLoopC6][7];
+         $SFActiveApplicant = $SFContactExist6[iLoopC6][8];
+        // $debugMsgs = $debugMsgs + " last name, nick name and city matches " + $SFContactExist6[iLoopC6][3];
+         $ContactMatch = "LastName,NickName,City";
+         RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+         iLoopC6 = iLoopC6 + 1;);)));
+
+// Check lastname(5), firstname(5), zip(5)
+If($ContactFound=="N",
+  //$debugMsgs = $debugMsgs + "Stepping into seventh soql statement..." + "\n";
+  //$debugMsgs = $debugMsgs + test7_soql + "\n";
+  eval($SFContactExist7 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test7_soql),$SFErrorMsg7=GetLastError()) ;
+  If(Length($SFErrorMsg7) &gt; 0,
+    $CAErrMessage7 = "Place Error Message here" + $SFErrorMsg7;
+    $debugMsgs = $debugMsgs + $CAErrMessage7 + "\n";,
+    If(Length($SFContactExist7) &gt; 0,
+      //$debugMsgs = $debugMsgs + "Found number 7: " + Length($SFContactExist7);
+      iLoopC7 = 0;
+      While(iLoopC7&lt;Length($SFContactExist7),
+        //$debugMsgs = $debugMsgs + "lastname(5),firstname(5),zip(5)" + $SFContactExist7[iLoopC7][3];
+        $ContactFound = "Y";
+        $ContactMatch = "LastName(5),FirstName(3),Zip(5)";
+        $SFContactId = $SFContactExist7[iLoopC7][0];
+        $SFLastName = $SFContactExist7[iLoopC7][1];
+        $SFFirstName = $SFContactExist7[iLoopC7][2];
+        $SFPostalcode = $SFContactExist7[iLoopC7][3];
+        $SFAdditionalPrograms = $SFContactExist7[iLoopC7][4];
+        $SFEmployer = $SFContactExist7[iLoopC7][5];
+        $SFDesiredEntryTerm = $SFContactExist7[iLoopC7][6];
+        $SFActiveApplicant = $SFContactExist7[iLoopC7][7];
+        RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+        iLoopC7 = iLoopC7 + 1;))));
+
+// Check for LastName(5),FirstName and City
+If($ContactFound=="N",
+ // $debugMsgs = $debugMsgs + "Stepping into eigth soql statement..." + "\n";
+ // $debugMsgs = $debugMsgs + test8_soql + "\n";
+  eval($SFContactExist8 = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",test8_soql),$SFErrorMsg8=GetLastError()) ;
+ // $debugMsgs = $debugMsgs + "After sflookupall: " + Length($SFErrorMsg8) + " / " +Length($SFContactExist8);
+  If(Length($SFErrorMsg8)&gt;0,
+    $CAErrMessage8 = "Place Error Message here " + $SFErrorMsg8;
+    $debugMsgs = $debugMsgs + $CAErrMessage8 + "\n";,
+    If(Length($SFContactExist8) &gt; 0,
+     // $debugMsgs = $debugMsgs + "Found number 8: " + Length($SFContactExist8);
+      iLoopC8 = 0;
+      While(iLoopC8 &lt; Length($SFContactExist8),
+       // $debugMsgs = $debugMsgs + "LastName(5),FirstName,City found: " + $SFContactExist8[iLoopC8][3];
+        $ContactFound = "Y";
+        $ContactMatch = "LastName(5),FirstName,City";
+        $SFContactId = $SFContactExist8[iLoopC8][0];
+        $SFLastName = $SFContactExist8[iLoopC8][1];
+        $SFFirstName = $SFContactExist8[iLoopC8][2];
+        $SFCity = $SFContactExist8[iLoopC8][3];
+        $SFAdditionalPrograms = $SFContactExist8[iLoopC8][4];
+        $SFEmployer = $SFContactExist8[iLoopC8][5];
+        $SFDesiredEntryTerm = $SFContactExist8[iLoopC8][6];
+        $SFActiveApplicant = $SFContactExist8[iLoopC8][7];
+        RunScript("sc.ff20db9a-fb11-4ecf-94cf-729bdc812243");
+        iLoopC8 = iLoopC8 + 1;))));
+
+&lt;/trans&gt;</konga.string>
+</Entity>

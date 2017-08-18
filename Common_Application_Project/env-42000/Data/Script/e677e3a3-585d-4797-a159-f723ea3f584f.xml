@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="e677e3a3-585d-4797-a159-f723ea3f584f" Name="Build_Interest_Values">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="e677e3a3-585d-4797-a159-f723ea3f584f"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$InterestAthletic = "";
+$InterestOther = "";
+$InterestAdditional = "";
+If(Length($CAActivity1Type) &gt; 0,
+  If($CAActivity1Type == "Athletics: JV/Varsity",
+    If($CAActivity1Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity1Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity1Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity1Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity1Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity1Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity1Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity1Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity1Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity1Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity1Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity1Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity1Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity1Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity1Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity1Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity1Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity1Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity1Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity1Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity1Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity1Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity1Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity1Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity1Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity1Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity1Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity1Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity1Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity1Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity1Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity1Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity1Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity1Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity1Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity1Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity1Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity1Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity1Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity1Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity1Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity1Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity1Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity1Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity1Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity1Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity1Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity1Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity1Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity1Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity1Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity1Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity1Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity1Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity1Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity1Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity1Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity1Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity1Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity1Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity1Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity2Type) &gt; 0,
+  If($CAActivity2Type == "Athletics: JV/Varsity",
+    If($CAActivity2Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity2Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity2Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity2Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity2Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity2Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity2Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity2Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity2Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity2Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity2Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity2Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity2Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity2Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity2Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity2Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity2Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity2Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity2Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity2Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity2Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity2Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity2Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity2Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity2Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity2Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity2Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity2Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity2Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity2Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity2Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity2Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity2Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity2Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity2Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity2Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity2Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity2Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity2Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity2Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity2Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity2Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity2Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity2Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity2Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity2Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity2Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity2Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity2Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity2Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity2Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity2Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity2Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity2Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity2Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity2Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity2Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity2Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity2Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity2Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity2Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity3Type) &gt; 0,
+  If($CAActivity3Type == "Athletics: JV/Varsity",
+    If($CAActivity3Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity3Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity3Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity3Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity3Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity3Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity3Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity3Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity3Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity3Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity3Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity3Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity3Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity3Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity3Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity3Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity3Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity3Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity3Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity3Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity3Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity3Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity3Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity3Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity3Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity3Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity3Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity3Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity3Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity3Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity3Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity3Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity3Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity3Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity3Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity3Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity3Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity3Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity3Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity3Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity3Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity3Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity3Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity3Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity3Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity3Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity3Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity3Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity3Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity3Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity3Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity3Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity3Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity3Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity3Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity3Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity3Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity3Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity3Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity3Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity3Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity4Type) &gt; 0,
+  If($CAActivity4Type == "Athletics: JV/Varsity",
+    If($CAActivity4Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity4Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity4Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity4Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity4Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity4Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity4Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity4Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity4Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity4Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity4Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity4Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity4Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity4Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity4Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity4Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity4Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity4Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity4Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity4Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity4Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity4Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity4Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity4Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity4Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity4Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity4Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity4Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity4Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity4Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity4Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity4Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity4Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity4Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity4Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity4Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity4Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity4Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity4Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity4Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity4Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity4Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity4Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity4Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity4Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity4Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity4Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity4Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity4Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity4Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity4Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity4Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity4Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity4Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity4Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity4Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity4Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity4Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity4Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity4Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity4Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity5Type) &gt; 0,
+  If($CAActivity5Type == "Athletics: JV/Varsity",
+    If($CAActivity5Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity5Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity5Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity5Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity5Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity5Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity5Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity5Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity5Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity5Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity5Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity5Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity5Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity5Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity5Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity5Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity5Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity5Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity5Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity5Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity5Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity5Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity5Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity5Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity5Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity5Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity5Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity5Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity5Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity5Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity5Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity5Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity5Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity5Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity5Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity5Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity5Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity5Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity5Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity5Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity5Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity5Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity5Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity5Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity5Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity5Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity5Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity5Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity5Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity5Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity5Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity5Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity5Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity5Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity5Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity5Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity5Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity5Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity5Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity5Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity5Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity6Type) &gt; 0,
+  If($CAActivity6Type == "Athletics: JV/Varsity",
+    If($CAActivity6Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity6Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity6Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity6Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity6Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity6Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity6Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity6Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity6Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity6Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity6Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity6Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity6Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity6Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity6Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity6Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity6Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity6Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity6Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity6Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity6Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity6Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity6Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity6Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity6Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity6Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity6Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity6Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity6Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity6Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity6Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity6Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity6Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity6Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity6Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity6Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity6Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity6Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity6Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity6Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity6Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity6Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity6Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity6Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity6Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity6Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity6Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity6Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity6Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity6Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity6Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity6Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity6Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity6Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity6Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity6Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity6Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity6Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity6Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity6Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity6Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity7Type) &gt; 0,
+  If($CAActivity7Type == "Athletics: JV/Varsity",
+    If($CAActivity7Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity7Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity7Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity7Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity7Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity7Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity7Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity7Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity7Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity7Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity7Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity7Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity7Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity7Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity7Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity7Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity7Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity7Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity7Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity7Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity7Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity7Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity7Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity7Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity7Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity7Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity7Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity7Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity7Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity7Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity7Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity7Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity7Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity7Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity7Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity7Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity7Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity7Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity7Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity7Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity7Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity7Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity7Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity7Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity7Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity7Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity7Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity7Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity7Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity7Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity7Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity7Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity7Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity7Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity7Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity7Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity7Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity7Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity7Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity7Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity7Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity8Type) &gt; 0,
+  If($CAActivity8Type == "Athletics: JV/Varsity",
+    If($CAActivity8Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity8Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity8Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity8Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity8Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity8Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity8Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity8Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity8Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity8Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity8Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity8Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity8Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity8Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity8Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity8Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity8Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity8Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity8Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity8Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity8Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity8Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity8Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity8Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity8Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity8Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity8Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity8Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity8Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity8Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity8Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity8Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity8Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity8Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity8Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity8Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity8Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity8Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity8Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity8Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity8Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity8Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity8Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity8Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity8Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity8Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity8Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity8Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity8Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity8Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity8Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity8Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity8Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity8Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity8Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity8Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity8Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity8Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity8Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity8Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity8Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity9Type) &gt; 0,
+  If($CAActivity9Type == "Athletics: JV/Varsity",
+    If($CAActivity9Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity9Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity9Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity9Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity9Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity9Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity9Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity9Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity9Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity9Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity9Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity9Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity9Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity9Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity9Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity9Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity9Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity9Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity9Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity9Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity9Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity9Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity9Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity9Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity9Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity9Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity9Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity9Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity9Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity9Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity9Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity9Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity9Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity9Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity9Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity9Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity9Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity9Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity9Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity9Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity9Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity9Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity9Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity9Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity9Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity9Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity9Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity9Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity9Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity9Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity9Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity9Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity9Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity9Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity9Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity9Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity9Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity9Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity9Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity9Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity9Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+If(Length($CAActivity10Type) &gt; 0,
+  If($CAActivity10Type == "Athletics: JV/Varsity",
+    If($CAActivity10Name == "Baseball",
+      $InterestAthletic = $InterestAthletic + "Baseball;");
+    If($CAActivity10Name == "Basketball",
+      $InterestAthletic = $InterestAthletic + "Basketball;");
+    If($CAActivity10Name == "Cheerleading",
+      $InterestAthletic = $InterestAthletic + "Cheerleading;");
+    If($CAActivity10Name == "Cross-country",
+      $InterestAthletic = $InterestAthletic + "Cross Country;");
+    If($CAActivity10Name == "Football",
+      $InterestAthletic = $InterestAthletic + "Football;");
+    If($CAActivity10Name == "Golf",
+      $InterestAthletic = $InterestAthletic + "Golf;");
+    If($CAActivity10Name == "Ice Hockey",
+      $InterestAthletic = $InterestAthletic + "Hockey;");
+    If($CAActivity10Name == "Indoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity10Name == "Outdoor Track",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity10Name == "Soccer",
+      $InterestAthletic = $InterestAthletic + "Soccer;");
+    If($CAActivity10Name == "Softball",
+      $InterestAthletic = $InterestAthletic + "Softball;");
+    If($CAActivity10Name == "Swim",
+      $InterestAthletic = $InterestAthletic + "Swimming;");
+    If($CAActivity10Name == "Tennis",
+      $InterestAthletic = $InterestAthletic + "Tennis;");
+    If($CAActivity10Name == "Track and field",
+      $InterestAthletic = $InterestAthletic + "Track;");
+    If($CAActivity10Name == "Volleyball",
+      $InterestAthletic = $InterestAthletic + "Volleyball;"););
+  If($CAActivity10Type == "Academic",
+    $InterestOther = $InterestOther + "Department clubs;");
+  If($CAActivity10Type == "Art",
+    $InterestOther = $InterestOther + "Art;");
+  If($CAActivity10Type == "Community Service (Volunteer)",
+    $InterestOther = $InterestOther + "Community Service Group;");
+  If($CAActivity10Type == "Computer/Technology",
+    $InterestOther = $InterestOther + "Computer Club;");
+  If($CAActivity10Type == "Debate/Speech",
+    $InterestOther = $InterestOther + "Debate;");
+  If($CAActivity10Type == "Environmental",
+    $InterestOther = $InterestOther + "Environmental or Ecology Activities;");
+  If($CAActivity10Type == "Foreign Exchange",
+    $InterestOther = $InterestOther + "Foreign Study Abroad;");
+  If($CAActivity10Type == "Journalism/Publication",
+    $InterestOther = $InterestOther + "Newspaper;");
+  If($CAActivity10Type == "Junior R.O.T.C.",
+    $InterestOther = $InterestOther + "ROTC;");
+  If($CAActivity10Type == "Music: Instrumental",
+    $InterestOther = $InterestOther + "Instrumental Music;");
+  If($CAActivity10Type == "Music: Vocal",
+    $InterestOther = $InterestOther + "Vocal Music;");
+  If($CAActivity10Type == "Theater/Drama",
+    $InterestOther = $InterestOther + "Theater/Drama;");
+  If($CAActivity10Name == "Archery",
+    $InterestOther = $InterestOther + "Archery;");
+  If($CAActivity10Name == "Badminton",
+    $InterestOther = $InterestOther + "Badminton;");
+  If($CAActivity10Name == "Bowling",
+    $InterestOther = $InterestOther + "Bowling;");
+  If($CAActivity10Name == "Equestrian",
+    $InterestOther = $InterestOther + "Equestrian;");
+  If($CAActivity10Name == "Fencing",
+    $InterestOther = $InterestOther + "Fencing;");
+  If($CAActivity10Name == "Gymnastics",
+    $InterestOther = $InterestOther + "Gymnastics;");
+  If($CAActivity10Name == "Handball",
+    $InterestOther = $InterestOther + "Handball;");
+  If($CAActivity10Name == "Judo",
+    $InterestOther = $InterestOther + "Judo/Karate/Tai Kwon Do;");
+  If($CAActivity10Name == "Racquetball",
+    $InterestOther = $InterestOther + "Racquetball;");
+  If($CAActivity10Name == "Rifle",
+    $InterestOther = $InterestOther + "Rifle;");
+  If($CAActivity10Name == "Rodeo",
+    $InterestOther = $InterestOther + "Rodeo;");
+  If($CAActivity10Name == "Rugby",
+    $InterestOther = $InterestOther + "Rugby;");
+  If($CAActivity10Name == "Sailing",
+    $InterestOther = $InterestOther + "Sailing;");
+  If($CAActivity10Name == "Skiing",
+    $InterestOther = $InterestOther + "Skiing;");
+  If($CAActivity10Name == "Skin Diving",
+    $InterestOther = $InterestOther + "Scuba Diving;");
+  If($CAActivity10Name == "Squash",
+    $InterestOther = $InterestOther + "Squash;");
+  If($CAActivity10Name == "Sync. swimming",
+    $InterestOther = $InterestOther + "Synchronized Swimming;");
+  If($CAActivity10Name == "Table Tennis",
+    $InterestOther = $InterestOther + "Table Tennis;");
+  If($CAActivity10Name == "Triathlon",
+    $InterestOther = $InterestOther + "Triathlon;");
+  If($CAActivity10Name == "Water polo",
+    $InterestOther = $InterestOther + "Water Polo;");
+  If($CAActivity10Name == "Weight lifting",
+    $InterestOther = $InterestOther + "Weightlifting;");
+  If($CAActivity10Name == "Wrestling",
+    $InterestOther = $InterestOther + "Wrestling;");
+  If($CAActivity10Type == "Athletics: Club",
+    $InterestAdditional = $InterestAdditional = "Intramurals;");
+  If($CAActivity10Type == "Foreign Language",
+    $InterestAdditional = $InterestAdditional = "Foreign Language + Activity Honors;");
+  If($CAActivity10Type == "Robotics",
+    $InterestAdditional = $InterestAdditional = "Robotics;");
+  If($CAActivity10Type == "School Spirit",
+    $InterestAdditional = $InterestAdditional = "School Spirit;");
+  If($CAActivity10Type == "Science/Math",
+    $InterestAdditional = $InterestAdditional = "Science/Math;");
+  If($CAActivity10Type == "Student Govt./Politics",
+    $InterestAdditional = $InterestAdditional = "Student Government;");
+  If($CAActivity10Name == "Boxing",
+    $InterestAdditional = $InterestAdditional + "Boxing;");
+  If($CAActivity10Name == "Diving",
+    $InterestAdditional = $InterestAdditional + "Diving;");
+  If($CAActivity10Name == "Field Hockey",
+    $InterestAdditional = $InterestAdditional + "Field Hockey;");
+  If($CAActivity10Name == "Football (non-tackle)",
+    $InterestAdditional = $InterestAdditional + "Flag Football;");
+  If($CAActivity10Name == "Lacrosse",
+    $InterestAdditional = $InterestAdditional + "Lacrosse;");
+  If($CAActivity10Name == "Rowing (Crew)",
+    $InterestAdditional = $InterestAdditional + "Crew;");
+ );
+&lt;/trans&gt;</konga.string>
+</Entity>

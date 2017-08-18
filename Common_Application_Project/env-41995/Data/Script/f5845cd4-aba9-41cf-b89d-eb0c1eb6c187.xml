@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="f5845cd4-aba9-41cf-b89d-eb0c1eb6c187" Name="Check_for_Interest">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="f5845cd4-aba9-41cf-b89d-eb0c1eb6c187"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+$SFIntAthletic = "";
+$SFIntAdditional = "";
+$SFIntOther = "";
+$SFInterestId = "";
+$SFIntExist = "";
+$SFStudentId = "0030q000006Tu8fAAC";
+Int_soql = "select id, Additional_Interests__c, Athletic_Interests__c, Other_Interests__c from Interest__c where Contact__c = " + Quote($SFStudentId);
+$debugMsgs = $debugMsgs + Int_soql + "\n";
+Eval($SFIntExist = SfLookupAll("so.6079dcdd-c71b-4f49-a2bf-38aba01638e2",Int_soql),$SFIntErrorMsg=GetLastError());
+If(Length($SFIntErrorMsg) &gt; 0,
+   ($IntErrMessage = "Place error message here " + $SFIntErrorMsg);
+   $debugMsgs = $debugMsgs + $IntErrMessage + "\n";,
+   If(Length($SFIntExist) &gt; 0,
+       $CAIntFoundMsg = $CAIntFoundMsg + "Interest Found " + $SFContactId + " " + $CAFirstName + " " +
+               $CALastName + " IntId:" + $SFIntExist[0][0] + " Additional Interest:" + $SFIntExist[0][1] + 
+               " Athletic Interest:" + $SFIntExist[0][2] + " Other Interest:" + $SFIntExist[0][3] + "\n";
+       $SFIntAthletic = $SFIntAthletic + $SFIntExist[0][2];
+       $SFIntAdditional = $SFIntAdditional + $SFIntExist[0][1];
+       $SFIntOther = $SFIntOther + $SFIntExist[0][3];
+       $SFInterestId = $SFIntExist[0][0];));
+&lt;/trans&gt;</konga.string>
+</Entity>

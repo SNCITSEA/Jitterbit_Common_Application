@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Source">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="e75ed9bc-f72f-45b2-a745-24f6f18a193a" Name="InterestBuildSource">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="salesforce_wizard_object" value="1"/>
+  </Properties>
+  <Location type="FileShare">
+    <Data>
+      <Properties>
+        <Item key="archive_password"/>
+        <Item key="character_encoding" value="UTF-8"/>
+        <Item key="encrypt_choice" value="0"/>
+        <Item key="file_name" value="Interest*.txt"/>
+        <Item key="filterOption.ignoreCase" value="0"/>
+        <Item key="filterOption.regularExpression" value="0"/>
+        <Item key="ignore_first" value="0"/>
+        <Item key="ignore_last" value="0"/>
+        <Item enc="true" key="locator" value="$00gq0v1k9vJjUPaCplhExI6TbwQR1hAr02/peSvmOFXW3RVFzT4kJpl7fh9p/1PKlbwtbxGLCItCVAP3sh/zksDI9LZ+fHHQSxf6RSY/hTxlWTu7YumFVZmhknbBbcOxcb"/>
+        <Item enc="true" key="login" value="$00NwE5kME4OhvjaFNG9m4pX8NkM/s3VdLvknk7ZS5x03Y="/>
+        <Item enc="true" key="password" value="$00/bAPQmvxP/ZvXiyLlzdhESzKuELq5Orb9LcEEfXTXzo="/>
+        <Item key="renamefileto" value="TaskBuild_[date][time].txt"/>
+        <Item key="uncompress_format" value=""/>
+      </Properties>
+    </Data>
+  </Location>
+</Entity>

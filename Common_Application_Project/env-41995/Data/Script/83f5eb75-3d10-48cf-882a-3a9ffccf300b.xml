@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Script">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="83f5eb75-3d10-48cf-882a-3a9ffccf300b" Name="Check_Religion_Valid">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="script_condition" value="0"/>
+    <Item key="script_id" value="83f5eb75-3d10-48cf-882a-3a9ffccf300b"/>
+  </Properties>
+  <konga.string name="script">&lt;trans&gt;
+//$CAReligion_raw = "Caodaiist";
+$CAReligion = $CAReligion_raw;
+If(Length($CAReligion_raw)&gt;0,
+  Case($CAReligion_raw = "Agnostic" || $CAReligion_raw = "Athiest" || $CAReligion_raw = "Wiccan (Pagan)","None",
+    $CAReligion_raw = "Anglican (Episcopal)","Anglican",
+    $CAReligion_raw = "Bahá'í", "Baha'i Faith",
+    $CAReligion_raw = "Caodaiist" || $CAReligion_raw = "Cheondoist" || $CAReligion_raw = "Church of World Messianity" 
+                         || $CAReligion_raw = "Jain" || $CAReligion_raw = "Moravian" || $CAReligion_raw = "Other"
+                         || $CAReligion_raw = "Rastafari" || $CAReligion_raw = "Reformed" || $CAReligion_raw = "Scientology"
+                         || $CAReligion_raw = "Seicho-no-le-ist" || $CAReligion_raw = "Sikh" || $CAReligion_raw = "Taoist"
+                         || $CAReligion_raw = "Tenrikyoist" || $CAReligion_raw = "Yazidi"
+                  ,"Other Religion",
+     $CAReligion_raw = "Christian Scientist", "Christian Science",
+     $CAReligion_raw = "Church of Christ", "Churches of Christ",
+     $CAReligion_raw = "Congregationalist (UCC)", "Congregational",
+     $CAReligion_raw = "Friend (Quaker)", "Society of Friends (Quaker)",
+     $CAReligion_raw = "Jehovah's Witness", "Jehovah's Witnesses",
+     $CAReligion_raw = "Latter-day Saint (Mormon)", "Latter-day Saints (Mormon)",
+     $CAReligion_raw = "Orthodox", "Eastern Christian Orthodox",
+     $CAReligion_raw = "Other - Christian", "Christian",
+     $CAReligion_raw = "Seventh Day Adventist", "Seventh-Day Adventist",
+     $CAReligion_raw = "Unitarian Universalist (UU)", "Unitarian Universalists",
+     $CAReligion_raw = "Baptist", $CAReligion_raw,
+     $CAReligion_raw = "Buddhist", $CAReligion_raw,
+     $CAReligion_raw = "Disciples of Christ", $CAReligion_raw,
+     $CAReligion_raw = "Hindu", $CAReligion_raw,
+     $CAReligion_raw = "Jewish", $CAReligion_raw,
+     $CAReligion_raw = "Lutheran", $CAReligion_raw,
+     $CAReligion_raw = "Methodist", $CAReligion_raw,
+     $CAReligion_raw = "Muslim", $CAReligion_raw,
+     $CAReligion_raw = "Pentecostal", $CAReligion_raw,
+     $CAReligion_raw = "Presbyterian", $CAReligion_raw,
+     $CAReligion_raw = "Roman Catholic", $CAReligion_raw,
+     $CAReligion_raw = "None", $CAReligion_raw));
+
+//$SFReligion = $CAReligion;
+&lt;/trans&gt;</konga.string>
+</Entity>

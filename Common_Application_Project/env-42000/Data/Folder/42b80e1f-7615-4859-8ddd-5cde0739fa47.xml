@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entity type="Folder">
+  <Header Deleted="false" DeployDirty="false" Deployed="true" HasMoved="false" ID="42b80e1f-7615-4859-8ddd-5cde0739fa47" Name="Salesforce Updates">
+    <konga.string name="Description"/>
+  </Header>
+  <Properties>
+    <Item key="folder_id" value="42b80e1f-7615-4859-8ddd-5cde0739fa47"/>
+    <Item key="protected" value="false"/>
+  </Properties>
+</Entity>
